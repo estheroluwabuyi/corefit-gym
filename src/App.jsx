@@ -23,3 +23,4 @@ function App() {
 }
 
 export default App;
+//https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb

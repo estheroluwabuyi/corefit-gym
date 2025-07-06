@@ -1,28 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap");
 
 @import "tailwindcss";
 @theme {
-  --font-inter: "Inter", sans-serif;
-  --font-poppins: "Poppins", sans-serif;
-  --font-great-vibes: "Great Vibes", cursive;
-  --color-primary: #f0eee4;
-  --color-secondary: #0c0c0c;
-}
+  --font-russo: "Russo One", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+  --font-lato: "Lato", sans-serif;
+  --font-anton: "Anton", sans-serif;
+  --league: "League Spartan", sans-serif;
+  --font-opens: "Open Sans", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 
-@font-face {
-  font-family: "Bulgatti";
-  src: url("/fonts/Bulgatti.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  --color-primary: #1a1a1a;
+  --color-other: #00c27a;
+  --color-text: #cccccc;
+  --color-muted: #3a3a3a;
+  --color-secondary: #ff5500;
 }
 
 :root {
-  --primary-font: "Inter", sans-serif;
-  --secondary-font: "Poppins", sans-serif;
-
-  --primary-color: #f0eee4;
-  --light-black: #0c0c0c;
+  --primary-color: #cccccc;
+  --primary-font: "Lato", sans-serif;
 }
 
 /* Global Reset  */
