@@ -109,7 +109,7 @@ function NavBar() {
                           : ""
                       )
                     }
-                    onTouchStart={() => handleMouseEnter(index)}
+                    onTouchStart={() => setHoveredItem(index)}
                     onTouchEnd={() => setHoveredItem(null)}
                     onClick={() => {
                       setToggleMenu(false);
