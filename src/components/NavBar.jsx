@@ -57,14 +57,13 @@ function NavBar() {
     <nav className="fixed top-0 left-0 right-0 bg-primary text-text py-8 px-[2rem] lg:px-[5rem] flex justify-between items-center ">
       <Logo />
 
-      <div className="flex order-3 flex-row-reverse gap-[2rem] items-center ">
+      <div className="flex order-3 flex-row-reverse gap-[2rem] items-center">
         <img
           src={menu}
           alt="Menu"
           width={30}
           height={30}
-          className="w-[30px] sm:w-[35px] h-auto cursor-pointer md:hidden rounded-lg transition-all duration-600  hover:shadow-[0_0_0_2px_rgba(255,85,0,0.15)]
-"
+          className="w-[30px] sm:w-[35px] h-auto cursor-pointer md:hidden rounded-lg transition-all duration-600 icon-effect"
           onClick={handleMenuToggle}
         />
 
@@ -86,7 +85,7 @@ function NavBar() {
               alt="Close"
               width={30}
               height={30}
-              className="w-[30px] sm:w-[32px] h-auto self-end cursor-pointer rounded-lg transition-all duration-600  hover:shadow-[0_0_0_2px_rgba(255,85,0,0.15)]"
+              className="w-[30px] sm:w-[32px] h-auto self-end cursor-pointer rounded-lg transition-all duration-600 icon-effect"
               onClick={handleMenuToggle}
             />
 
@@ -96,7 +95,7 @@ function NavBar() {
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `flex items-center gap-3 w-full p-5 rounded hover:bg-secondary/20 hover:text-secondary transition-all duration-600 ${
+                      `flex items-center gap-3 w-full p-5 rounded hover:bg-secondary/20 hover:text-secondary active:text-secondary focus:text-secondary transition-all duration-600 ${
                         isActive ? "text-secondary!" : ""
                       }`
                     }
