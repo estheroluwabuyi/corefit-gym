@@ -1,11 +1,10 @@
 import { useState } from "react";
+import clsx from "clsx";
 
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-
 import CartImg from "./CartImg";
 import Logo from "./Logo";
-
 import menu from "/images/menu.svg";
 import close from "/images/close.svg";
 
@@ -27,6 +26,11 @@ const navItems = [
 
 function NavBar() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (item) => {
+    setHoveredItem(item);
+  };
 
   const menuVariants = {
     hidden: {
@@ -90,15 +94,23 @@ function NavBar() {
             />
 
             <ul className="flex flex-col gap-2 text-[1.7rem] z-50">
-              {navItems.map((item) => (
+              {navItems.map((item, index) => (
                 <li key={item.name}>
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `flex items-center gap-3 w-full p-5 rounded hover:bg-secondary/20 hover:text-secondary active:text-secondary focus:text-secondary transition-all duration-600 ${
-                        isActive ? "text-secondary!" : ""
-                      }`
+                      clsx(
+                        "flex items-center gap-3 w-full p-5 rounded",
+                        "hover:bg-secondary/20 hover:text-secondary",
+                        "transition-all duration-600",
+                        isActive && "text-secondary",
+                        hoveredItem === index
+                          ? "bg-secondary/20 text-secondary"
+                          : ""
+                      )
                     }
+                    onTouchStart={() => handleMouseEnter(index)}
+                    onTouchEnd={() => setHoveredItem(null)}
                     onClick={() => {
                       setToggleMenu(false);
                     }}
