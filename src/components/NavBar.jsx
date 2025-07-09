@@ -100,9 +100,9 @@ function NavBar() {
                     to={item.path}
                     className={({ isActive }) => {
                       return clsx(
-                        "flex items-center gap-3 w-full p-5 rounded hover:bg-secondary/20 hover:text-secondary transition-all duration-600",
-                        isActive ? "text-secondary!" : "",
-                        hoveredItem === index ? "text-secondary!" : ""
+                        "flex items-center gap-3 w-full p-5 rounded hover:bg-secondary/20 transition-all duration-600",
+                        isActive && "text-secondary!",
+                        hoveredItem === index && " hover:bg-secondary/20"
                       );
                     }}
                     onTouchStart={() => setHoveredItem(index)}
