@@ -98,17 +98,13 @@ function NavBar() {
                 <li key={item.name}>
                   <NavLink
                     to={item.path}
-                    className={({ isActive }) =>
-                      clsx(
-                        "flex items-center gap-3 w-full p-5 rounded",
-                        "hover:bg-secondary/20 hover:text-secondary",
-                        "transition-all duration-600",
-                        isActive && "text-secondary",
-                        hoveredItem === index
-                          ? "bg-secondary/20 text-secondary"
-                          : ""
-                      )
-                    }
+                    className={({ isActive }) => {
+                      return clsx(
+                        "flex items-center gap-3 w-full p-5 rounded hover:bg-secondary/20 hover:text-secondary transition-all duration-600",
+                        isActive ? "text-secondary!" : "",
+                        hoveredItem === index ? "text-secondary!" : ""
+                      );
+                    }}
                     onTouchStart={() => setHoveredItem(index)}
                     onTouchEnd={() => setHoveredItem(null)}
                     onClick={() => {
