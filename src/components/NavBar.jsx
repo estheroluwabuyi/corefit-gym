@@ -28,10 +28,6 @@ function NavBar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  const handleMouseEnter = (item) => {
-    setHoveredItem(item);
-  };
-
   const menuVariants = {
     hidden: {
       x: "100%",
@@ -69,6 +65,7 @@ function NavBar() {
           height={30}
           className="w-[30px] sm:w-[35px] h-auto cursor-pointer md:hidden rounded-lg transition-all duration-600 icon-effect"
           onClick={handleMenuToggle}
+          loading="eager"
         />
 
         <CartImg />
@@ -91,6 +88,7 @@ function NavBar() {
               height={30}
               className="w-[30px] sm:w-[32px] h-auto self-end cursor-pointer rounded-lg transition-all duration-600 icon-effect"
               onClick={handleMenuToggle}
+              loading="eager"
             />
 
             <ul className="flex flex-col gap-2 text-[1.7rem] z-50">
