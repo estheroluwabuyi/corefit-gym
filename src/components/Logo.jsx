@@ -11,7 +11,7 @@ function Logo() {
         >
           <g transform="translate(0,10)">
             <rect x="0" y="0" width="10" height="40" rx="5" fill="#ff5500" />
-            <rect x="10" y="17" width="40" height="6" fill="#cccccc" />
+            <rect x="10" y="17" width="40" height="6" fill="#f0eee4" />
 
             <rect x="50" y="0" width="10" height="40" rx="5" fill="#ff5500" />
           </g>
@@ -21,7 +21,7 @@ function Logo() {
             y="35"
             font-family="'Russo One', sans-serif"
             font-size="40"
-            fill="#cccccc"
+            fill="#f0eee4"
             dominant-baseline="middle"
           >
             CORE
