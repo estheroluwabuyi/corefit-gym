@@ -9,7 +9,7 @@ function Hero() {
         className="text-center lg:text-left self-center"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.8, duration: 1.3, ease: "easeOut" }}
+        transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
       >
         <h1 className="font-montserrat font-[800] text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6.5rem] uppercase">
           <span className="text-secondary text-shadow-orange">Break</span>{" "}
@@ -37,7 +37,7 @@ function Hero() {
         className="lg:self-end"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.8, duration: 1.3, ease: "easeOut" }}
+        transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
       >
         <img
           src={heroImg}
