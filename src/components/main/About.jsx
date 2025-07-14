@@ -31,3 +31,66 @@ function About() {
 }
 
 export default About;
+
+// {/* <section className="bg-primary py-8">
+//   <h2 className="text-center text-lg uppercase tracking-wider text-muted mb-4">
+//     Trusted By Leading Brands
+//   </h2>
+//   <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+//     <img src="/brands/diadora.svg" alt="Diadora" className="h-8" />
+//     <img src="/brands/asics.svg" alt="Asics" className="h-8" />
+//     <img src="/brands/allianz.svg" alt="Allianz" className="h-8" />
+//     {/* Add more logos */}
+//   </div>
+// </section> */}
+
+// 🎯 Recommended mix for your scenario:
+
+// ✅ Sportswear & equipment:
+
+// Nike
+
+// Adidas
+
+// Under Armour
+
+// Asics
+
+// Rogue Fitness
+
+// ✅ Supplements & wellness:
+
+// Optimum Nutrition
+
+// ✅ Payment & logistics (optional but boosts trust):
+
+// Stripe (secure payments)
+
+// PayPal (secure payments)
+
+// FedEx or DHL (fast shipping)
+
+// 💡 How to frame it visually:
+// Headline idea:
+
+// Trusted by Top Brands & Secure Payment Partners
+// or
+// Shop the Best, Powered by the Brands You Trust
+
+// Then show the logos in one row or a carousel.
+
+// ✅ Example (if you want only 6–7 brands):
+
+// Nike
+
+// Adidas
+
+// Rogue Fitness
+
+// Optimum Nutrition
+
+// Stripe
+
+// PayPal
+
+// FedEx
