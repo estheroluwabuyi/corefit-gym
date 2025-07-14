@@ -1,7 +1,13 @@
+import { useState } from "react";
+
 import { motion } from "framer-motion";
+import clsx from "clsx";
+
 import heroImg from "/images/bg.webp";
 
 function Hero() {
+  const [mobileHovered, setMobileHovered] = useState(false);
+
   return (
     <header className="bg-black pt-[15rem] lg:pt-[11rem] hero-bg px-8 flex justify-between items-center lg:items-start lg:px-[5rem] flex-col lg:flex-row gap-8 relative">
       {/* Hero Text */}
@@ -27,7 +33,14 @@ function Hero() {
           Your transformation starts now.
         </p>
 
-        <button className="bg-secondary py-4 px-8  lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-transparent font-[600] uppercase tracking-wide text-text hover:bg-transparent transition-all duration-600 hover:border-secondary active:border-secondary mt-8 mb-4 lg:mb-0 focus:ring">
+        <button
+          className={clsx(
+            "bg-secondary py-4 px-8  lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-transparent font-[600] uppercase tracking-wide text-text hover:bg-transparent transition-all duration-600 hover:border-secondary active:border-secondary mt-8 mb-4 lg:mb-0 focus:ring",
+            mobileHovered && "border-secondary"
+          )}
+          onTouchStart={() => setMobileHovered(true)}
+          onTouchEnd={() => setMobileHovered(false)}
+        >
           Start Training
         </button>
       </motion.div>
