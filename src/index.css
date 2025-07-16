@@ -66,6 +66,14 @@ a {
   background-repeat: no-repeat;
 }
 
+.preloader-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/images/bg-3.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .text-shadow-orange {
   text-shadow: 2px 2px 5px rgba(255, 85, 0, 0.4);
 }

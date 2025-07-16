@@ -4,16 +4,16 @@ import Logo from "./Logo";
 function Preloader() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="bg-red-600 fixed inset-0 flex flex-col justify-center items-center  z-50"
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      className="preloader-bg fixed inset-0 flex flex-col justify-center items-center  z-50"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       >
         <Logo />
       </motion.div>
