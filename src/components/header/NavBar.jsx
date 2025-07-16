@@ -54,7 +54,12 @@ function NavBar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-primary text-text py-8 px-[2rem] lg:px-[5rem] flex justify-between items-center z-1000">
+    <motion.nav
+      className="fixed top-0 left-0 right-0 bg-primary text-text py-8 px-[2rem] lg:px-[5rem] flex justify-between items-center z-1000"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.5, duration: 0.8, ease: "easeIn" }}
+    >
       <Link to="/">
         <Logo />
       </Link>
@@ -142,7 +147,7 @@ function NavBar() {
           ))}
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 
