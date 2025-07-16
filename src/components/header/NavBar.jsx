@@ -55,7 +55,9 @@ function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-primary text-text py-8 px-[2rem] lg:px-[5rem] flex justify-between items-center z-1000">
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
 
       <div className="flex order-3 flex-row-reverse gap-[2rem] items-center">
         <img

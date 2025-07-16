@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 import Layout from "./pages/Layout";
 import PageNotFound from "./pages/PageNotFound";
 import HomePage from "./pages/HomePage";
@@ -15,21 +17,23 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      {!isLoaded ? (
-        <Preloader />
-      ) : (
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route index element={<HomePage />} />
-            <Route path="/contact" element={<Contact />} />
-          </Route>
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+    <>
+      <AnimatePresence>{!isLoaded && <Preloader />}</AnimatePresence>
+
+      {isLoaded && (
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route index element={<HomePage />} />
+              <Route path="/contact" element={<Contact />} />
+            </Route>
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </BrowserRouter>
       )}
-    </BrowserRouter>
+    </>
   );
 }
 
