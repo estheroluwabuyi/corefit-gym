@@ -11,6 +11,7 @@ import paypal from "/images/brands/paypal.svg";
 import rogue from "/images/brands/rogue.webp";
 import stripe from "/images/brands/stripe.svg";
 import underArmour from "/images/brands/under-armour.svg";
+import SectionHeader from "./SectionHeader";
 
 const logos = [
   { src: adidas, alt: "Adidas" },
@@ -28,13 +29,14 @@ const logos = [
 function Brands() {
   return (
     <div className="bg-primary px-8 py-8 pt-12 lg:px-[5rem] overflow-hidden">
-      <h2 className="text-center text-2xl sm:text-[2rem] lg:text-[3rem] font-montserrat font-bold mb-8 text-secondary">
-        Trusted By Leading Brands
-      </h2>
+      <SectionHeader
+        titleColor="text"
+        highlightColor="secondary"
+        title="Trusted By"
+        highlight="Leading Brands"
+      />
 
-      {/* Outer wrapper to control overflow */}
       <div className="relative w-full ">
-        {/* Animated marquee track */}
         <motion.div
           className="flex gap-12 lg:gap-20 w-max justify-center items-center"
           animate={{ x: ["0%", "-50%"] }}
