@@ -98,4 +98,9 @@ a {
     content: "■ ■ ■";
   }
 }
-/* ● */
+
+.grey-brand {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(7%) saturate(251%)
+    hue-rotate(178deg) brightness(92%) contrast(90%);
+  opacity: 0.9;
+}
