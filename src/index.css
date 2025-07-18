@@ -41,6 +41,7 @@ body {
   font-size: 1.3rem;
   font-family: var(--primary-font);
   color: var(--primary-color);
+  background-color: #262626;
 }
 
 button {

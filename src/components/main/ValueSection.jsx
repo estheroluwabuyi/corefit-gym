@@ -1,11 +1,7 @@
+import { useState } from "react";
 import SectionHeader from "../SectionHeader";
 import check from "/images/check.svg";
-import gymEquipments from "/images/value/value-gym-equipments.webp";
-import gymEquipments2 from "/images/value/value-gym-equipments2.webp";
 import gymEquipments3 from "/images/value/gym-equipments3.jpg";
-import gymEquipments4 from "/images/value/gym-equipments.jpg";
-import gymEquipments5 from "/images/value/gym-equipments2.jpg";
-import gymEquipments6 from "/images/value/gym-equipments3.jpg";
 
 import gymClass from "/images/value/value-gym-class.webp";
 import gymClass2 from "/images/value/value-gym-class2.webp";
@@ -19,8 +15,10 @@ const sectionA = [
 ];
 
 function ValueSection() {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   return (
-    <div className="bg-dark-alt  px-8 py-8 pt-12 lg:px-[5rem]">
+    <div className="bg-dark-alt px-8 py-8 pt-12 lg:px-[5rem]">
       <SectionHeader
         highlight="Your Fitness Partner"
         highlightColor="text"
@@ -31,20 +29,22 @@ function ValueSection() {
       <div>
         {/* section: 1 */}
         <section className="">
-          {/* img */}
-          <div className="lg:w-1/2 mb-4 lg:mb-0">
-            <img
-              src={gymEquipments3}
-              className="w-full  rounded-2xl shadow-lg"
-            />
-          </div>
-          {/* texts */}
+          {!imgLoaded && (
+            <div className="w-full h-[300px] bg-gray-700 animate-pulse rounded-2xl" />
+          )}
+          <img
+            src={gymEquipments3}
+            className={`w-full h-auto rounded-2xl shadow-lg ${
+              imgLoaded ? "block" : "hidden"
+            }`}
+            onLoad={() => setImgLoaded(true)}
+            alt="Gym Equipment"
+          />
+
           <div className="flex flex-col ">
             <h2 className="text-[1.7rem] sm:text-[2rem] lg:text-[3rem] font-bold text-secondary lg:max-w-2xl mb-4">
               Best Equipment & Expert Trainers
             </h2>
-            {/* max-w-3xl */}
-
             <p className=" md:text-[1.4rem] lg:text-[1.55rem] tracking-wider  md:max-w-6xl lg:text-left mb-8">
               We don’t just help you break a sweat—we help you build a
               lifestyle. With top-tier gym equipment and certified trainers who
