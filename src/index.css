@@ -12,6 +12,7 @@
   --font-roboto: "Roboto", sans-serif;
 
   --color-primary: #1a1a1a;
+  --color-dark-alt: #262626;
   --color-other: #00c27a;
   --color-text: #f0eee4;
   --color-muted: #3a3a3a;
@@ -78,29 +79,8 @@ a {
   text-shadow: 2px 2px 5px rgba(255, 85, 0, 0.4);
 }
 
-.loading-text::after {
-  display: inline-block;
-  animation: dots 1.5s steps(3, end) infinite;
-  content: "";
-}
-
-@keyframes dots {
-  0% {
-    content: "";
-  }
-  33% {
-    content: "■";
-  }
-  66% {
-    content: "■ ■";
-  }
-  100% {
-    content: "■ ■ ■";
-  }
-}
-
 .grey-brand {
   filter: brightness(0) saturate(100%) invert(43%) sepia(7%) saturate(251%)
     hue-rotate(178deg) brightness(92%) contrast(90%);
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }

@@ -1,13 +1,13 @@
-import Brands from "../components/Brands";
+import Brands from "../components/main/Brands";
 import Hero from "../components/header/Hero";
-import About from "../components/main/About";
+import ValueSection from "../components/main/ValueSection";
 
 function HomePage() {
   return (
     <div>
       <Hero />
       <Brands />
-      {/* <About /> */}
+      <ValueSection />
     </div>
   );
 }
