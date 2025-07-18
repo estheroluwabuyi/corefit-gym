@@ -39,13 +39,13 @@ function ValueSection() {
             />
           </div>
           {/* texts */}
-          <div className="flex flex-col gap-[2rem]">
-            <h2 className="text-[1.7rem] sm:text-[2rem] lg:text-[3rem] font-bold text-secondary lg:max-w-2xl ">
+          <div className="flex flex-col ">
+            <h2 className="text-[1.7rem] sm:text-[2rem] lg:text-[3rem] font-bold text-secondary lg:max-w-2xl mb-4">
               Best Equipment & Expert Trainers
             </h2>
             {/* max-w-3xl */}
 
-            <p className=" md:text-[1.4rem] lg:text-[1.55rem] tracking-wider  md:max-w-6xl lg:text-left">
+            <p className=" md:text-[1.4rem] lg:text-[1.55rem] tracking-wider  md:max-w-6xl lg:text-left mb-8">
               We don’t just help you break a sweat—we help you build a
               lifestyle. With top-tier gym equipment and certified trainers who
               care, your goals are always within reach.
@@ -65,11 +65,11 @@ function ValueSection() {
                 </li>
               ))}
             </ul>
-          </div>
 
-          <button className="bg-secondary py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text hover:bg-transparent transition-all duration-600 hover:border-secondary active:border-secondary mt-8  focus:outline-none focus:ring focus:ring-secondary">
-            Lets Start
-          </button>
+            <button className="self-center bg-secondary py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text hover:bg-transparent transition-all duration-600 hover:border-secondary active:border-secondary mt-8  focus:outline-none focus:ring focus:ring-secondary">
+              Lets Start
+            </button>
+          </div>
         </section>
 
         {/* section: 2 */}
