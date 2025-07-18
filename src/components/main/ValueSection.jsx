@@ -32,7 +32,7 @@ function ValueSection() {
         {/* section: 1 */}
         <section className="">
           {/* img */}
-          <div className="lg:w-1/2 mb-4 lg:mb-0 bg-gray-300 rounded-2xl">
+          <div className="lg:w-1/2 mb-4 lg:mb-0">
             <img
               src={gymEquipments3}
               className="w-full  rounded-2xl shadow-lg"
