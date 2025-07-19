@@ -29,7 +29,7 @@ function ValueSection() {
       <div className="pt-8 md:max-w-5xl lg:max-w-full m-auto">
         <section className="  flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-20">
           {!imgLoaded && (
-            <div className="w-full h-[300px] bg-gray-700 animate-pulse rounded-3xl" />
+            <div className="w-full h-[400px] bg-gray-700 animate-pulse rounded-3xl" />
           )}
           <img
             src={gymEquipments3}
