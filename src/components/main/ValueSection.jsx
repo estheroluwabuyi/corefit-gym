@@ -39,7 +39,7 @@ function ValueSection() {
           ref={sectionRef}
           initial={{ y: 100 }}
           animate={isInView ? { y: 0 } : {}}
-          transition={{ duration: 1.3, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {!imgLoaded && (
             <div className="w-full h-[300px] lg:h-[400px] bg-gray-700 animate-pulse rounded-3xl" />
