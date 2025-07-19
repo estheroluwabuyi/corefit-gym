@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 
 import heroImg from "/images/bg.webp";
+import CtaBtn from "../CtaBtn";
 
 function Hero() {
   const [mobileHovered, setMobileHovered] = useState(false);
@@ -18,22 +19,22 @@ function Hero() {
         transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
       >
         <h1 className="font-montserrat font-[800] text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6.5rem] uppercase">
-          <span className="text-secondary text-shadow-orange">Break</span>{" "}
-          <span className="text-text text-shadow-orange">Limits,</span> <br />
-          <span className="text-text text-shadow-orange">Build</span>{" "}
-          <span className="text-secondary text-shadow-orange">Legends.</span>
+          <span className="text-secondary">Break</span>{" "}
+          <span className="text-text">Limits,</span> <br />
+          <span className="text-text">Build</span>{" "}
+          <span className="text-secondary">Legends.</span>
         </h1>
 
         <p className="text-[1.2rem] md:text-[1.4rem] lg:text-[1.55rem] font-[500] mt-4 max-w-3xl tracking-wider">
           Stop settling. Push past limits, crush excuses, and forge
-          <span className="text-secondary font-[600] text-shadow-orange">
+          <span className="text-secondary font-[600]">
             {" "}
             unshakable strength.
           </span>{" "}
           Your transformation starts now.
         </p>
 
-        <motion.button
+        {/* <motion.button
           className={clsx(
             "bg-secondary py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text hover:bg-transparent transition-all duration-600 hover:border-secondary active:border-secondary mt-8 mb-4 lg:mb-3 focus:outline-none focus:ring focus:ring-secondary",
             mobileHovered && "border-secondary bg-transparent"
@@ -44,7 +45,14 @@ function Hero() {
           whileTap={{ scale: 0.98 }}
         >
           Start Training
-        </motion.button>
+        </motion.button> */}
+
+        <CtaBtn
+          text="Start Training"
+          bg="bg-secondary"
+          hoverBg="bg-transparent"
+          activeBg="bg-transparent"
+        />
       </motion.div>
 
       {/* Hero Image */}

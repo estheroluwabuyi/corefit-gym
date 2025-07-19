@@ -2,6 +2,7 @@ import { useState } from "react";
 import SectionHeader from "../SectionHeader";
 import check from "/images/check.svg";
 import gymEquipments3 from "/images/value/gym-equipments3.webp";
+import CtaBtn from "../CtaBtn";
 
 // import gymClass from "/images/value/value-gym-class.webp";
 // import gymClass2 from "/images/value/value-gym-class2.webp";
@@ -29,11 +30,11 @@ function ValueSection() {
       <div className="pt-8 md:max-w-5xl lg:max-w-full m-auto">
         <section className="  flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-20">
           {!imgLoaded && (
-            <div className="w-full h-[400px] bg-gray-700 animate-pulse rounded-3xl" />
+            <div className="w-full h-[300px] lg:h-[400px] bg-gray-700 animate-pulse rounded-3xl" />
           )}
           <img
             src={gymEquipments3}
-            className={`w-full h-auto rounded-3xl mb-8 outline-text outline-3 lg:w-1/2 lg:mb-0 shadow-lg ${
+            className={`w-full h-auto rounded-3xl mb-8  lg:w-1/2 lg:mb-0 shadow-lg ${
               imgLoaded ? "block" : "hidden"
             }`}
             onLoad={() => setImgLoaded(true)}
@@ -67,9 +68,24 @@ function ValueSection() {
               </ul>
             </div>
 
-            <button className="self-start lg:self-start md:self-center ml-[3rem] bg-transparent py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 hover:bg-secondary active:bg-secondary mt-8  focus:outline-none focus:ring focus:ring-secondary">
+            {/* <button className="self-start lg:self-start md:self-center ml-[3rem] bg-transparent py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 hover:bg-secondary active:bg-secondary mt-8  focus:outline-none focus:ring focus:ring-secondary">
               Lets Start
-            </button>
+            </button> */}
+            <div className="self-start lg:self-start md:self-center ml-[3rem]">
+              <CtaBtn
+                text="Let's Start"
+                bg="bg-transparent"
+                hoverBg="bg-secondary"
+                activeBg="bg-secondary"
+              />
+            </div>
+
+            {/* className={clsx(
+        `${bg} py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 hover:${hoverBg} hover:${hoverBorder} active:${activeBg} mt-8 ${others} focus:outline-none focus:ring focus:ring-secondary`,
+        mobileHovered && `border-${hoverBorder} bg-${hoverBg}`
+      )} */}
+
+            {/* text, bg, hoverBg, hoverBorder, activeBg, others */}
           </div>
         </section>
 
