@@ -3,9 +3,9 @@ import SectionHeader from "../SectionHeader";
 import check from "/images/check.svg";
 import gymEquipments3 from "/images/value/gym-equipments3.jpg";
 
-import gymClass from "/images/value/value-gym-class.webp";
-import gymClass2 from "/images/value/value-gym-class2.webp";
-import gymClass3 from "/images/value/value-gym-class3.webp";
+// import gymClass from "/images/value/value-gym-class.webp";
+// import gymClass2 from "/images/value/value-gym-class2.webp";
+// import gymClass3 from "/images/value/value-gym-class3.webp";
 
 const sectionA = [
   "Personalised workout plans",
@@ -29,7 +29,7 @@ function ValueSection() {
       <div>
         {/* section: 1 */}
         <section className="">
-          {!imgLoaded && (
+          {/* {!imgLoaded && (
             <div className="w-full h-[300px] bg-gray-700 animate-pulse rounded-2xl" />
           )}
           <img
@@ -39,7 +39,7 @@ function ValueSection() {
             }`}
             onLoad={() => setImgLoaded(true)}
             alt="Gym Equipment"
-          />
+          /> */}
 
           <div className="flex flex-col ">
             <h2 className="text-[1.7rem] sm:text-[2rem] lg:text-[3rem] font-bold text-secondary lg:max-w-2xl mb-4">
