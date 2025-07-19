@@ -30,8 +30,8 @@ function Brands() {
   return (
     <div className="bg-primary px-8 py-8 pt-12 lg:px-[5rem] overflow-hidden">
       <SectionHeader
-        titleColor="text"
-        highlightColor="secondary"
+        titleColor="secondary"
+        highlightColor="text"
         title="Trusted By "
         highlight="Leading Brands"
       />
