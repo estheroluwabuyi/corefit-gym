@@ -68,9 +68,6 @@ function ValueSection() {
               </ul>
             </div>
 
-            {/* <button className="self-start lg:self-start md:self-center ml-[3rem] bg-transparent py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 hover:bg-secondary active:bg-secondary mt-8  focus:outline-none focus:ring focus:ring-secondary">
-              Lets Start
-            </button> */}
             <div className="self-start lg:self-start md:self-center ml-[3rem]">
               <CtaBtn
                 text="Let's Start"
@@ -79,13 +76,6 @@ function ValueSection() {
                 activeBg="bg-secondary"
               />
             </div>
-
-            {/* className={clsx(
-        `${bg} py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 hover:${hoverBg} hover:${hoverBorder} active:${activeBg} mt-8 ${others} focus:outline-none focus:ring focus:ring-secondary`,
-        mobileHovered && `border-${hoverBorder} bg-${hoverBg}`
-      )} */}
-
-            {/* text, bg, hoverBg, hoverBorder, activeBg, others */}
           </div>
         </section>
 

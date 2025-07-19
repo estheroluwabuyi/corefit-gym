@@ -1,14 +1,9 @@
-import { useState } from "react";
-
 import { motion } from "framer-motion";
-import clsx from "clsx";
 
 import heroImg from "/images/bg.webp";
 import CtaBtn from "../CtaBtn";
 
 function Hero() {
-  const [mobileHovered, setMobileHovered] = useState(false);
-
   return (
     <header className="bg-black pt-[15rem] lg:pt-[11rem] hero-bg px-8 flex justify-between items-center lg:items-start lg:px-[5rem] flex-col lg:flex-row gap-8 relative overflow-hidden">
       {/* Hero Text */}
@@ -33,19 +28,6 @@ function Hero() {
           </span>{" "}
           Your transformation starts now.
         </p>
-
-        {/* <motion.button
-          className={clsx(
-            "bg-secondary py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text hover:bg-transparent transition-all duration-600 hover:border-secondary active:border-secondary mt-8 mb-4 lg:mb-3 focus:outline-none focus:ring focus:ring-secondary",
-            mobileHovered && "border-secondary bg-transparent"
-          )}
-          onTouchStart={() => setMobileHovered(true)}
-          onTouchEnd={() => setMobileHovered(false)}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          Start Training
-        </motion.button> */}
 
         <CtaBtn
           text="Start Training"
