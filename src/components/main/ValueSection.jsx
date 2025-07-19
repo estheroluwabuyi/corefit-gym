@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionHeader from "../SectionHeader";
 import check from "/images/check.svg";
-import gymEquipments3 from "/images/value/gym-equipments3.jpg";
+import gymEquipments3 from "/images/value/gym-equipments3.webp";
 
 // import gymClass from "/images/value/value-gym-class.webp";
 // import gymClass2 from "/images/value/value-gym-class2.webp";
@@ -33,7 +33,7 @@ function ValueSection() {
           )}
           <img
             src={gymEquipments3}
-            className={`w-full h-auto rounded-3xl mb-8 outline-secondary outline-3 lg:w-1/2 lg:mb-0 shadow-lg ${
+            className={`w-full h-auto rounded-3xl mb-8 outline-text outline-3 lg:w-1/2 lg:mb-0 shadow-lg ${
               imgLoaded ? "block" : "hidden"
             }`}
             onLoad={() => setImgLoaded(true)}
@@ -67,7 +67,7 @@ function ValueSection() {
               </ul>
             </div>
 
-            <button className="self-start lg:self-start md:self-center ml-[3rem] bg-secondary py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text hover:bg-transparent transition-all duration-600 hover:border-secondary active:border-secondary mt-8  focus:outline-none focus:ring focus:ring-secondary">
+            <button className="self-start lg:self-start md:self-center ml-[3rem] bg-transparent py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 hover:bg-secondary active:bg-secondary mt-8  focus:outline-none focus:ring focus:ring-secondary">
               Lets Start
             </button>
           </div>
