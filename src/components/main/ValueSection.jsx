@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+
 import SectionHeader from "../SectionHeader";
 import check from "/images/check.svg";
 import gymEquipments3 from "/images/value/gym-equipments3.webp";
@@ -18,6 +20,9 @@ const sectionA = [
 function ValueSection() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
   return (
     <div className="bg-dark-alt px-8 py-8 pt-12 lg:px-[5rem]">
       <SectionHeader
@@ -28,7 +33,14 @@ function ValueSection() {
       />
 
       <div className="pt-8 md:max-w-5xl lg:max-w-full m-auto">
-        <section className="  flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-20">
+        {/* section: 1*/}
+        <motion.section
+          className="  flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-20"
+          ref={sectionRef}
+          initial={{ y: 100 }}
+          animate={isInView ? { y: 0 } : {}}
+          transition={{ duration: 1.3, ease: "easeOut" }}
+        >
           {!imgLoaded && (
             <div className="w-full h-[300px] lg:h-[400px] bg-gray-700 animate-pulse rounded-3xl" />
           )}
@@ -77,7 +89,7 @@ function ValueSection() {
               />
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* section: 2 */}
         <section></section>
