@@ -9,7 +9,7 @@ function CtaBtn({ text, bg, hoverBg, hoverBorder, activeBg, others }) {
     <motion.button
       className={clsx(
         `${bg} py-4 px-8 lg:px-12 rounded-tl-[1.8rem] rounded-br-[1.8rem] text-[1.5rem] lg:text-[1.8rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 hover:${hoverBg} hover:${hoverBorder} active:${activeBg} mt-8 ${others} focus:outline-none focus:ring focus:ring-secondary`,
-        mobileHovered && `bg-${hoverBg}`
+        mobileHovered && `${hoverBg}`
       )}
       onTouchStart={() => setMobileHovered(true)}
       onTouchEnd={() => setMobileHovered(false)}
