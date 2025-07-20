@@ -84,8 +84,8 @@ function ValueSection() {
               <CtaBtn
                 text="Let's Start"
                 bg="bg-transparent"
-                hoverBg="bg-secondary"
-                activeBg="bg-secondary"
+                hoverBg="hover:bg-secondary"
+                activeBg="active:bg-primary"
               />
             </div>
           </div>

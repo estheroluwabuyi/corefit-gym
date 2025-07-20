@@ -11,8 +11,9 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-roboto: "Roboto", sans-serif;
 
-  --color-primary: #1a1a1a;
-  --color-dark-alt: #262626;
+  --color-primary: #262626;
+  /* --color-dark-alt: #1a1a1a; */
+  --color-dark-alt: #1f1f1f;
   --color-other: #00c27a;
   --color-text: #f0eee4;
   --color-muted: #3a3a3a;
@@ -77,12 +78,12 @@ a {
   background-repeat: no-repeat;
 }
 
-.text-shadow-oange {
+/* .text-shadow-orange {
   text-shadow: 2px 2px 2px rgba(255, 85, 0, 0.4);
-}
+} */
 
 .grey-brand {
-  filter: brightness(0) saturate(100%) invert(43%) sepia(7%) saturate(251%)
+  filter: brightness(0) saturate(100%) invert(53%) sepia(7%) saturate(251%)
     hue-rotate(178deg) brightness(92%) contrast(90%);
   /* opacity: 0.9; */
 }

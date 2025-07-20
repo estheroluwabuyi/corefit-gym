@@ -8,7 +8,7 @@ function Hero() {
     <header className="bg-black pt-[15rem] lg:pt-[11rem] hero-bg px-8 flex justify-between items-center lg:items-start lg:px-[5rem] flex-col lg:flex-row gap-8 relative overflow-hidden">
       {/* Hero Text */}
       <motion.div
-        className="text-center lg:text-left self-center"
+        className="text-center lg:text-left self-center pb-7 lg:pb-0"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
@@ -32,8 +32,8 @@ function Hero() {
         <CtaBtn
           text="Start Training"
           bg="bg-secondary"
-          hoverBg="bg-transparent"
-          activeBg="bg-transparent"
+          hoverBg="hover:bg-transparent"
+          activeBg="active:bg-transparent"
         />
       </motion.div>
 
