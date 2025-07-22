@@ -54,9 +54,9 @@ function ValueSection() {
         titleColor="text"
       />
 
-      <div className="flex flex-col md:flex-row lg:flex-col gap-15 lg:gap-25 mt-8 lg:mt-16">
+      <div className="flex flex-col md:flex-row lg:flex-col gap-15 md:gap-20 lg:gap-25 mt-8 lg:mt-16">
         {[sectionA, sectionB].map((sec, i) => (
-          <FadeInSection key={i} delay={i * 0.4}>
+          <FadeInSection key={i} delay={i * 0.2}>
             <section
               className={clsx(
                 "flex flex-col lg:justify-between lg:gap-20 ",
@@ -79,32 +79,28 @@ function ValueSection() {
                 <h2 className="text-[1.7rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-secondary lg:max-w-2xl mb-4 md:text-center">
                   {sec.heading}
                 </h2>
-                <p className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider sm:max-w-4xl lg:text-left mb-8">
+                <p className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider sm:max-w-4xl md:text-center lg:text-left mb-8">
                   {sec.texts}
                 </p>
 
-                <div>
-                  {/* flex flex-col gap-7  */}
-
-                  <ul
-                    className={clsx(
-                      "md:text-[1.5rem] lg:text-[1.7rem] tracking-wider list-none w-full flex flex-col gap-7"
-                    )}
-                  >
-                    {sec.arr.map((text, i) => (
-                      <li key={i} className="flex items-center gap-4 ">
-                        <img
-                          src={check}
-                          width={22}
-                          height={22}
-                          className="w-[20px] h-[20px]"
-                          alt="check"
-                        />
-                        {text.trim()}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul
+                  className={clsx(
+                    "md:text-[1.35rem] lg:text-[1.55rem] tracking-wider list-none w-full flex flex-col gap-7"
+                  )}
+                >
+                  {sec.arr.map((text, i) => (
+                    <li key={i} className="flex items-center gap-4 ">
+                      <img
+                        src={check}
+                        width={22}
+                        height={22}
+                        className="w-[20px] h-[20px]"
+                        alt="check"
+                      />
+                      {text.trim()}
+                    </li>
+                  ))}
+                </ul>
 
                 <div className="self-start lg:self-start md:self-center ml-[3rem]">
                   <CtaBtn
