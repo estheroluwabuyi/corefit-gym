@@ -34,6 +34,7 @@ function Hero() {
           bg="bg-secondary"
           hoverBg="hover:bg-transparent"
           activeBg="active:bg-transparent"
+          mobileHoverBg="bg-transparent"
         />
       </motion.div>
 
