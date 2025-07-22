@@ -5,7 +5,7 @@ function Logo() {
     <div>
       {/* <Link to="/"> */}
       <svg
-        className="w-[150px] sm:w-[200px] md:w-[280px]  h-auto"
+        className="w-[150px] sm:w-[200px] lg:w-[280px]  h-auto"
         viewBox="0 0 280 60"
         xmlns="http://www.w3.org/2000/svg"
       >
