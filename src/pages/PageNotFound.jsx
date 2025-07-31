@@ -12,7 +12,8 @@ function PageNotFound() {
       </p>
       <Link
         to="/"
-        className="px-8 py-4 rounded-xl bg-secondary text-text! text-lg hover:bg-[#e04b00] transition"
+        className="px-8 py-4 rounded-xl bg-secondary text-text!
+         text-[1.35rem]! sm:text-[1.4rem]! lg:text-[1.7rem]! hover:bg-[#e04b00] transition font-semibold"
       >
         Go Home
       </Link>

@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import SectionHeader from "../SectionHeader";
 import CtaBtn from "../CtaBtn";
-import FadeInSection from "../FadInSection";
+import FadeInSection from "../FadeInSection";
 
 import check from "/images/check.svg";
 import gymEquipments3 from "/images/value/gym-equipments3.webp";
@@ -13,7 +13,7 @@ const sections = {
   sectionA: {
     heading: "Best Equipment & Expert Trainers",
     texts:
-      "  We don’t just help you break a sweat—we help you build a lifestyle. With top-tier gym equipment and certified trainers who care, your goals are always within reach",
+      "We don’t just help you break a sweat—we help you build a lifestyle. With top-tier gym equipment and certified trainers who care, your goals are always within reach",
     img: gymEquipments3,
     btn: "Start Your Journey",
     alt: "Gym Equipment",
@@ -56,10 +56,11 @@ function ValueSection() {
 
       <div className="flex flex-col md:flex-row lg:flex-col gap-15 md:gap-20 lg:gap-25 mt-8 lg:mt-16">
         {[sectionA, sectionB].map((sec, i) => (
-          <FadeInSection key={i} delay={i * 0.2}>
+          // <FadeInSection key={i} delay={i * 0.4}>
+          <FadeInSection key={i} delay={0.4}>
             <section
               className={clsx(
-                "flex flex-col lg:justify-between lg:gap-20 ",
+                "flex flex-col lg:justify-between lg:gap-20 shadow-2xl p-7 py-8 bg-primary rounded-3xl",
                 i === 1 ? "lg:flex-row" : "lg:flex-row-reverse"
               )}
             >

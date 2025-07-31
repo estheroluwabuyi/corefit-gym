@@ -19,20 +19,20 @@ function Logo() {
         <text
           x="70"
           y="35"
-          font-family="'Russo One', sans-serif"
-          font-size="40"
+          fontFamily="'Russo One', sans-serif"
+          fontSize="40"
           fill="#f0eee4"
-          dominant-baseline="middle"
+          dominantBaseline="middle"
         >
           CORE
         </text>
         <text
           x="180"
           y="35"
-          font-family="'Russo One', sans-serif"
-          font-size="40"
+          fontFamily="'Russo One', sans-serif"
+          fontSize="40"
           fill="#f75c03"
-          dominant-baseline="middle"
+          dominantBaseline="middle"
         >
           FIT
         </text>
