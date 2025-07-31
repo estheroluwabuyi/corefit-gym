@@ -15,9 +15,8 @@ function Products() {
       />
 
       <p className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider sm:max-w-5xl lg:max-w-7xl text-center mx-auto">
-        From dumbbells to deadlift platforms — we’ve got the tools to match your
-        hustle. Built for performance, priced for you. Ready to power up your
-        home or gym space?
+        We’ve got the tools to match your hustle. Built for performance, priced
+        for you. Ready to power up your home or gym space?
       </p>
     </div>
   );
