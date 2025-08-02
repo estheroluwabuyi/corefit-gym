@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { FaShoppingCart } from "react-icons/fa";
+
 import SectionHeader from "../SectionHeader";
 import { equipmentItems } from "../../utils/equipmentList";
 
@@ -19,27 +21,32 @@ function Products() {
         for you. Ready to power up your home or gym space?
       </p>
 
-      {/* use mediaquery width <=320 single col */}
-      <div className="grid-small-container grid grid-cols-2  sm:grid-cols-2 lg:grid-cols-5 gap-7 md:gap-10 mt-12 sm:max-w-4xl md:max-w-5xl lg:max-w-full mx-auto">
+      <div className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-12 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
         {equipments.slice(0, 10).map((item) => (
           <div
             key={item.id}
-            className="bg-text/90 p-7 flex flex-col justify-center items-center rounded-3xl gap-7 text-primary "
+            className="bg-text/90 p-10 flex flex-col justify-center items-center rounded-3xl  text-primary "
           >
             <img
               src={item.image}
               alt={item.name}
               width={150}
               height={150}
-              className="w-[100px] h-[80px] sm:w-[150px] sm:h-[120px] lg:w-[200px] lg:h-[170px] bg-muted/40 p-3 sm:p-5 lg:p-7 rounded-2xl shadow-lg"
+              className="w-[120px] h-[100px] sm:w-[180px] sm:h-[150px] lg:w-[220px] lg:h-[160px] bg-muted/40 p-3 sm:p-5 lg:p-7 rounded-2xl shadow-lg grid-large-containerImg"
             />
 
             <div>
-              <h2 className="md:text-[1.35rem] lg:text-[1.55rem] font-semibold text-center">
+              <h2 className="md:text-[1.35rem] lg:text-[1.55rem] font-semibold text-center my-[2rem]">
                 {item.name}
               </h2>
+            </div>
 
-              <div className="text-sm"></div>
+            <div className="self-start text-[1.5rem] lg:text-[1.7rem] flex justify-between w-full">
+              <div className="font-bold  font-montserrat">${item.price}</div>
+
+              <div className="cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center">
+                <FaShoppingCart className="text-text " />
+              </div>
             </div>
           </div>
         ))}
