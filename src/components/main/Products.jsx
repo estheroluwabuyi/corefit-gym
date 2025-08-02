@@ -3,8 +3,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import clsx from "clsx";
 
 import SectionHeader from "../SectionHeader";
+import CtaBtn from "../CtaBtn";
 import { equipmentItems } from "../../utils/equipmentList";
-import { i } from "framer-motion/client";
+import { Link } from "react-router-dom";
 
 function Products() {
   const [equipments, setEquipments] = useState(equipmentItems);
@@ -28,7 +29,7 @@ function Products() {
           <div
             key={item.id}
             className={
-              "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-3xl  text-primary " +
+              "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl  text-primary " +
               clsx(item.inStock ? "" : "opacity-50 cursor-not-allowed")
             }
           >
@@ -68,6 +69,16 @@ function Products() {
           </div>
         ))}
       </div>
+
+      <Link to="/shop" className="mt-5 flex justify-center">
+        <CtaBtn
+          hoverBg="hover:bg-transparent"
+          activeBg="active:bg-transparent"
+          mobileHoverBg="bg-transparent"
+          text="See More →"
+          bg="bg-secondary"
+        />
+      </Link>
     </div>
   );
 }

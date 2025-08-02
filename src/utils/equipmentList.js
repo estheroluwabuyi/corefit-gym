@@ -107,7 +107,7 @@ export const equipmentItems = [
     inStock: true,
   },
   {
-    id: "eq020",
+    id: "eq011",
     name: "Stationary Bike",
     description:
       "Low-impact indoor cycling machine for endurance and fat burn.",
@@ -202,7 +202,7 @@ export const equipmentItems = [
   },
 
   {
-    id: "eq011",
+    id: "eq020",
     name: "Medicine Ball",
     description:
       "10 lb ball for dynamic strength, coordination, and core training.",
