@@ -54,13 +54,13 @@ function ValueSection() {
         titleColor="text"
       />
 
-      <div className="flex flex-col md:flex-row lg:flex-col gap-15 md:gap-20 lg:gap-25 mt-8 lg:mt-16">
+      <div className="flex flex-col md:flex-row lg:flex-col gap-15 md:gap-20 lg:gap-25 mt-8 lg:mt-16 ">
         {[sectionA, sectionB].map((sec, i) => (
           // <FadeInSection key={i} delay={i * 0.4}>
           <FadeInSection key={i} delay={0.4}>
             <section
               className={clsx(
-                "flex flex-col lg:justify-between lg:gap-20 shadow-2xl p-7 py-8 bg-primary rounded-3xl",
+                "flex flex-col lg:justify-between lg:gap-20 shadow-2xl p-7 py-8 bg-muted/50 rounded-3xl",
                 i === 1 ? "lg:flex-row" : "lg:flex-row-reverse"
               )}
             >

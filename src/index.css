@@ -87,3 +87,13 @@ a {
     hue-rotate(178deg) brightness(92%) contrast(90%);
   /* opacity: 0.9; */
 }
+
+/* media query */
+@media (max-width: 320px) {
+  .grid-small-container {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 3rem;
+  }
+}
