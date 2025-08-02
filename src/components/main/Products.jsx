@@ -64,7 +64,7 @@ function Products() {
                   {item.inStock ? (
                     <motion.button
                       className={clsx(
-                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center   text-text  transition-all duration-600 hover:bg-secondary/80",
+                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center   text-text  transition-all duration-600 hover:bg-secondary/80 active:bg-secondary/80 focus:bg-secondary/80",
                         mobileHovered && "bg-secondary/80"
                       )}
                       onTouchStart={() => setMobileHovered(true)}
