@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import clsx from "clsx";
 
 import SectionHeader from "../SectionHeader";
 import { equipmentItems } from "../../utils/equipmentList";
+import { i } from "framer-motion/client";
 
 function Products() {
   const [equipments, setEquipments] = useState(equipmentItems);
@@ -25,14 +27,20 @@ function Products() {
         {equipments.slice(0, 10).map((item) => (
           <div
             key={item.id}
-            className="bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-3xl  text-primary "
+            className={
+              "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-3xl  text-primary " +
+              clsx(item.inStock ? "" : "opacity-50 cursor-not-allowed")
+            }
           >
             <img
               src={item.image}
               alt={item.name}
               width={150}
               height={150}
-              className="w-[120px] h-[90px] sm:w-[180px] sm:h-[150px] lg:w-[220px] lg:h-[160px] bg-muted/40 p-3 sm:p-5 lg:p-7 rounded-2xl shadow-lg grid-large-containerImg"
+              className={clsx(
+                "w-[120px] h-[90px] sm:w-[180px] sm:h-[150px] lg:w-[220px] lg:h-[160px] bg-muted/40 p-3 sm:p-5 lg:p-7 rounded-2xl shadow-lg grid-large-containerImg",
+                !item.inStock ? " grayscale" : ""
+              )}
             />
 
             <div>
@@ -44,9 +52,18 @@ function Products() {
             <div className="self-start text-[1.5rem] lg:text-[1.7rem] flex justify-between w-full">
               <div className="font-bold  font-montserrat">${item.price}</div>
 
-              <button className=" bg-secondary w-[30px] lg:w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center">
-                <FaShoppingCart className="text-text " />
-              </button>
+              {item.inStock ? (
+                <button className="cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center">
+                  <FaShoppingCart className="text-text" />
+                </button>
+              ) : (
+                <button
+                  className="bg-gray-400 text-white text-[0.8rem] lg:text-[1rem] px-2 py-1 rounded-[3px]"
+                  disabled
+                >
+                  Out of Stock
+                </button>
+              )}
             </div>
           </div>
         ))}

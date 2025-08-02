@@ -107,15 +107,15 @@ export const equipmentItems = [
     inStock: true,
   },
   {
-    id: "eq011",
-    name: "Medicine Ball",
+    id: "eq020",
+    name: "Stationary Bike",
     description:
-      "10 lb ball for dynamic strength, coordination, and core training.",
-    price: 45,
-    rating: 4.5,
-    tags: ["strength", "explosive", "core"],
-    image: "/images/equipments/medecineball.webp",
-    inStock: true,
+      "Low-impact indoor cycling machine for endurance and fat burn.",
+    price: 350,
+    rating: 4.7,
+    tags: ["cardio", "legs", "home gym"],
+    image: "/images/equipments/stationarybike.webp",
+    inStock: false,
   },
   {
     id: "eq012",
@@ -200,15 +200,16 @@ export const equipmentItems = [
     image: "/images/equipments/pushupbars.webp",
     inStock: true,
   },
+
   {
-    id: "eq020",
-    name: "Stationary Bike",
+    id: "eq011",
+    name: "Medicine Ball",
     description:
-      "Low-impact indoor cycling machine for endurance and fat burn.",
-    price: 350,
-    rating: 4.7,
-    tags: ["cardio", "legs", "home gym"],
-    image: "/images/equipments/stationarybike.webp",
-    inStock: false,
+      "10 lb ball for dynamic strength, coordination, and core training.",
+    price: 45,
+    rating: 4.5,
+    tags: ["strength", "explosive", "core"],
+    image: "/images/equipments/medecineball.webp",
+    inStock: true,
   },
 ];
