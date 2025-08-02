@@ -64,9 +64,9 @@ function Products() {
                   {item.inStock ? (
                     <motion.button
                       className={clsx(
-                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center  border-2 border-secondary hover:bg-transparent text-text hover:text-secondary active:bg-transparent transition-all duration-300",
+                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center  border-2 border-secondary hover:bg-transparent text-text hover:text-secondary active:bg-transparent transition-all duration-600",
                         {
-                          "bg-transparent": mobileHovered,
+                          "bg-transparent text-secondary": mobileHovered,
                         }
                       )}
                       onTouchStart={() => setMobileHovered(true)}
