@@ -72,7 +72,7 @@ function Products() {
                       onTouchStart={() => setMobileHovered(true)}
                       onTouchEnd={() => setMobileHovered(false)}
                       whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.4 }}
+                      whileTap={{ scale: 0.9 }}
                     >
                       <FaShoppingCart />
                     </motion.button>
