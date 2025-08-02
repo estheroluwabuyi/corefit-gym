@@ -64,11 +64,12 @@ function Products() {
                   {item.inStock ? (
                     <motion.button
                       className={clsx(
-                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center  border-2 border-secondary hover:bg-transparent text-text hover:text-secondary active:bg-transparent transition-all duration-600"
+                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center   text-text  transition-all duration-600 hover:bg-secondary/80",
+                        mobileHovered && "bg-secondary/80"
                       )}
                       onTouchStart={() => setMobileHovered(true)}
                       onTouchEnd={() => setMobileHovered(false)}
-                      whileHover={{ scale: 1.03 }}
+                      whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.9 }}
                     >
                       <FaShoppingCart />
