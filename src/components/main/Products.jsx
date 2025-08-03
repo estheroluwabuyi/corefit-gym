@@ -36,9 +36,11 @@ function Products() {
               <div
                 key={item.id}
                 className={clsx(
-                  "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl text-primary transition-all duration-600 ease-in-out",
+                  "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl text-primary transition-all duration-700 ease-in-out",
                   !item.inStock && "opacity-50 cursor-not-allowed",
-                  containerActive === item.id && item.inStock && "bg-text!"
+                  containerActive === item.id &&
+                    item.inStock &&
+                    "bg-text! scale-99"
                 )}
                 onMouseOver={() => setContainerActive(item.id)}
                 onMouseLeave={() => setContainerActive(null)}
