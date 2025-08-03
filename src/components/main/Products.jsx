@@ -7,7 +7,7 @@ import clsx from "clsx";
 import SectionHeader from "../SectionHeader";
 import CtaBtn from "../CtaBtn";
 import { equipmentItems } from "../../utils/equipmentList";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FadeInSection from "../FadeInSection";
 
 function Products() {
@@ -15,8 +15,14 @@ function Products() {
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [containerActive, setContainerActive] = useState(null);
 
+  const navigate = useNavigate();
+
+  function handleNavigate() {
+    navigate("/shop");
+  }
+
   return (
-    <div className="bg-primary p-8 pt-12 lg:px-[5rem]">
+    <div className="bg-primary px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem]">
       <SectionHeader
         title="Our "
         highlight="Products"
@@ -37,7 +43,7 @@ function Products() {
                 key={item.id}
                 className={clsx(
                   "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl text-primary transition-all duration-700 ease-in-out",
-                  !item.inStock && "opacity-50 cursor-not-allowed",
+                  !item.inStock && "opacity-50",
                   containerActive === item.id &&
                     item.inStock &&
                     "bg-text! scale-99"
@@ -97,15 +103,16 @@ function Products() {
             ))}
           </div>
 
-          <Link to="/shop" className="mt-5 flex justify-center">
+          <div className="mt-5 flex justify-center">
             <CtaBtn
               hoverBg="hover:bg-transparent"
               activeBg="active:bg-transparent"
               mobileHoverBg="bg-transparent"
               text="See More →"
               bg="bg-secondary"
+              func={handleNavigate}
             />
-          </Link>
+          </div>
         </div>
       </FadeInSection>
     </div>

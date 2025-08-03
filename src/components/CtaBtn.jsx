@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 
-function CtaBtn({ text, bg, hoverBg, activeBg, mobileHoverBg }) {
+function CtaBtn({ text, bg, hoverBg, activeBg, mobileHoverBg, func }) {
   const [mobileHovered, setMobileHovered] = useState(false);
 
   return (
@@ -15,6 +15,7 @@ function CtaBtn({ text, bg, hoverBg, activeBg, mobileHoverBg }) {
       onTouchEnd={() => setMobileHovered(false)}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
+      onClick={func}
     >
       {text}
     </motion.button>
