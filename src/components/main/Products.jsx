@@ -64,10 +64,9 @@ function Products() {
                   {item.inStock ? (
                     <motion.button
                       className={clsx(
-                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center text-text border-2 border-secondary transition-all duration-600 hover:text-secondary hover:bg-transparent",
-                        hoveredItemId === item.id
-                          ? "bg-transparent text-secondary border-secondary"
-                          : "bg-secondary text-text border-secondary"
+                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center text-text border-2 border-secondary transition-all duration-600 hover:text-secondary hover:bg-transparent active:bg-transparent focus:bg-transparent active:text-secondary focus:text-secondary",
+                        hoveredItemId === item.id &&
+                          "bg-transparent text-secondary"
                       )}
                       onTouchStart={() => setHoveredItemId(item.id)}
                       onTouchEnd={() => setHoveredItemId(null)}
