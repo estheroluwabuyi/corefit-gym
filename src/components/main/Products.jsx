@@ -12,7 +12,7 @@ import FadeInSection from "../FadeInSection";
 
 function Products() {
   const [equipments, setEquipments] = useState(equipmentItems);
-  const [mobileHovered, setMobileHovered] = useState(false);
+  const [hoveredItemId, setHoveredItemId] = useState(null);
 
   return (
     <div className="bg-primary p-8 pt-12 lg:px-[5rem]">
@@ -64,11 +64,12 @@ function Products() {
                   {item.inStock ? (
                     <motion.button
                       className={clsx(
-                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center   text-text border-2 border-secondary  transition-all duration-600 hover:text-secondary hover:bg-transparent active:text-secondary  focus:text-secondary ",
-                        mobileHovered && "bg-transparent text-secondary"
+                        "cursor-pointer bg-secondary w-[50px] px-2 py-1 rounded-[3px] flex items-center justify-center text-text border-2 border-secondary transition-all duration-600 hover:text-secondary hover:bg-transparent active:text-secondary focus:text-secondary",
+                        hoveredItemId === item.id &&
+                          "bg-transparent text-secondary"
                       )}
-                      onTouchStart={() => setMobileHovered(true)}
-                      onTouchEnd={() => setMobileHovered(false)}
+                      onTouchStart={() => setHoveredItemId(item.id)}
+                      onTouchEnd={() => setHoveredItemId(null)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.9 }}
                     >
