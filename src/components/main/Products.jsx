@@ -13,6 +13,7 @@ import FadeInSection from "../FadeInSection";
 function Products() {
   const [equipments, setEquipments] = useState(equipmentItems);
   const [hoveredItemId, setHoveredItemId] = useState(null);
+  const [containerActive, setContainerActive] = useState(null);
 
   return (
     <div className="bg-primary p-8 pt-12 lg:px-[5rem]">
@@ -34,10 +35,15 @@ function Products() {
             {equipments.slice(0, 10).map((item) => (
               <div
                 key={item.id}
-                className={
-                  "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl  text-primary " +
-                  clsx(item.inStock ? "" : "opacity-50 cursor-not-allowed")
-                }
+                className={clsx(
+                  "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl text-primary transition-all duration-600 ease-in-out",
+                  !item.inStock && "opacity-50 cursor-not-allowed",
+                  containerActive === item.id && item.inStock && "bg-text!"
+                )}
+                onMouseOver={() => setContainerActive(item.id)}
+                onMouseLeave={() => setContainerActive(null)}
+                onTouchStart={() => setContainerActive(item.id)}
+                onTouchEnd={() => setContainerActive(null)}
               >
                 <img
                   src={item.image}
@@ -45,8 +51,9 @@ function Products() {
                   width={150}
                   height={150}
                   className={clsx(
-                    "w-[120px] h-[90px] sm:w-[180px] sm:h-[150px] lg:w-[220px] lg:h-[160px] bg-muted/40 p-3 sm:p-5 lg:p-7 rounded-2xl shadow-lg grid-large-containerImg",
-                    !item.inStock ? " grayscale" : ""
+                    "w-[120px] h-[90px] sm:w-[180px] sm:h-[150px] lg:w-[220px] lg:h-[160px] bg-muted/40 p-3 sm:p-5 lg:p-7 rounded-2xl shadow-lg grid-large-containerImg transition-all duration-1500 ease-in-out",
+                    !item.inStock ? " grayscale" : "",
+                    containerActive === item.id && item.inStock && "scale-105"
                   )}
                 />
 
