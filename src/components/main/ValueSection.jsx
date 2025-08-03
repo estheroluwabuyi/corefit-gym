@@ -50,7 +50,7 @@ function ValueSection() {
       <SectionHeader
         highlight="Your Fitness Partner"
         highlightColor="secondary"
-        title="More Than a Gym—"
+        title="More Than a Gym —"
         titleColor="text"
       />
 
