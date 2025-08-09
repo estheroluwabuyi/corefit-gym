@@ -35,15 +35,16 @@ function NavBar() {
     visible: {
       x: "0%",
       transition: {
-        type: "spring",
-        stiffness: 500,
-        damping: 10,
+        type: "tween",
+        ease: "easeOut",
+        duration: 0.35,
       },
     },
     exit: {
       x: "100%",
       transition: {
-        ease: "easeInOut",
+        type: "tween",
+        ease: "easeIn",
         duration: 0.35,
       },
     },

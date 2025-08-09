@@ -33,6 +33,9 @@ function Products() {
       <p className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider sm:max-w-5xl lg:max-w-7xl text-center mx-auto">
         We’ve got the tools to match your hustle. Built for performance, priced
         for you. Ready to power up your home or gym space?
+        {/* Here’s a selection of fitness equipment available for sale. Whether
+        you’re setting up at home or stocking your gym, you’ll find what you
+        need here. */}
       </p>
 
       <FadeInSection delay={0.4}>
