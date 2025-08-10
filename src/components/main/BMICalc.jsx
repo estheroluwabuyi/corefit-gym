@@ -1,8 +1,9 @@
+import CtaBtn from "../CtaBtn";
 import SectionHeader from "../SectionHeader";
 
 function BMICalc() {
   return (
-    <div className="bg-dark-alt  px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem]">
+    <div className="bmi-bg  px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem]">
       <SectionHeader
         title="Let's Check "
         highlight="Your BMI"
@@ -15,6 +16,54 @@ function BMICalc() {
         healthy weight range based on your height and weight. Find out now —
         it's fast and free.
       </p>
+
+      <form className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider">
+        <div className="flex flex-col gap-[3rem]">
+          <div>
+            <label htmlFor="weight">Weight (kg):</label>
+            <input
+              type="number"
+              // type="text"
+              id="weight"
+              className="w-full h-[5rem] border px-3 py-2 mt-1"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="height">Height (cm):</label>
+            <input
+              // type="text"
+              type="number"
+              id="height"
+              className="w-full  h-[5rem] border px-3 py-2 mt-1"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="height">Age:</label>
+            <input
+              type="text"
+              id="height"
+              className="w-full  h-[5rem] border px-3 py-2 mt-1"
+              required
+            />
+          </div>
+        </div>
+
+        <div className="mt-5 flex justify-center">
+          <CtaBtn
+            hoverBg="hover:bg-transparent"
+            activeBg="active:bg-transparent"
+            mobileHoverBg="bg-transparent"
+            text="Calculate BMI"
+            bg="bg-secondary"
+            btnType="submit"
+            // func={handleNavigate}
+          />
+        </div>
+      </form>
     </div>
   );
 }

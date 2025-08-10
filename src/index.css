@@ -108,3 +108,12 @@ a {
     height: 120px;
   }
 }
+
+.bmi-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.83)),
+    url("/images/bmi/bmi4.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

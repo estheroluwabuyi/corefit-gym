@@ -48,7 +48,7 @@ function ValueSection() {
   return (
     <div className="bg-dark-alt px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem]">
       <SectionHeader
-        highlight="Your Fitness Partner"
+        highlight=" Your Fitness Partner"
         highlightColor="secondary"
         title="More Than a Gym —"
         titleColor="text"
