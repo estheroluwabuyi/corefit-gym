@@ -110,7 +110,7 @@ a {
 }
 
 .bmi-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.83)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("/images/bmi/bmi4.webp");
   background-size: cover;
   background-position: center;
