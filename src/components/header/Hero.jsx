@@ -20,7 +20,7 @@ function Hero() {
           <span className="text-secondary">Legends.</span>
         </h1>
 
-        <p className="text-[1.2rem] md:text-[1.4rem] lg:text-[1.55rem] font-[500] mt-4 max-w-3xl tracking-wider">
+        <p className="text-[1.25rem] md:text-[1.4rem] lg:text-[1.55rem] font-[500] mt-4 max-w-3xl tracking-wider">
           Stop settling. Push past limits, crush excuses, and forge
           <span className="text-secondary font-[600]">
             {" "}
