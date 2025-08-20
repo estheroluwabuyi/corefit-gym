@@ -5,7 +5,7 @@ import CtaBtn from "../CtaBtn";
 
 function Hero() {
   return (
-    <header className="bg-black pt-[15rem] lg:pt-[11rem] hero-bg px-8 flex justify-between items-center lg:items-start lg:px-[5rem] flex-col lg:flex-row gap-8 relative overflow-hidden">
+    <header className="bg-black pt-[17rem] lg:pt-[11rem] hero-bg px-8 flex justify-between items-center lg:items-start lg:px-[5rem] flex-col lg:flex-row gap-8 relative overflow-hidden">
       {/* Hero Text */}
       <motion.div
         className="text-center lg:text-left self-center pb-7 lg:pb-0"

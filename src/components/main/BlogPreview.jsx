@@ -3,6 +3,8 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { HiOutlineCalendar } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import FadeInSection from "../FadeInSection";
+import { useState } from "react";
+import clsx from "clsx";
 
 const blogPosts = [
   {
@@ -13,6 +15,7 @@ const blogPosts = [
     date: "10/08/2025",
     id: 1,
     alt: "A beginner lifting dumbbells",
+    blog: "",
   },
   {
     title: "5 Easy Stretches to Do Every Morning",
@@ -22,6 +25,7 @@ const blogPosts = [
     date: "02/08/2025",
     id: 2,
     alt: "A person doing morning stretches",
+    blog: "",
   },
   {
     title: "How to Choose the Right Fitness Equipment",
@@ -31,6 +35,7 @@ const blogPosts = [
     date: "20/08/2025",
     id: 3,
     alt: "fitness equipment",
+    blog: "",
   },
   {
     title: "Healthy Snacks for Pre and Post-Workout",
@@ -40,10 +45,13 @@ const blogPosts = [
     date: "12/07/2025",
     id: 4,
     alt: "Healthy snacks on a table",
+    blog: "",
   },
 ];
 
 function BlogPreview() {
+  const [activeId, setActiveId] = useState(null);
+
   return (
     <div className="bg-primary px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem]">
       <SectionHeader
@@ -59,18 +67,37 @@ function BlogPreview() {
         well and stay active.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
         {blogPosts.map((post) => (
           <FadeInSection delay={0.4}>
             <div
               key={post.id}
-              className="relative bg-dark-alt rounded-2xl shadow-lg"
+              className={clsx(
+                "relative bg-muted/70 rounded-2xl shadow-lg overflow-hidden transition-all duration-700 linear",
+                { "bg-muted/100": activeId === post.id }
+              )}
+              onMouseEnter={() => setActiveId(post.id)}
+              onMouseLeave={() => setActiveId(null)}
+              onTouchStart={() => setActiveId(post.id)}
+              onTouchEnd={() => setActiveId(null)}
             >
-              <img
-                src={post.img}
-                alt={post.alt}
-                className="w-full h-[200px] rounded-t-2xl"
-              />
+              <div
+                className={clsx(
+                  "w-full h-[210px] rounded-t-2xl overflow-hidden "
+                )}
+              >
+                <img
+                  src={post.img}
+                  alt={post.alt}
+                  className={clsx(
+                    "w-full h-full transition-transform duration-1000 ease-in-out delay-100",
+                    {
+                      "scale-110": activeId === post.id,
+                    }
+                  )}
+                />
+              </div>
+
               <div className="flex items-center  gap-2 py-1 px-1.5   bg-dark-alt/90 rounded-[3px] w-[10rem] absolute top-0 left-0 mt-5 ml-5 text-[1.25rem]">
                 <FaCalendarAlt className="mb-1" />
                 {post["date"]}

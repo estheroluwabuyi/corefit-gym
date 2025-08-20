@@ -133,3 +133,33 @@ a {
   border-color: var(--color-secondary);
   box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.2);
 }
+
+/* Shimmer Effect */
+.img-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-40deg);
+  left: -1000px;
+}
+
+.img-card:is(:hover, :focus-visible)::before {
+  animation: shine 500ms ease;
+}
+
+@keyframes shine {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
