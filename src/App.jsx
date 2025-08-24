@@ -7,6 +7,7 @@ import PageNotFound from "./pages/PageNotFound";
 import HomePage from "./pages/HomePage";
 import Contact from "./pages/Contact";
 import Preloader from "./components/Preloader";
+import Cart from "./pages/Cart";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -28,6 +29,7 @@ function App() {
               <Route path="/home" element={<HomePage />} />
               <Route index element={<HomePage />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/cart" element={<Cart />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
           </Routes>
