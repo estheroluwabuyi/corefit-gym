@@ -10,7 +10,7 @@ const blogPosts = [
   {
     title: "Beginner’s Guide to Strength Training",
     intro:
-      "Starting your fitness journey? Learn the basics of strength training and how to do it safely...",
+      "Starting your fitness journey? Learn the basics of strength training and how to do...",
     img: "/images/blog/blog1.webp",
     date: "10/08/2025",
     id: 1,
@@ -20,7 +20,7 @@ const blogPosts = [
   {
     title: "5 Easy Stretches to Do Every Morning",
     intro:
-      "Simple stretches to help you feel energised and reduce stiffness throughout the day...",
+      "Simple stretches to help you feel energised and reduce stiffness throughout the...",
     img: "/images/blog/blog2i.webp",
     date: "02/08/2025",
     id: 2,
@@ -30,7 +30,7 @@ const blogPosts = [
   {
     title: "How to Choose the Right Fitness Equipment",
     intro:
-      "From treadmills to resistance bands—find out what’s worth your money and space...",
+      "From treadmills to resistance bands—find out what’s worth your money and...",
     img: "/images/blog/blog3.webp",
     date: "20/08/2025",
     id: 3,
@@ -67,14 +67,14 @@ function BlogPreview() {
         well and stay active.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
         {blogPosts.map((post) => (
-          <FadeInSection delay={0.4}>
+          <FadeInSection delay={0.2}>
             <div
               key={post.id}
               className={clsx(
-                "relative bg-muted/70 rounded-2xl shadow-lg overflow-hidden transition-all duration-700 linear",
-                { "bg-muted/100": activeId === post.id }
+                "relative bg-muted/70 rounded-2xl shadow-lg overflow-hidden transition-all duration-800 linear",
+                { "bg-muted/100 text-white": activeId === post.id }
               )}
               onMouseEnter={() => setActiveId(post.id)}
               onMouseLeave={() => setActiveId(null)}
@@ -83,7 +83,7 @@ function BlogPreview() {
             >
               <div
                 className={clsx(
-                  "w-full h-[210px] rounded-t-2xl overflow-hidden "
+                  "w-full h-[205px] rounded-t-2xl overflow-hidden "
                 )}
               >
                 <img

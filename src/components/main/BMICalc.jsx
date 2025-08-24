@@ -46,7 +46,7 @@ function BMICalc() {
   };
 
   return (
-    <div className="bmi-bg  px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem] overflow-hidden">
+    <div className="bg-dark-alt bmi-bg  px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem] overflow-hidden">
       <SectionHeader
         title="Let's Check "
         highlight="Your BMI"
@@ -60,7 +60,7 @@ function BMICalc() {
         it's fast and free.
       </p>
 
-      <FadeInSection delay={0.4}>
+      <FadeInSection delay={0.2}>
         <form
           className="mt-12 md:text-[1.35rem] lg:text-[1.55rem] tracking-wider"
           onSubmit={calculateBMI}

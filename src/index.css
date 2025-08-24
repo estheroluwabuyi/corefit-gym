@@ -66,25 +66,36 @@ a {
   transition: all 600ms ease;
 }
 
-.hero-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/images/bg-3.webp");
+.preloader-bg,
+.hero-bg,
+.footer-bg,
+.bmi-bg {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/bg-3.webp");
 }
 
 .preloader-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     url("/images/bg-3.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-/* .text-shadow-orange {
-  text-shadow: 2px 2px 2px rgba(255, 85, 0, 0.4);
-} */
+.bmi-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/bmi/bmi4.webp");
+  background-attachment: fixed;
+}
+
+.footer-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("/images/cool-gym-boy.webp");
+  background-attachment: fixed;
+}
 
 .grey-brand {
   filter: brightness(0) saturate(100%) invert(53%) sepia(7%) saturate(251%)
@@ -109,15 +120,6 @@ a {
   }
 }
 
-.bmi-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("/images/bmi/bmi4.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 .bmi-input {
   border: 1px solid var(--color-text);
   outline: none;
@@ -129,6 +131,7 @@ a {
   transition: all 600ms ease;
 }
 
+.contact-input:focus,
 .bmi-input:focus {
   border-color: var(--color-secondary);
   box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.2);
