@@ -69,52 +69,52 @@ function BlogPreview() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
         {blogPosts.map((post) => (
-          <FadeInSection delay={0.2}>
+          // <FadeInSection delay={0.2}>
+          <div
+            key={post.id}
+            className={clsx(
+              "relative bg-muted/70 rounded-2xl shadow-lg overflow-hidden transition-all duration-800 linear",
+              { "bg-muted/100 text-white": activeId === post.id }
+            )}
+            onMouseEnter={() => setActiveId(post.id)}
+            onMouseLeave={() => setActiveId(null)}
+            onTouchStart={() => setActiveId(post.id)}
+            onTouchEnd={() => setActiveId(null)}
+          >
             <div
-              key={post.id}
               className={clsx(
-                "relative bg-muted/70 rounded-2xl shadow-lg overflow-hidden transition-all duration-800 linear",
-                { "bg-muted/100 text-white": activeId === post.id }
+                "w-full h-[205px] rounded-t-2xl overflow-hidden "
               )}
-              onMouseEnter={() => setActiveId(post.id)}
-              onMouseLeave={() => setActiveId(null)}
-              onTouchStart={() => setActiveId(post.id)}
-              onTouchEnd={() => setActiveId(null)}
             >
-              <div
+              <img
+                src={post.img}
+                alt={post.alt}
                 className={clsx(
-                  "w-full h-[205px] rounded-t-2xl overflow-hidden "
+                  "w-full h-full transition-transform duration-1000 ease-in-out delay-100",
+                  {
+                    "scale-110": activeId === post.id,
+                  }
                 )}
-              >
-                <img
-                  src={post.img}
-                  alt={post.alt}
-                  className={clsx(
-                    "w-full h-full transition-transform duration-1000 ease-in-out delay-100",
-                    {
-                      "scale-110": activeId === post.id,
-                    }
-                  )}
-                />
-              </div>
-
-              <div className="flex items-center  gap-2 py-1 px-1.5   bg-dark-alt/90 rounded-[3px] w-[10rem] absolute top-0 left-0 mt-5 ml-5 text-[1.25rem]">
-                <FaCalendarAlt className="mb-1" />
-                {post["date"]}
-              </div>
-              <div className="p-4 py-8">
-                <h3 className="font-semibold text-secondary mt-2 font-montserrat uppercase text-center">
-                  {post.title}
-                </h3>
-                <p className="text-left pt-5">
-                  {post.intro}
-                  <span className="text-secondary text-[0.9rem] font-semibold  ">
-                    <Link to="/blog">Read More</Link>
-                  </span>
-                </p>
-              </div>
+              />
             </div>
-          </FadeInSection>
+
+            <div className="flex items-center  gap-2 py-1 px-1.5   bg-dark-alt/90 rounded-[3px] w-[10rem] absolute top-0 left-0 mt-5 ml-5 text-[1.25rem]">
+              <FaCalendarAlt className="mb-1" />
+              {post["date"]}
+            </div>
+            <div className="p-4 py-8">
+              <h3 className="font-semibold text-secondary mt-2 font-montserrat uppercase text-center">
+                {post.title}
+              </h3>
+              <p className="text-left pt-5">
+                {post.intro}
+                <span className="text-secondary text-[0.9rem] font-semibold  ">
+                  <Link to="/blog">Read More</Link>
+                </span>
+              </p>
+            </div>
+          </div>
+          // </FadeInSection>
         ))}
       </div>
     </div>
