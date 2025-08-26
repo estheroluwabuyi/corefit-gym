@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import Contact from "./pages/Contact";
 import Preloader from "./components/Preloader";
 import Cart from "./pages/Cart";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -23,6 +24,7 @@ function App() {
 
       {isLoaded && (
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<HomePage />} />

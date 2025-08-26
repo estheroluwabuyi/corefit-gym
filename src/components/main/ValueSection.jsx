@@ -57,7 +57,7 @@ function ValueSection() {
       <div className="flex flex-col md:flex-row lg:flex-col gap-15 md:gap-20 lg:gap-25 mt-8 lg:mt-16 ">
         {[sectionA, sectionB].map((sec, i) => (
           // <FadeInSection key={i} delay={i * 0.4}>
-          // <FadeInSection key={i} delay={0.2}>
+          <FadeInSection key={i} delay={0.2}>
             <section
               className={clsx(
                 "flex flex-col lg:justify-between lg:gap-20 shadow-2xl p-7 py-8 bg-muted/50 rounded-3xl",
@@ -114,7 +114,7 @@ function ValueSection() {
                 </div>
               </div>
             </section>
-          // </FadeInSection>
+          </FadeInSection>
         ))}
       </div>
     </div>
