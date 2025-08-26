@@ -60,7 +60,7 @@ function BMICalc() {
         it's fast and free.
       </p>
 
-      <FadeInSection delay={0.2}>
+      <FadeInSection animation="blur" delay={0.4}>
         <form
           className="mt-12 md:text-[1.35rem] lg:text-[1.55rem] tracking-wider"
           onSubmit={calculateBMI}

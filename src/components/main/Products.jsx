@@ -35,7 +35,7 @@ function Products() {
         for you. Ready to power up your home or gym space?
       </p>
 
-      <FadeInSection delay={0.2}>
+      <FadeInSection animation="slide" delay={0.4}>
         <div>
           <div className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-12 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
             {equipments.slice(0, 10).map((item) => (

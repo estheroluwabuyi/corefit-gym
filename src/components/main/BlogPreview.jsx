@@ -69,7 +69,7 @@ function BlogPreview() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
         {blogPosts.map((post) => (
-          <FadeInSection delay={0.2}>
+          <FadeInSection animation="fade" delay={0.4} key={post.id}>
             <div
               key={post.id}
               className={clsx(
