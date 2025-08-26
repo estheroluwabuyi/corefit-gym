@@ -16,7 +16,7 @@ function FadeInSection({
       animate: { opacity: 1, scale: 1 },
     },
     slide: {
-      initial: { opacity: 0, y: 50 },
+      initial: { opacity: 0.1, y: 50 },
       animate: { opacity: 1, y: 0 },
     },
     blur: {
