@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -9,9 +9,11 @@ import CtaBtn from "../CtaBtn";
 import { equipmentItems } from "../../utils/equipmentList";
 import { Link, useNavigate } from "react-router-dom";
 import FadeInSection from "../FadeInSection";
+import { GymContext } from "../../App";
 
 function Products() {
-  const [equipments, setEquipments] = useState(equipmentItems);
+  // const [equipments, setEquipments] = useState(equipmentItems);
+  const { equipments } = useContext(GymContext);
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [containerActive, setContainerActive] = useState(null);
 
