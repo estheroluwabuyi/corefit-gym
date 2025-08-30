@@ -1,6 +1,7 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { GymContext } from "../App";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import {
   FaStar,
@@ -14,13 +15,7 @@ import BackBtn from "../components/BackBtn";
 function CartItemDetails() {
   const { id } = useParams();
 
-  const {
-    equipments,
-    hoveredItemId,
-    setHoveredItemId,
-    containerActive,
-    setContainerActive,
-  } = useContext(GymContext);
+  const { equipments } = useContext(GymContext);
 
   const item = equipments.find((item) => item.id === id);
 
@@ -44,15 +39,23 @@ function CartItemDetails() {
     });
   };
 
-  if (!item)
-    return (
-      <p className="bg-dark-alt min-h-screen lg:pb-20 lg:px-[5rem] pt-[15rem] pb-[5rem] px-8">
-        Item not found
-      </p>
-    );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!item) {
+      navigate("*"); // redirect to 404
+    }
+  }, [item, navigate]);
+
+  if (!item) return null;
 
   return (
-    <div className=" bg-dark-alt min-h-screen flex flex-col justify-center items-center pb-[5rem] pt-[15rem] text-center gap-6 text-dark-alt lg:px-[5rem] px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.1, delay: 0.5, ease: "easeOut" }}
+      className=" bg-dark-alt min-h-screen flex flex-col justify-center items-center pb-[5rem] pt-[15rem] text-center gap-6 text-dark-alt lg:px-[5rem] px-8"
+    >
       <div className="bg-text flex flex-col w-full md:w-3xl px-6 md:px-8 md:py-16 py-10 rounded-3xl">
         <BackBtn />
 
@@ -88,7 +91,7 @@ function CartItemDetails() {
           Add to Cart
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -15,7 +15,12 @@ function Shop() {
   } = useContext(GymContext);
 
   return (
-    <div className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.1, delay: 0.5, ease: "easeOut" }}
+      className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20"
+    >
       <section className="min-h-[40vh] w-full component-header-bg lg:px-[5rem] pt-[15rem] pb-[5rem] px-8 text-text flex flex-col justify-center items-center text-center gap-7">
         <h1 className="text-[2rem] md:text-[4rem] font-bold uppercase font-montserrat drop-shadow-lg ">
           Our <span className="text-secondary">Products</span>
@@ -100,7 +105,7 @@ function Shop() {
           </div>
         ))}
       </section>
-    </div>
+    </motion.div>
   );
 }
 
