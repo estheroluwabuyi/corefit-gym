@@ -6,7 +6,7 @@ function Cart() {
   //   const [cartItems, setCartItems] = useState([]);
 
   return (
-    <div className="bg-dark-alt flex flex-col justify-center items-center lg:pt-[11rem] hero-bg px-8 h-screen">
+    <div className="bg-dark-alt flex flex-col justify-center items-center   pt-[15rem] lg:pt-[11rem] hero-bg px-8 h-screen">
       <h1 className="text-[1.5rem] lg:text-[2.5rem] font-bold">
         Your Cart is empty!
       </h1>

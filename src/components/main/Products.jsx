@@ -12,10 +12,13 @@ import FadeInSection from "../FadeInSection";
 import { GymContext } from "../../App";
 
 function Products() {
-  // const [equipments, setEquipments] = useState(equipmentItems);
-  const { equipments } = useContext(GymContext);
-  const [hoveredItemId, setHoveredItemId] = useState(null);
-  const [containerActive, setContainerActive] = useState(null);
+  const {
+    equipments,
+    hoveredItemId,
+    setHoveredItemId,
+    containerActive,
+    setContainerActive,
+  } = useContext(GymContext);
 
   const navigate = useNavigate();
 

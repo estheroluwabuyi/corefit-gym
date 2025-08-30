@@ -10,14 +10,28 @@ import Preloader from "./components/Preloader";
 import Cart from "./pages/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 import { equipmentItems } from "./utils/equipmentList";
+import Shop from "./pages/Shop";
+import CartItemDetails from "./pages/CartItemDetails";
 
+// USECONTEXT
 const GymContext = createContext();
 
 function GymProvider({ children }) {
   const [equipments, setEquipments] = useState(equipmentItems);
+  const [hoveredItemId, setHoveredItemId] = useState(null);
+  const [containerActive, setContainerActive] = useState(null);
 
   return (
-    <GymContext.Provider value={{ equipments, setEquipments }}>
+    <GymContext.Provider
+      value={{
+        equipments,
+        setEquipments,
+        hoveredItemId,
+        setHoveredItemId,
+        containerActive,
+        setContainerActive,
+      }}
+    >
       {children}
     </GymContext.Provider>
   );
@@ -46,6 +60,8 @@ function App() {
                 <Route index element={<HomePage />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/shop/:id" element={<CartItemDetails />} />
               </Route>
               <Route path="*" element={<PageNotFound />} />
             </Routes>
