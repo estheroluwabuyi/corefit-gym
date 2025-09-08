@@ -51,9 +51,9 @@ function CartItemDetails() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.1, delay: 0.5, ease: "easeOut" }}
+      initial={{ opacity: 0.7, filter: "blur(8px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
       className=" bg-dark-alt min-h-screen flex flex-col justify-center items-center pb-[5rem] pt-[15rem] text-center gap-6 text-dark-alt lg:px-[5rem] px-8"
     >
       <div className="bg-text flex flex-col w-full md:w-3xl px-6 md:px-8 md:py-16 py-10 rounded-3xl">
