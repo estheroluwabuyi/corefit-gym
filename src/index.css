@@ -100,8 +100,8 @@ a {
 }
 
 .component-header-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("/images/ali-muhammad--xdqVgnjcDM-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/bmi3.webp");
   background-attachment: fixed;
   /* height: 100vh-60%; */
 }

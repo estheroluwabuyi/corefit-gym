@@ -131,7 +131,7 @@ export const equipmentItems = [
     id: "eq013",
     name: "Rowing Machine",
     description: "Low-impact full-body cardio and strength workout machine.",
-    price: 499.99,
+    price: 499,
     rating: 4.7,
     tags: ["cardio", "full body", "home gym"],
     image: "/images/equipments/rowingmachine.webp",
