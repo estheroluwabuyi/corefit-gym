@@ -3,13 +3,7 @@ import { GymContext } from "../App";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import {
-  FaStar,
-  FaStarHalfAlt,
-  FaRegStar,
-  FaShoppingCart,
-} from "react-icons/fa";
-import clsx from "clsx";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import BackBtn from "../components/BackBtn";
 
 function CartItemDetails() {
@@ -43,7 +37,7 @@ function CartItemDetails() {
 
   useEffect(() => {
     if (!item) {
-      navigate("*"); // redirect to 404
+      navigate("*");
     }
   }, [item, navigate]);
 
