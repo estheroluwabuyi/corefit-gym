@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 function Logo() {
   return (
     <div>
-      {/* <Link to="/"> */}
       <svg
         className="w-[150px] sm:w-[200px] lg:w-[280px]  h-auto"
         viewBox="0 0 280 60"
@@ -37,7 +36,6 @@ function Logo() {
           FIT
         </text>
       </svg>
-      {/* </Link> */}
     </div>
   );
 }
