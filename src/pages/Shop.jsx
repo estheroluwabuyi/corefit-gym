@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { GymContext } from "../App";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CardComponent from "../components/CardComponent";
+import { useGym } from "../contexts/GymContext";
 
 function Shop() {
-  const { equipments } = useContext(GymContext);
+  const { equipments } = useGym();
 
   return (
     <div className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20">

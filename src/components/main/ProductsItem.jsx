@@ -1,8 +1,7 @@
-import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { GymContext } from "../../App";
+import { useGym } from "../../contexts/GymContext";
 
 function ProductsItem({ item }) {
   const {
@@ -10,7 +9,7 @@ function ProductsItem({ item }) {
     setHoveredItemId,
     containerActive,
     setContainerActive,
-  } = useContext(GymContext);
+  } = useGym();
 
   return (
     <div

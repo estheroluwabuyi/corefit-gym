@@ -75,11 +75,11 @@ function ValueSection() {
                 alt={sec.alt}
               />
 
-              <div className="flex flex-col lg:items-start">
+              <div className="flex flex-col lg:items-start w-full justify-center">
                 <h2 className="text-[1.7rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-secondary lg:max-w-2xl mb-4 md:text-center">
                   {sec.heading}
                 </h2>
-                <p className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider sm:max-w-4xl md:text-center lg:text-left mb-8">
+                <p className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider sm:max-w-4xl lg:max-w-5xl md:text-center lg:text-left mb-8">
                   {sec.texts}
                 </p>
 

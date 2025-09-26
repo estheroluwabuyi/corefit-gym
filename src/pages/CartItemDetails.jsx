@@ -1,15 +1,15 @@
-import { useContext, useEffect } from "react";
-import { GymContext } from "../App";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import BackBtn from "../components/BackBtn";
+import { useGym } from "../contexts/GymContext";
 
 function CartItemDetails() {
   const { id } = useParams();
 
-  const { equipments } = useContext(GymContext);
+  const { equipments } = useGym();
 
   const item = equipments.find((item) => item.id === id);
 

@@ -1,13 +1,12 @@
-import { useContext } from "react";
 import SectionHeader from "../SectionHeader";
 import CtaBtn from "../CtaBtn";
 import { Link, useNavigate } from "react-router-dom";
 import FadeInSection from "../FadeInSection";
-import { GymContext } from "../../App";
 import ProductsItem from "./ProductsItem";
+import { useGym } from "../../contexts/GymContext";
 
 function Products() {
-  const { equipments } = useContext(GymContext);
+  const { equipments = [] } = useGym();
 
   const navigate = useNavigate();
 

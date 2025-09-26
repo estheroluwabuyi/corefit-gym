@@ -1,7 +1,6 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-
 import Layout from "./pages/Layout";
 import PageNotFound from "./pages/PageNotFound";
 import HomePage from "./pages/HomePage";
@@ -9,33 +8,9 @@ import Contact from "./pages/Contact";
 import Preloader from "./components/Preloader";
 import Cart from "./pages/Cart";
 import ScrollToTop from "./components/ScrollToTop";
-import { equipmentItems } from "./utils/equipmentList";
 import Shop from "./pages/Shop";
 import CartItemDetails from "./pages/CartItemDetails";
-
-// USECONTEXT
-const GymContext = createContext();
-
-function GymProvider({ children }) {
-  const [equipments, setEquipments] = useState(equipmentItems);
-  const [hoveredItemId, setHoveredItemId] = useState(null);
-  const [containerActive, setContainerActive] = useState(null);
-
-  return (
-    <GymContext.Provider
-      value={{
-        equipments,
-        setEquipments,
-        hoveredItemId,
-        setHoveredItemId,
-        containerActive,
-        setContainerActive,
-      }}
-    >
-      {children}
-    </GymContext.Provider>
-  );
-}
+import { GymProvider } from "./contexts/GymContext";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -73,4 +48,3 @@ function App() {
 }
 
 export default App;
-export { GymContext };
