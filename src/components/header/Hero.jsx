@@ -50,7 +50,7 @@ function Hero() {
           alt="Hero Image"
           width={400}
           height={400}
-          className="w-[300px] sm:w-[500px] lg:w-[600px] max-w-full h-auto object-cover "
+          className="w-[300px] sm:w-[500px] lg:w-[700px] max-w-full h-auto object-cover "
           loading="eager"
         />
       </motion.div>
