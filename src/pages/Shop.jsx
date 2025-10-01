@@ -2,22 +2,20 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CardComponent from "../components/CardComponent";
 import { useGym } from "../contexts/GymContext";
+import PageHeader from "../components/PageHeader";
 
 function Shop() {
   const { equipments } = useGym();
 
   return (
     <div className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20">
-      <section className="min-h-[40vh] w-full component-header-bg lg:px-[5rem] pt-[15rem] pb-[5rem] px-8 text-text flex flex-col justify-center items-center text-center gap-7">
-        <h1 className="text-[2rem] md:text-[4rem] font-bold uppercase font-montserrat drop-shadow-lg ">
-          Our <span className="text-secondary">Products</span>
-        </h1>
-        <p className="text-text/85 max-w-2xl text-[1.35rem] lg:text-[1.55rem] tracking-wider">
-          Premium gear built for performance. From beginners to pros, find
-          everything you need to push your limits and power your fitness
-          journey.
-        </p>
-      </section>
+      <PageHeader
+        title="Our"
+        titleSpan=" Products"
+        titleColor="text-secondary"
+        subtitle="Premium gear built for performance. From beginners to pros, find
+        everything you need to push your limits and power your fitness journey."
+      />
 
       <motion.section
         initial={{ opacity: 0.1, y: 50 }}

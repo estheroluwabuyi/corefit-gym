@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Shop from "./pages/Shop";
 import CartItemDetails from "./pages/CartItemDetails";
 import { GymProvider } from "./contexts/GymContext";
+import About from "./pages/About";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/home" element={<HomePage />} />
                 <Route index element={<HomePage />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/shop/:id" element={<CartItemDetails />} />

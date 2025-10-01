@@ -5,8 +5,6 @@ import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import CartImg from "../CartImg";
 import Logo from "../Logo";
-import menu from "/images/menu.svg";
-import close from "/images/close.svg";
 
 import {
   FaDumbbell,
@@ -15,6 +13,9 @@ import {
   FaEnvelope,
   FaHome,
 } from "react-icons/fa";
+import { TbMenu2 } from "react-icons/tb";
+import { IoCloseOutline } from "react-icons/io5";
+import { CgClose } from "react-icons/cg";
 
 const navItems = [
   { name: "Home", icon: <FaHome />, path: "/" },
@@ -66,15 +67,13 @@ function NavBar() {
       </Link>
 
       <div className="flex order-3 flex-row-reverse gap-[2rem] items-center">
-        <img
-          src={menu}
-          alt="Menu"
-          width={30}
-          height={30}
-          className="w-[30px] sm:w-[35px] h-auto cursor-pointer md:hidden rounded-lg transition-all duration-600 icon-effect"
+        <button
+          className="md:hidden rounded-lg transition-all duration-600 icon-effect"
           onClick={handleMenuToggle}
-          loading="eager"
-        />
+          aria-label="Menu"
+        >
+          <TbMenu2 size={30} className="w-[30px] sm:w-[35px] h-auto  " />
+        </button>
 
         <CartImg />
       </div>
@@ -89,15 +88,13 @@ function NavBar() {
             exit="exit"
             variants={menuVariants}
           >
-            <img
-              src={close}
-              alt="Close"
-              width={30}
-              height={30}
-              className="w-[30px] sm:w-[32px] h-auto self-end cursor-pointer rounded-lg transition-all duration-600 icon-effect"
+            <button
+              className="md:hidden rounded-lg transition-all self-end duration-600 icon-effect"
               onClick={handleMenuToggle}
-              loading="eager"
-            />
+              aria-label="Menu Close"
+            >
+              <CgClose size={30} className="w-[30px] sm:w-[35px] h-auto  " />
+            </button>
 
             <ul className="flex flex-col gap-2 text-[1.7rem] z-50">
               {navItems.map((item, index) => (

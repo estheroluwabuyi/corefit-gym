@@ -3,15 +3,15 @@ import { SlGlobe } from "react-icons/sl";
 
 export const contactInfo = [
   {
-    address: "",
-    icon: <MdLocationPin />,
+    text: "address",
+    icon: MdLocationPin,
   },
   {
-    phone: "",
-    icon: <MdPhoneIphone />,
+    text: "phone",
+    icon: MdPhoneIphone,
   },
   {
-    email: "",
-    icon: <SlGlobe />,
+    text: "email",
+    icon: SlGlobe,
   },
 ];
