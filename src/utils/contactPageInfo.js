@@ -1,17 +1,23 @@
 import { MdLocationPin, MdPhoneIphone } from "react-icons/md";
-import { SlGlobe } from "react-icons/sl";
+import { SiMailgun } from "react-icons/si";
 
 export const contactInfo = [
   {
-    text: "address",
+    text: "CoreFit Gym, 401 West Fitness Ave, Brooklyn, NY 11201, USA",
     icon: MdLocationPin,
+    link: "https://www.google.com/maps?q=CoreFit+Gym,+401+West+Fitness+Ave,+Brooklyn,+NY+11201,+USA",
+    id: 111,
   },
   {
-    text: "phone",
+    text: "(555) 123-4567",
     icon: MdPhoneIphone,
+    link: "tel:+15551234567",
+    id: 211,
   },
   {
-    text: "email",
-    icon: SlGlobe,
+    text: "support@corefitgym.com",
+    icon: SiMailgun,
+    link: "mailto:support@corefitgym.com",
+    id: 311,
   },
 ];

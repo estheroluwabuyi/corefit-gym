@@ -21,7 +21,7 @@ function Shop() {
         initial={{ opacity: 0.1, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1, ease: "easeOut" }}
-        className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-12 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto  lg:px-[5rem] px-8"
+        className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-15 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto  lg:px-[5rem] px-8"
       >
         {equipments.map((item) => (
           <div key={item.id}>

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
-import { contactInfo } from "../utils/contactPageInfo";
-import { div } from "framer-motion/client";
+import { useGym } from "../contexts/GymContext";
 
 function Contact() {
+  const { contactPage } = useGym();
   return (
     <div className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20">
       <PageHeader
@@ -17,17 +17,32 @@ function Contact() {
         initial={{ opacity: 0.1, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1, ease: "easeOut" }}
-        // className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-12 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto  lg:px-[5rem] px-8"
+        className="lg:px-[5rem] px-8 mt-15"
       >
-        {contactInfo.map((item, i) => {
-          const Icon = item.icon;
-          return (
-            <div key={i} className="flex items-center gap-3">
-              <Icon className="text-xl text-secondary" />
-              <span>{item.text}</span>
-            </div>
-          );
-        })}
+        <p className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12">
+          Reach us through any of the options below—we’ll get back to you
+          quickly.
+        </p>
+        <div className="flex flex-col lg:flex-row gap-8">
+          {contactPage.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                href={item.link}
+                target={item.id === 111 ? "_blank" : "_self"}
+                rel={item.id === 111 ? "noopener noreferrer" : undefined}
+                key={item.id}
+                className="w-full h-[170px] md:h-[210px] flex items-center gap-8 border border-text/70 rounded-lg px-6 flex-col justify-center shadow-lg hover:shadow-[0_0_12px_#ff944d] hover:scale-[1.005] hover:-translate-y-1
+ transition-all duration-500 hover:border-secondary"
+              >
+                <Icon className="text-[3.5rem] lg:text-[5rem] text-secondary" />
+                <span className="text-[1.5rem] md:text-[1.7rem] text-center font-semibold">
+                  {item.text}
+                </span>
+              </a>
+            );
+          })}
+        </div>
       </motion.section>
     </div>
   );

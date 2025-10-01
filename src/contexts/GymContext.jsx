@@ -1,11 +1,13 @@
 import { createContext, useContext, useState } from "react";
 
 import { equipmentItems } from "../utils/equipmentList";
+import { contactInfo } from "../utils/contactPageInfo";
 
 const GymContext = createContext();
 
 function GymProvider({ children }) {
   const [equipments, setEquipments] = useState(equipmentItems);
+  const contactPage = contactInfo;
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [containerActive, setContainerActive] = useState(null);
 
@@ -18,6 +20,7 @@ function GymProvider({ children }) {
         setHoveredItemId,
         containerActive,
         setContainerActive,
+        contactPage,
       }}
     >
       {children}
