@@ -43,7 +43,7 @@ function ContactForm() {
 
     setTimeout(() => {
       toast.success("Your Message has been sent!", {
-        id: "newsletter",
+        id: "contactForm",
       });
       dispatch({ type: "reset" });
     }, 3000);
