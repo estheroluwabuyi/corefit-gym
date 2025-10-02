@@ -6,7 +6,7 @@ function FooterNewsLetter() {
 
   const handleForm = (e) => {
     e.preventDefault();
-    toast.success("🎉 Thanks for subscribing!", {
+    toast.success("Thanks for subscribing!", {
       id: "newsletter",
     });
 

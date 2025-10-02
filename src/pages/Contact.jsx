@@ -3,7 +3,7 @@ import PageHeader from "../components/PageHeader";
 import { useGym } from "../contexts/GymContext";
 import clsx from "clsx";
 import ContactForm from "../components/ContactForm";
-import ContactMap from "../components/main/ContactMap";
+import ContactMap from "../components/ContactMap";
 
 function Contact() {
   const { contactPage, containerActive, setContainerActive } = useGym();
@@ -56,7 +56,7 @@ function Contact() {
         </div>
 
         {/* CONTACT FORM AND MAP */}
-        <div className="mt-20 flex lg:flex-row flex-col w-full justify-center items-center gap-8 lg:gap-16">
+        <div className="mt-20 flex lg:flex-row flex-col w-full justify-center items-center gap-8 lg:gap-16 ">
           <ContactForm />
           <ContactMap />
         </div>

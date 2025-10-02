@@ -1,3 +1,4 @@
+import toast, { Toaster } from "react-hot-toast";
 import { useReducer } from "react";
 import CtaBtn from "./CtaBtn";
 
@@ -5,6 +6,7 @@ const initialState = {
   email: "",
   name: "",
   textarea: "",
+  isLoading: false,
 };
 
 function reducer(state, action) {
@@ -21,25 +23,35 @@ function reducer(state, action) {
     case "reset":
       return initialState;
 
+    case "setLoading":
+      return { ...state, isLoading: action.payload };
+
     default:
       throw new Error("Unknown action");
   }
 }
 
 function ContactForm() {
-  const [{ email, name, textarea }, dispatch] = useReducer(
+  const [{ email, name, textarea, isLoading }, dispatch] = useReducer(
     reducer,
     initialState
   );
 
   const handleSubmit = (e) => {
+    dispatch({ type: "setLoading", payload: true });
     e.preventDefault();
-    dispatch({ type: "reset" });
+
+    setTimeout(() => {
+      toast.success("Your Message has been sent!", {
+        id: "newsletter",
+      });
+      dispatch({ type: "reset" });
+    }, 3000);
   };
 
   return (
     <form
-      className="border border-text p-8  rounded-2xl lg:w-1/2 "
+      className="border border-text p-8 w-full rounded-2xl lg:w-1/2 "
       onSubmit={handleSubmit}
     >
       <div className="text-center mb-10 max-w-3xl flex flex-col gap-5 mx-auto font-montserrat">
@@ -63,6 +75,7 @@ function ContactForm() {
             onChange={(e) =>
               dispatch({ type: "setName", payload: e.target.value })
             }
+            disabled={isLoading}
           />
 
           <input
@@ -74,6 +87,7 @@ function ContactForm() {
             onChange={(e) =>
               dispatch({ type: "setEmail", payload: e.target.value })
             }
+            disabled={isLoading}
           />
         </div>
 
@@ -87,17 +101,20 @@ function ContactForm() {
           onChange={(e) =>
             dispatch({ type: "setTextarea", payload: e.target.value })
           }
+          disabled={isLoading}
         ></textarea>
 
         {/* Submit Button */}
         <CtaBtn
-          text="Send Message"
+          // text="Send Message"
+          text={isLoading ? "Sending..." : "Send Message"}
           bg="bg-secondary "
           hoverBg="hover:bg-transparent"
           mobileHoverBg="bg-transparent"
           activeBg="active:bg-transparent"
           btnType="submit"
           radius="rounded-md"
+          isLoading={isLoading}
         />
       </div>
     </form>

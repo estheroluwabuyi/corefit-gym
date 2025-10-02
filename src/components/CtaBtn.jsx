@@ -11,6 +11,7 @@ function CtaBtn({
   func,
   btnType,
   radius,
+  isLoading,
 }) {
   const [mobileHovered, setMobileHovered] = useState(false);
 
@@ -19,7 +20,8 @@ function CtaBtn({
       className={clsx(
         `${bg} ${radius}  py-4 px-8 lg:px-12  text-[1.35rem] sm:text-[1.4rem] lg:text-[1.7rem] border-2 border-secondary font-[600] uppercase tracking-wide text-text transition-all duration-600 ${hoverBg} ${activeBg} mt-8 focus:outline-none focus:ring focus:ring-secondary`,
         mobileHovered &&
-          `${mobileHoverBg} rounded-tl-[1.8rem] rounded-br-[1.8rem]`
+          `${mobileHoverBg} rounded-tl-[1.8rem] rounded-br-[1.8rem]`,
+        isLoading && "bg-text/90! text-primary! border-none"
       )}
       type={btnType}
       onTouchStart={() => setMobileHovered(true)}
@@ -27,6 +29,7 @@ function CtaBtn({
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
       onClick={func}
+      disabled={isLoading}
     >
       {text}
     </motion.button>

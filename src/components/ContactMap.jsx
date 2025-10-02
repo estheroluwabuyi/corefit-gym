@@ -17,7 +17,7 @@ L.Marker.prototype.options.icon = defaultIcon;
 
 function ContactMap() {
   return (
-    <div className="relative z-5 lg:w-1/2 ">
+    <div className="relative w-full z-5 lg:w-1/2 ">
       <MapContainer
         center={[40.6947, -73.9496]}
         zoom={15}
