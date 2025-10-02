@@ -17,6 +17,7 @@ function Cart() {
           mobileHoverBg="bg-transparent"
           text="Continue Shopping"
           bg="bg-secondary"
+          radius="rounded-md"
         />
       </Link>
     </div>

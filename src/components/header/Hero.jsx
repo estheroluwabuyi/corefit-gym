@@ -35,6 +35,7 @@ function Hero() {
           hoverBg="hover:bg-transparent"
           activeBg="active:bg-transparent"
           mobileHoverBg="bg-transparent"
+          radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
         />
       </motion.div>
 

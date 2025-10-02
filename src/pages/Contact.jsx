@@ -2,15 +2,11 @@ import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import { useGym } from "../contexts/GymContext";
 import clsx from "clsx";
+import ContactForm from "../components/ContactForm";
+import ContactMap from "../components/main/ContactMap";
 
 function Contact() {
-  const {
-    contactPage,
-    hoveredItemId,
-    setHoveredItemId,
-    containerActive,
-    setContainerActive,
-  } = useGym();
+  const { contactPage, containerActive, setContainerActive } = useGym();
 
   return (
     <div className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20">
@@ -50,7 +46,6 @@ function Contact() {
                 onTouchStart={() => setContainerActive(item.id)}
                 onTouchEnd={() => setContainerActive(null)}
               >
-                {/* hover:shadow-[0_0_12px_#ff944d] hover:scale-[1.005] hover:border-secondary hover:-translate-y-1  */}
                 <Icon className="text-[3.5rem] lg:text-[5rem] text-secondary" />
                 <span className="text-[1.5rem] md:text-[1.7rem] text-center font-semibold">
                   {item.text}
@@ -58,6 +53,12 @@ function Contact() {
               </a>
             );
           })}
+        </div>
+
+        {/* CONTACT FORM AND MAP */}
+        <div className="mt-20 flex lg:flex-row flex-col w-full justify-center items-center gap-8 lg:gap-16">
+          <ContactForm />
+          <ContactMap />
         </div>
       </motion.section>
     </div>

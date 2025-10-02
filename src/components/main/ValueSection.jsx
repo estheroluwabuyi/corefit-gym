@@ -103,6 +103,7 @@ function ValueSection() {
                     hoverBg="hover:bg-secondary"
                     mobileHoverBg="bg-secondary"
                     activeBg="active:bg-secondary"
+                    radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
                   />
                 </div>
               </div>

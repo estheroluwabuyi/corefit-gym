@@ -140,8 +140,18 @@ a {
   transition: all 600ms ease;
 }
 
+.textarea {
+  border: 1px solid var(--color-text);
+  outline: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-top: 0.25rem;
+  transition: all 600ms ease;
+}
+
 .contact-input:focus,
-.bmi-input:focus {
+.bmi-input:focus,
+.textarea:focus {
   border-color: var(--color-secondary);
   box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.2);
 }

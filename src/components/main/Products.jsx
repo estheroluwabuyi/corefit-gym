@@ -52,6 +52,7 @@ function Products() {
               text="See More →"
               bg="bg-secondary"
               func={handleNavigate}
+              radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
             />
           </div>
         </div>

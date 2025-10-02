@@ -55,9 +55,9 @@ function BMICalc() {
       />
 
       <p className="md:text-[1.35rem] lg:text-[1.55rem] tracking-wider sm:max-w-5xl lg:max-w-7xl text-center mx-auto">
-        Body Mass Index (BMI) is a quick way to gauge whether you're in a
+        Body Mass Index (BMI) is a quick way to gauge whether you&apos;re in a
         healthy weight range based on your height and weight. Find out now —
-        it's fast and free.
+        it&apos;s fast and free.
       </p>
 
       <FadeInSection animation="blur" delay={0.4}>
@@ -127,6 +127,7 @@ function BMICalc() {
               text="Calculate BMI"
               bg="bg-secondary"
               btnType="submit"
+              radius="rounded-md"
             />
           </div>
         </form>
