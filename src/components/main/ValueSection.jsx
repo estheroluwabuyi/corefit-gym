@@ -5,9 +5,9 @@ import SectionHeader from "../SectionHeader";
 import CtaBtn from "../CtaBtn";
 import FadeInSection from "../FadeInSection";
 
-import check from "/images/check.svg";
 import gymEquipments3 from "/images/value/gym-equipments3.webp";
 import gymClass from "/images/value/value-gym-class.webp";
+import { IoMdCheckboxOutline } from "react-icons/io";
 
 const sections = {
   sectionA: {
@@ -90,13 +90,7 @@ function ValueSection() {
                 >
                   {sec.arr.map((text, i) => (
                     <li key={i} className="flex items-center gap-4 ">
-                      <img
-                        src={check}
-                        width={22}
-                        height={22}
-                        className="w-[20px] h-[20px]"
-                        alt="check"
-                      />
+                      <IoMdCheckboxOutline className="text-secondary w-[20px] h-[20px]" />
                       {text.trim()}
                     </li>
                   ))}
