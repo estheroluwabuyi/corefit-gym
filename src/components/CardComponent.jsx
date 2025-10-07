@@ -57,7 +57,6 @@ function CardComponent({ item }) {
             whileTap={{ scale: 0.9 }}
             onClick={(e) => {
               e.preventDefault();
-              console.log("Add to Cart", item.name);
             }}
           >
             <FaShoppingCart />

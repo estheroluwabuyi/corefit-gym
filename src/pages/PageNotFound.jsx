@@ -8,7 +8,7 @@ function PageNotFound() {
       </h1>
       <p className="text-[2rem] mb-6">Page Not Found</p>
       <p className=" max-w-md mb-8">
-        Oops! The page you're looking for doesn’t exist or has been moved.
+        Oops! The page you&apos;re looking for doesn’t exist or has been moved.
       </p>
       <Link
         to="/"

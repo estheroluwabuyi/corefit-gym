@@ -12,6 +12,7 @@ import Shop from "./pages/Shop";
 import CartItemDetails from "./pages/CartItemDetails";
 import { GymProvider } from "./contexts/GymContext";
 import About from "./pages/About";
+import Blog from "./pages/Blog";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/shop/:id" element={<CartItemDetails />} />
               </Route>
+              <Route path="/blog/:id" element={<Blog />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </BrowserRouter>
