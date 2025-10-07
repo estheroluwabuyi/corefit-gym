@@ -30,8 +30,8 @@ function Products() {
 
       <FadeInSection animation="slide" delay={0.4}>
         <div>
-          <div className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-12 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
-            {equipments.slice(0, 10).map((item) => (
+          <div className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-12 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
+            {equipments.slice(0, 8).map((item) => (
               <div key={item.id}>
                 {item.inStock ? (
                   <Link to={`/shop/${item.id}`}>

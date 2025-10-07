@@ -23,10 +23,10 @@ function Contact() {
         transition={{ duration: 1.1, ease: "easeOut" }}
         className="lg:px-[5rem] px-8 mt-15"
       >
-        <p className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto">
+        <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto">
           Reach us through any of the options below—we’ll get back to you
           quickly.
-        </p>
+        </h2>
         <div className="flex flex-col lg:flex-row gap-8">
           {contactPage.map((item) => {
             const Icon = item.icon;
