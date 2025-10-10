@@ -17,14 +17,27 @@ import Blog from "./pages/Blog";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setIsLoaded(true), 3000);
+  //   return () => clearTimeout(timer);
+  // }, []);
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 3000);
-    return () => clearTimeout(timer);
+    const handleLoad = () => setIsLoaded(true);
+    window.addEventListener("load", handleLoad);
+
+    const timer = setTimeout(() => setIsLoaded(true), 4000);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
     <>
-      <AnimatePresence>{!isLoaded && <Preloader />}</AnimatePresence>
+      <AnimatePresence>
+        {!isLoaded && <Preloader key="preloader" />}
+      </AnimatePresence>
 
       {isLoaded && (
         <GymProvider>

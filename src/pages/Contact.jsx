@@ -20,7 +20,7 @@ function Contact() {
       <motion.section
         initial={{ opacity: 0.1, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, ease: "easeOut" }}
+        transition={{ duration: 1.1, delay: 0.5, ease: "easeOut" }}
         className="lg:px-[5rem] px-8 mt-15"
       >
         <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto">

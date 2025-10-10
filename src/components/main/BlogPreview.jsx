@@ -1,6 +1,5 @@
 import SectionHeader from "../SectionHeader";
 import { FaCalendarAlt } from "react-icons/fa";
-import { HiOutlineCalendar } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import FadeInSection from "../FadeInSection";
 import { useState } from "react";
@@ -12,7 +11,7 @@ const blogPosts = [
     intro:
       "Starting your fitness journey? Learn the basics of strength training and how to do...",
     img: "/images/blog/blog1.webp",
-    date: "10/08/2025",
+    date: "10/08/2026",
     id: 1,
     alt: "A beginner lifting dumbbells",
     blog: "",
@@ -22,7 +21,7 @@ const blogPosts = [
     intro:
       "Simple stretches to help you feel energised and reduce stiffness throughout the...",
     img: "/images/blog/blog2i.webp",
-    date: "02/08/2025",
+    date: "02/08/2026",
     id: 2,
     alt: "A person doing morning stretches",
     blog: "",
@@ -32,7 +31,7 @@ const blogPosts = [
     intro:
       "From treadmills to resistance bands—find out what’s worth your money and...",
     img: "/images/blog/blog3.webp",
-    date: "20/08/2025",
+    date: "20/08/2026",
     id: 3,
     alt: "fitness equipment",
     blog: "",
@@ -42,7 +41,7 @@ const blogPosts = [
     intro:
       "Fuel your workouts with easy, nutritious snacks you can prepare in minutes...",
     img: "/images/blog/blog4.webp",
-    date: "12/07/2025",
+    date: "12/07/2026",
     id: 4,
     alt: "Healthy snacks on a table",
     blog: "",
@@ -111,7 +110,6 @@ function BlogPreview() {
                     {post.intro}
                     <span className="text-secondary text-[0.9rem] font-semibold  ">
                       Read More
-                      {/* <Link to="/blog">Read More</Link> */}
                     </span>
                   </p>
                 </div>
