@@ -57,6 +57,8 @@ function CartItemDetails() {
           <img
             src={item.image}
             alt={item.name}
+            width={300}
+            height={400}
             className="w-full max-w-lg h-auto  object-cover p-2"
           />
         </div>
