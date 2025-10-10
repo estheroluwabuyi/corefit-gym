@@ -13,7 +13,7 @@ function Blog() {
       {/* GIF */}
       <img
         height={280}
-        width={280}
+        width={250}
         src="/gifs/hammer.gif"
         alt="Under construction"
         className="w-[200px] md:w-[280px] mb-8"
