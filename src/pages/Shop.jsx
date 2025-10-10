@@ -20,7 +20,7 @@ function Shop() {
       <motion.section
         initial={{ opacity: 0.1, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, delay: 0.5, ease: "easeOut" }}
+        transition={{ duration: 1.1, delay: 0.3, ease: "easeOut" }}
       >
         <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto mt-15 ">
           Explore Our Collection
