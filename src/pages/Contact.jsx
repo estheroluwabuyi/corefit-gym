@@ -9,7 +9,12 @@ function Contact() {
   const { contactPage, containerActive, setContainerActive } = useGym();
 
   return (
-    <div className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20">
+    <motion.div
+      className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20"
+      initial={{ opacity: 0.1 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
+    >
       <PageHeader
         title="Contact"
         titleSpan=" Us"
@@ -18,9 +23,9 @@ function Contact() {
       />
 
       <motion.section
-        initial={{ opacity: 0.1, y: 50 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, delay: 0.3, ease: "easeOut" }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
         className="lg:px-[5rem] px-8 mt-15"
       >
         <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto">
@@ -61,7 +66,7 @@ function Contact() {
           <ContactMap />
         </div>
       </motion.section>
-    </div>
+    </motion.div>
   );
 }
 
