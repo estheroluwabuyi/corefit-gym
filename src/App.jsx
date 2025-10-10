@@ -17,19 +17,18 @@ import Blog from "./pages/Blog";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setIsLoaded(true), 3000);
-  //   return () => clearTimeout(timer);
-  // }, []);
   useEffect(() => {
-    const handleLoad = () => setIsLoaded(true);
+    const handleLoad = () => {
+      setTimeout(() => setIsLoaded(true), 1500);
+    };
+
     window.addEventListener("load", handleLoad);
 
-    const timer = setTimeout(() => setIsLoaded(true), 4000);
+    const fallback = setTimeout(() => setIsLoaded(true), 4000);
 
     return () => {
       window.removeEventListener("load", handleLoad);
-      clearTimeout(timer);
+      clearTimeout(fallback);
     };
   }, []);
 
