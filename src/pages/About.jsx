@@ -15,6 +15,16 @@ function About() {
         titleColor="text-secondary"
         subtitle="Our gym is more than just a workout space—it’s a place where support, energy, and dedication come together to fuel every fitness journey."
       />
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="lg:px-[5rem] px-8 mt-15"
+      >
+        <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto font-semibold font-montserrat">
+          Our Story
+        </h2>
+      </motion.section>
     </motion.div>
   );
 }
