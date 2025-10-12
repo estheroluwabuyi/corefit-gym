@@ -25,7 +25,7 @@ function Shop() {
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
       >
         <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto mt-15 font-semibold font-montserrat">
           Explore Our Collection

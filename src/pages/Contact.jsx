@@ -25,12 +25,12 @@ function Contact() {
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
         className="lg:px-[5rem] px-8 mt-15"
       >
-        <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto font-semibold font-montserrat">
-          Reach us through any of the options below—we’ll get back to you
-          quickly.
+        <h2 className=" text-[1.5rem] md:text-[1.7rem] text-center pb-15 max-w-2xl mx-auto font-semibold font-montserrat ">
+          Reach Us Through Any of the Options Below — We’ll Get Back to You
+          Quickly.
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
           {contactPage.map((item) => {
