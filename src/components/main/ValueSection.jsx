@@ -46,7 +46,7 @@ function ValueSection() {
   const { sectionA, sectionB } = sections;
 
   return (
-    <div className="bg-dark-alt px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem] overflow-hidden">
+    <div className="bg-dark-alt px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem] overflow-hidden 2xl:px-[15rem]">
       <SectionHeader
         highlight=" Your Fitness Partner"
         highlightColor="secondary"

@@ -5,56 +5,58 @@ import CtaBtn from "../CtaBtn";
 
 function Hero() {
   return (
-    <header className="bg-dark-alt pt-[15rem] lg:pt-[11rem] hero-bg px-8 flex justify-between items-center lg:items-start lg:px-[5rem] flex-col lg:flex-row gap-8 relative overflow-hidden">
+    <header className="bg-dark-alt pt-[15rem] lg:pt-[11rem] hero-bg px-8 overflow-hidden lg:px-[5rem] ">
       {/* Hero Text */}
-      <motion.div
-        className="text-center lg:text-left self-center pb-7 lg:pb-0"
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
-      >
-        <h1 className="font-montserrat font-[800] text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6.5rem] uppercase">
-          <span className="text-secondary">Break</span>{" "}
-          <span className="text-text">Limits,</span> <br />
-          <span className="text-text">Build</span>{" "}
-          <span className="text-secondary">Legends.</span>
-        </h1>
+      <div className="flex justify-between items-center lg:items-start flex-col lg:flex-row gap-8 relative 2xl:max-w-[1520px] mx-auto ">
+        <motion.div
+          className="text-center lg:text-left self-center pb-7 lg:pb-0"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
+        >
+          <h1 className="font-montserrat font-[800] text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6.5rem] uppercase">
+            <span className="text-secondary">Break</span>{" "}
+            <span className="text-text">Limits,</span> <br />
+            <span className="text-text">Build</span>{" "}
+            <span className="text-secondary">Legends.</span>
+          </h1>
 
-        <p className="text-[1.25rem] md:text-[1.4rem] lg:text-[1.55rem] font-[500] mt-4 max-w-3xl tracking-wider">
-          Stop settling. Push past limits, crush excuses, and forge
-          <span className="text-secondary font-[600]">
-            {" "}
-            unshakable strength.
-          </span>{" "}
-          Your transformation starts now.
-        </p>
+          <p className="text-[1.25rem] md:text-[1.4rem] lg:text-[1.55rem] font-[500] mt-4 max-w-3xl tracking-wider">
+            Stop settling. Push past limits, crush excuses, and forge
+            <span className="text-secondary font-[600]">
+              {" "}
+              unshakable strength.
+            </span>{" "}
+            Your transformation starts now.
+          </p>
 
-        <CtaBtn
-          text="Start Training"
-          bg="bg-secondary"
-          hoverBg="hover:bg-transparent"
-          activeBg="active:bg-transparent"
-          mobileHoverBg="bg-transparent"
-          radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
-        />
-      </motion.div>
+          <CtaBtn
+            text="Start Training"
+            bg="bg-secondary"
+            hoverBg="hover:bg-transparent"
+            activeBg="active:bg-transparent"
+            mobileHoverBg="bg-transparent"
+            radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
+          />
+        </motion.div>
 
-      {/* Hero Image */}
-      <motion.div
-        className="lg:self-end  lg:translate-y-[2rem]"
-        initial={{ opacity: 0, x: 30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
-      >
-        <img
-          src={heroImg}
-          alt="Hero Image"
-          width={400}
-          height={400}
-          className="w-[300px] sm:w-[500px] lg:w-[700px] max-w-full h-auto object-cover "
-          loading="eager"
-        />
-      </motion.div>
+        {/* Hero Image */}
+        <motion.div
+          className="lg:self-end  lg:translate-y-[2rem]"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1, duration: 1.3, ease: "easeOut" }}
+        >
+          <img
+            src={heroImg}
+            alt="Hero Image"
+            width={400}
+            height={400}
+            className="w-[300px] sm:w-[500px] lg:w-[700px] max-w-full h-auto object-cover "
+            loading="eager"
+          />
+        </motion.div>
+      </div>
     </header>
   );
 }

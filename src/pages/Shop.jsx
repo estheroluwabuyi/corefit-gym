@@ -9,7 +9,7 @@ function Shop() {
 
   return (
     <motion.div
-      className=" bg-dark-alt min-h-screen  pb-15 lg:pb-20"
+      className=" bg-dark-alt min-h-screen pb-15 lg:pb-20"
       initial={{ opacity: 0.1 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
@@ -25,13 +25,13 @@ function Shop() {
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
       >
         <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center pb-12 max-w-2xl mx-auto mt-15 font-semibold font-montserrat">
           Explore Our Collection
         </h2>
 
-        <div className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto  lg:px-[5rem] px-8">
+        <div className="xs:grid-cols-1 xs:max-w-[200px] grid ss:grid-cols-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 ss:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto 2xl:px-[15rem] lg:px-[5rem] px-8">
           {equipments.map((item) => (
             <div key={item.id}>
               {item.inStock ? (

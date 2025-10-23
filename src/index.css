@@ -11,6 +11,15 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-roboto: "Roboto", sans-serif;
 
+  /*  *Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-ss: 375px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1680px;
+
   --color-primary: #262626;
   /* --color-dark-alt: #1a1a1a; */
   --color-dark-alt: #1f1f1f;
@@ -110,16 +119,6 @@ a {
   filter: brightness(0) saturate(100%) invert(53%) sepia(7%) saturate(251%)
     hue-rotate(178deg) brightness(92%) contrast(90%);
   /* opacity: 0.9; */
-}
-
-/* media query */
-@media (max-width: 320px) {
-  .grid-small-container {
-    grid-template-columns: 1fr;
-    max-width: 200px;
-    margin: auto;
-    margin-top: 3rem;
-  }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {

@@ -52,7 +52,7 @@ function BlogPreview() {
   const [activeId, setActiveId] = useState(null);
 
   return (
-    <div className="bg-primary px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem]">
+    <div className="bg-primary px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem] 2xl:px-[15rem]">
       <SectionHeader
         title="From the "
         highlight="Fitness Corner"

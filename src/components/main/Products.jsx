@@ -15,7 +15,7 @@ function Products() {
   }
 
   return (
-    <div className="bg-primary px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem]">
+    <div className="bg-primary px-8 py-12 pb-15 lg:pb-20 lg:px-[5rem] 2xl:px-[15rem]">
       <SectionHeader
         title="Our "
         highlight="Products"
@@ -30,7 +30,7 @@ function Products() {
 
       <FadeInSection animation="slide" delay={0.4}>
         <div>
-          <div className="grid-small-container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-12 sm:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
+          <div className="xs:grid-cols-1 xs:max-w-[200px] grid ss:grid-cols-2  lg:grid-cols-4 gap-10 mt-12 ss:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
             {equipments.slice(0, 8).map((item) => (
               <div key={item.id}>
                 {item.inStock ? (

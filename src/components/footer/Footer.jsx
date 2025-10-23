@@ -9,7 +9,7 @@ function Footer() {
   return (
     <section
       aria-label="Footer"
-      className="p-8 py-[5rem] lg:px-[5rem] bg-dark-alt footer-bg"
+      className="p-8 py-[5rem] lg:px-[5rem] bg-dark-alt footer-bg 2xl:px-[15rem]"
     >
       <div className="flex flex-col gap-[3rem] md:flex-row ">
         <FooterBrandAndHours />
