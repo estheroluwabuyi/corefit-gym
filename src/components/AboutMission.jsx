@@ -2,11 +2,13 @@ import { FaDumbbell, FaUsers, FaFire, FaLeaf, FaBrain } from "react-icons/fa";
 
 const missionPoints = [
   {
-    icon: <FaUsers className="text-blue-500 text-[3.5rem]" />,
+    icon: <FaUsers className="text-blue-500 text-[3.7rem] md:text-[3.5rem]" />,
     text: "To build a supportive, inclusive community that celebrates every milestone.",
   },
   {
-    icon: <FaDumbbell className="text-red-500 text-[3.5rem]" />,
+    icon: (
+      <FaDumbbell className="text-red-500 text-[3.7rem] md:text-[3.5rem]" />
+    ),
     text: "To empower individuals to reach their peak physical and mental fitness.",
   },
   {
