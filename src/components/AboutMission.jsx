@@ -36,7 +36,7 @@ function AboutMission() {
           <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
         </div>
 
-        <ul className="space-y-12 flex flex-col items-start md:items-center">
+        <ul className="space-y-10 flex flex-col items-start md:items-center">
           {missionPoints.map((point, i) => (
             <li key={i} className="flex items-center gap-4">
               {point.icon}
