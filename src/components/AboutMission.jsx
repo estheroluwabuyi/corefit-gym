@@ -30,10 +30,10 @@ function AboutMission() {
     <section className="mt-16 bg-dark-alt py-12 rounded-xl shadow-lg max-w-7xl mx-auto font-permanent">
       <div className="bg-black/90 p-12 rounded-xl relative">
         <div className="flex flex-col items-center">
-          <h2 className="text-[2.5rem] lg:text-[3rem] font-caveat  text-center mb-3">
+          <h2 className="text-[2.5rem] lg:text-[3rem] font-caveat  text-center mb-2">
             Our Mission
           </h2>
-          <div className="h-1.5 w-20 bg-secondary  rounded-full mb-10"></div>
+          <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
         </div>
 
         <ul className="space-y-12 flex flex-col items-start md:items-center">

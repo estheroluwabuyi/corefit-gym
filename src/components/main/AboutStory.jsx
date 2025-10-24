@@ -17,17 +17,17 @@ function AboutStory() {
         {/* Text */}
         <div className="lg:w-1/2 ">
           <div className="flex flex-col items-center">
-            <h2 className="text-[1.5rem] md:text-[1.7rem]  text-center  max-w-2xl mx-auto font-semibold font-montserrat mb-3">
+            <h2 className="text-[1.5rem] md:text-[1.7rem]  text-center  max-w-2xl mx-auto font-semibold font-montserrat mb-2">
               Our Story
             </h2>
-            <div className="h-1.5 w-20 bg-secondary  rounded-full mb-10"></div>
+            <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
           </div>
 
           <p className="text-[1.4rem] lg:text-[1.7rem] tracking-wider leading-relaxed sm:max-w-4xl lg:max-w-5xl mb-8 ">
             Founded in 2018, CoreFit began with a simple idea — to create a
             space where everyone feels welcome, regardless of where they are in
             their fitness journey.
-            <p className="my-5">
+            <p className="my-3">
               What started as a small community gym quickly grew into a place of
               transformation — not just of bodies, but of confidence, mindset,
               and lifestyle.
