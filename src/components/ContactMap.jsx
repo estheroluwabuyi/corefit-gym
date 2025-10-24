@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import FadeInSection from "./FadeInSection";
 
 import iconUrl from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
@@ -17,7 +18,12 @@ L.Marker.prototype.options.icon = defaultIcon;
 
 function ContactMap() {
   return (
-    <div className="relative w-full z-5 lg:w-1/2 ">
+    //  <FadeInSection animation="blur" delay={0.4}></FadeInSection>
+    <FadeInSection
+      animation="blur"
+      delay={0.3}
+      className="relative w-full z-5 lg:w-1/2 "
+    >
       <MapContainer
         center={[40.6947, -73.9496]}
         zoom={15}
@@ -55,7 +61,7 @@ function ContactMap() {
           CoreFit Gym, 401 West Fitness Ave, Brooklyn, NY 11201, USA
         </a>
       </p>
-    </div>
+    </FadeInSection>
   );
 }
 

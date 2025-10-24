@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import { useReducer } from "react";
 import CtaBtn from "./CtaBtn";
+import FadeInSection from "./FadeInSection";
 
 const initialState = {
   email: "",
@@ -50,74 +51,80 @@ function ContactForm() {
   };
 
   return (
-    <form
-      className="border border-text p-8 w-full rounded-2xl lg:w-1/2 "
-      onSubmit={handleSubmit}
+    <FadeInSection
+      animation="blur"
+      delay={0.3}
+      className=" w-full z-5 lg:w-1/2 "
     >
-      <div className="text-center mb-10 max-w-3xl flex flex-col gap-5 mx-auto font-montserrat">
-        <h2 className="text-[2rem] lg:text-[2.5rem] font-semibold text-secondary">
-          Send Us a Message
-        </h2>
-        <p>
-          Your fitness journey matters to us—reach out anytime and we’ll be in
-          touch.
-        </p>
-      </div>
-
-      <div className="flex flex-col text-text">
-        <div className="flex gap-6">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="bmi-input"
-            required
-            value={name}
-            onChange={(e) =>
-              dispatch({ type: "setName", payload: e.target.value })
-            }
-            disabled={isLoading}
-          />
-
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="bmi-input"
-            required
-            value={email}
-            onChange={(e) =>
-              dispatch({ type: "setEmail", payload: e.target.value })
-            }
-            disabled={isLoading}
-          />
+      <form
+        className="border border-text p-8 rounded-2xl "
+        onSubmit={handleSubmit}
+      >
+        <div className="text-center mb-10 max-w-3xl flex flex-col gap-5 mx-auto font-montserrat">
+          <h2 className="text-[2rem] lg:text-[2.5rem] font-semibold text-secondary">
+            Send Us a Message
+          </h2>
+          <p>
+            Your fitness journey matters to us—reach out anytime and we’ll be in
+            touch.
+          </p>
         </div>
 
-        {/* Message */}
-        <textarea
-          rows="7"
-          placeholder="Your Message"
-          className="textarea w-full px-4 py-3 mt-10! mb-7 resize-none"
-          required
-          value={textarea}
-          onChange={(e) =>
-            dispatch({ type: "setTextarea", payload: e.target.value })
-          }
-          disabled={isLoading}
-        ></textarea>
+        <div className="flex flex-col text-text">
+          <div className="flex gap-6">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="bmi-input"
+              required
+              value={name}
+              onChange={(e) =>
+                dispatch({ type: "setName", payload: e.target.value })
+              }
+              disabled={isLoading}
+            />
 
-        {/* Submit Button */}
-        <CtaBtn
-          // text="Send Message"
-          text={isLoading ? "Sending..." : "Send Message"}
-          bg="bg-secondary "
-          hoverBg="hover:bg-transparent"
-          mobileHoverBg="bg-transparent"
-          activeBg="active:bg-transparent"
-          btnType="submit"
-          radius="rounded-md"
-          isLoading={isLoading}
-        />
-      </div>
-    </form>
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="bmi-input"
+              required
+              value={email}
+              onChange={(e) =>
+                dispatch({ type: "setEmail", payload: e.target.value })
+              }
+              disabled={isLoading}
+            />
+          </div>
+
+          {/* Message */}
+          <textarea
+            rows="7"
+            placeholder="Your Message"
+            className="textarea w-full px-4 py-3 mt-10! mb-7 resize-none"
+            required
+            value={textarea}
+            onChange={(e) =>
+              dispatch({ type: "setTextarea", payload: e.target.value })
+            }
+            disabled={isLoading}
+          ></textarea>
+
+          {/* Submit Button */}
+          <CtaBtn
+            // text="Send Message"
+            text={isLoading ? "Sending..." : "Send Message"}
+            bg="bg-secondary "
+            hoverBg="hover:bg-transparent"
+            mobileHoverBg="bg-transparent"
+            activeBg="active:bg-transparent"
+            btnType="submit"
+            radius="rounded-md"
+            isLoading={isLoading}
+          />
+        </div>
+      </form>
+    </FadeInSection>
   );
 }
 
