@@ -1,24 +1,35 @@
-import { FaDumbbell, FaUsers, FaFire, FaLeaf, FaBrain } from "react-icons/fa";
+import {
+  FaDumbbell,
+  FaUsers,
+  FaFire,
+  FaLeaf,
+  FaBrain,
+  FaHeart,
+} from "react-icons/fa";
 import FadeInSection from "./FadeInSection";
 
 const missionPoints = [
   {
-    icon: <FaUsers className="text-blue-500 text-[3.8rem] md:text-[3.5rem]" />,
+    icon: <FaUsers className="text-sky-500 text-[3.8rem] md:text-[3.5rem]" />,
     text: "To build a supportive, inclusive community that celebrates every milestone.",
   },
   {
     icon: (
-      <FaDumbbell className="text-red-500 text-[3.8rem] md:text-[3.5rem]" />
+      <FaDumbbell className="text-orange-500 text-[3.8rem] md:text-[3.5rem]" />
     ),
     text: "To empower individuals to reach their peak physical and mental fitness.",
   },
   {
-    icon: <FaFire className="text-orange-500 text-[3.2rem]" />,
+    icon: <FaFire className="text-red-500 text-[3.2rem]" />,
     text: "To inspire consistency and discipline—on and off the gym floor.",
   },
   {
     icon: <FaLeaf className="text-green-500 text-[3.5rem]" />,
     text: "To encourage healthy eating habits and overall wellness.",
+  },
+  {
+    icon: <FaHeart className="text-pink-400 text-[3.5rem]" />,
+    text: "To promote balance, self-love, and sustainable progress.",
   },
   {
     icon: <FaBrain className="text-purple-500 text-[3.5rem]" />,
