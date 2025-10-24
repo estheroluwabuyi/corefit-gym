@@ -2,23 +2,23 @@ import { FaDumbbell, FaUsers, FaFire, FaLeaf, FaBrain } from "react-icons/fa";
 
 const missionPoints = [
   {
-    icon: <FaUsers size={25} className="text-blue-500" />,
+    icon: <FaUsers className="text-blue-500 text-[3.2rem]" />,
     text: "To build a supportive, inclusive community that celebrates every milestone.",
   },
   {
-    icon: <FaDumbbell size={25} className="text-red-500" />,
+    icon: <FaDumbbell className="text-red-500 text-[3.2rem]" />,
     text: "To empower individuals to reach their peak physical and mental fitness.",
   },
   {
-    icon: <FaFire size={25} className="text-orange-500" />,
+    icon: <FaFire className="text-orange-500 text-[2.7rem]" />,
     text: "To inspire consistency and discipline—on and off the gym floor.",
   },
   {
-    icon: <FaLeaf size={25} className="text-green-500" />,
+    icon: <FaLeaf className="text-green-500 text-[3rem]" />,
     text: "To encourage healthy eating habits and overall wellness.",
   },
   {
-    icon: <FaBrain size={25} className="text-purple-500" />,
+    icon: <FaBrain className="text-purple-500 text-[3rem]" />,
     text: "To support mental resilience and a positive mindset.",
   },
 ];
@@ -42,7 +42,7 @@ function AboutMission() {
             </li>
           ))}
         </ul>
-
+        {/* Chalkboard effect */}
         <div className="absolute top-2 left-2 right-2 bottom-2 border-2 border-dashed border-white/40 rounded-xl pointer-events-none"></div>
       </div>
     </section>
