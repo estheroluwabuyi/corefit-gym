@@ -20,7 +20,7 @@ function AboutStory() {
             <h2 className="text-[1.5rem] md:text-[1.7rem]  text-center  max-w-2xl mx-auto font-semibold font-montserrat mb-2">
               Our Story
             </h2>
-            <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
+            <div className="h-1.5 w-18 bg-secondary  rounded-full mb-7"></div>
           </div>
 
           <p className="text-[1.4rem] lg:text-[1.7rem] tracking-wider leading-relaxed sm:max-w-4xl lg:max-w-5xl mb-8 ">
