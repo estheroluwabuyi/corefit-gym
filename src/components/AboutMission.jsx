@@ -12,7 +12,7 @@ const missionPoints = [
     text: "To empower individuals to reach their peak physical and mental fitness.",
   },
   {
-    icon: <FaFire className="text-orange-500 text-[3rem]" />,
+    icon: <FaFire className="text-orange-500 text-[2.9rem]" />,
     text: "To inspire consistency and discipline—on and off the gym floor.",
   },
   {
