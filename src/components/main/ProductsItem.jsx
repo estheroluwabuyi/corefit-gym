@@ -14,7 +14,7 @@ function ProductsItem({ item }) {
   return (
     <div
       className={clsx(
-        "bg-text/90 p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl text-primary transition-all duration-700 ease-in-out",
+        "bg-text/90 p-7 xs:p-5 ss:p-7 lg:p-10 flex flex-col justify-center items-center rounded-2xl text-primary transition-all duration-700 ease-in-out",
         !item.inStock && "opacity-50",
         containerActive === item.id && item.inStock && "bg-text!"
       )}
