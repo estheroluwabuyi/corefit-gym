@@ -12,7 +12,7 @@
   --font-roboto: "Roboto", sans-serif;
   --font-permanent: "Permanent Marker", cursive;
   /*  *Breakpoints */
-  --breakpoint-xs: 320px;
+  --breakpoint-xs: 356px;
   --breakpoint-ss: 375px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;

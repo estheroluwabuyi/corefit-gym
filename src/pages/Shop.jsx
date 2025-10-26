@@ -31,7 +31,7 @@ function Shop() {
           Explore Our Collection
         </h2>
 
-        <div className="xs:grid-cols-1 xs:max-w-[200px] grid ss:grid-cols-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-10 ss:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto 2xl:px-[15rem] lg:px-[5rem] px-8">
+        <div className="grid-cols-1 max-w-[200px] grid xs:grid-cols-2 lg:grid-cols-4 gap-10 mt-12 xs:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto 2xl:px-[15rem] lg:px-[5rem] px-8">
           {equipments.map((item) => (
             <div key={item.id}>
               {item.inStock ? (

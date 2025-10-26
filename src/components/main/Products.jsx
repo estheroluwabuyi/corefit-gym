@@ -30,7 +30,7 @@ function Products() {
 
       <FadeInSection animation="slide" delay={0.4}>
         <div>
-          <div className="xs:grid-cols-1 xs:max-w-[200px] grid ss:grid-cols-2  lg:grid-cols-4 gap-10 mt-12 ss:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
+          <div className="grid-cols-1 max-w-[200px] grid xs:grid-cols-2  lg:grid-cols-4 gap-10 mt-12 xs:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto">
             {equipments.slice(0, 8).map((item) => (
               <div key={item.id}>
                 {item.inStock ? (
