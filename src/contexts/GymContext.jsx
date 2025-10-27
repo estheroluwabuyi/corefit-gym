@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useMemo, useState } from "react";
 
 import { equipmentItems } from "../utils/equipmentList";
 import { contactInfo } from "../utils/contactPageInfo";
@@ -11,21 +11,19 @@ function GymProvider({ children }) {
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [containerActive, setContainerActive] = useState(null);
 
-  return (
-    <GymContext.Provider
-      value={{
-        equipments,
-        setEquipments,
-        hoveredItemId,
-        setHoveredItemId,
-        containerActive,
-        setContainerActive,
-        contactPage,
-      }}
-    >
-      {children}
-    </GymContext.Provider>
-  );
+  const value = useMemo(() => {
+    return {
+      equipments: equipments,
+      setEquipments: setEquipments,
+      hoveredItemId: hoveredItemId,
+      setHoveredItemId: setHoveredItemId,
+      containerActive: containerActive,
+      setContainerActive: setContainerActive,
+      contactPage: contactPage,
+    };
+  }, [contactPage, containerActive, equipments, hoveredItemId]);
+
+  return <GymContext.Provider value={value}>{children}</GymContext.Provider>;
 }
 
 function useGym() {
