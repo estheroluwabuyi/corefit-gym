@@ -1,18 +1,21 @@
-import { useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Layout from "./pages/Layout";
-import PageNotFound from "./pages/PageNotFound";
-import HomePage from "./pages/HomePage";
-import Contact from "./pages/Contact";
+
 import Preloader from "./components/Preloader";
-import Cart from "./pages/Cart";
 import ScrollToTop from "./components/ScrollToTop";
-import Shop from "./pages/Shop";
-import CartItemDetails from "./pages/CartItemDetails";
 import { GymProvider } from "./contexts/GymContext";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
+import Layout from "./components/Layout";
+
+// Lazy imports
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+const HomePage = lazy(() => import("./pages/HomePage"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Cart = lazy(() => import("./pages/Cart"));
+const Shop = lazy(() => import("./pages/Shop"));
+const CartItemDetails = lazy(() => import("./pages/CartItemDetails"));
+const About = lazy(() => import("./pages/About"));
+const Blog = lazy(() => import("./pages/Blog"));
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,7 +37,7 @@ function App() {
 
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {!isLoaded && <Preloader key="preloader" />}
       </AnimatePresence>
 
@@ -42,20 +45,22 @@ function App() {
         <GymProvider>
           <BrowserRouter>
             <ScrollToTop />
-            <Routes>
-              <Route element={<Layout />}>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/home" element={<HomePage />} />
-                <Route index element={<HomePage />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/shop" element={<Shop />} />
-                <Route path="/shop/:id" element={<CartItemDetails />} />
-              </Route>
-              <Route path="/blog/:id" element={<Blog />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
+            <Suspense fallback={null}>
+              <Routes>
+                <Route element={<Layout />}>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/home" element={<HomePage />} />
+                  <Route index element={<HomePage />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/shop" element={<Shop />} />
+                  <Route path="/shop/:id" element={<CartItemDetails />} />
+                </Route>
+                <Route path="/blog/:id" element={<Blog />} />
+                <Route path="*" element={<PageNotFound />} />
+              </Routes>
+            </Suspense>
           </BrowserRouter>
         </GymProvider>
       )}
