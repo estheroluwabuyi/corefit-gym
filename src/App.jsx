@@ -6,6 +6,7 @@ import Preloader from "./components/Preloader";
 import ScrollToTop from "./components/ScrollToTop";
 import { GymProvider } from "./contexts/GymContext";
 import Layout from "./components/Layout";
+import { CartProvider } from "./contexts/CartContext";
 
 // Lazy imports
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
@@ -43,25 +44,27 @@ function App() {
 
       {isLoaded && (
         <GymProvider>
-          <BrowserRouter>
-            <ScrollToTop />
-            <Suspense fallback={null}>
-              <Routes>
-                <Route element={<Layout />}>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/home" element={<HomePage />} />
-                  <Route index element={<HomePage />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/cart" element={<Cart />} />
-                  <Route path="/shop" element={<Shop />} />
-                  <Route path="/shop/:id" element={<CartItemDetails />} />
-                </Route>
-                <Route path="/blog/:id" element={<Blog />} />
-                <Route path="*" element={<PageNotFound />} />
-              </Routes>
-            </Suspense>
-          </BrowserRouter>
+          <CartProvider>
+            <BrowserRouter>
+              <ScrollToTop />
+              <Suspense fallback={null}>
+                <Routes>
+                  <Route element={<Layout />}>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/home" element={<HomePage />} />
+                    <Route index element={<HomePage />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/shop" element={<Shop />} />
+                    <Route path="/shop/:id" element={<CartItemDetails />} />
+                  </Route>
+                  <Route path="/blog/:id" element={<Blog />} />
+                  <Route path="*" element={<PageNotFound />} />
+                </Routes>
+              </Suspense>
+            </BrowserRouter>
+          </CartProvider>
         </GymProvider>
       )}
     </>

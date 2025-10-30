@@ -3,13 +3,15 @@ import { motion } from "framer-motion";
 import { FaShoppingCart } from "react-icons/fa";
 import { useGym } from "../contexts/GymContext";
 
-function CardComponent({ item }) {
+function CardComponent({ item, addToCart }) {
   const {
     hoveredItemId,
     setHoveredItemId,
     containerActive,
     setContainerActive,
   } = useGym();
+
+  // const
 
   return (
     <div
@@ -57,6 +59,7 @@ function CardComponent({ item }) {
             whileTap={{ scale: 0.9 }}
             onClick={(e) => {
               e.preventDefault();
+              addToCart();
             }}
           >
             <FaShoppingCart />

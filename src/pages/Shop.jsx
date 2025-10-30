@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import CardComponent from "../components/CardComponent";
 import { useGym } from "../contexts/GymContext";
 import PageHeader from "../components/PageHeader";
+import { useCart } from "../contexts/CartContext";
 
 function Shop() {
   const { equipments } = useGym();
+  const { addToCart } = useCart();
 
   return (
     <motion.div
@@ -36,7 +38,10 @@ function Shop() {
             <div key={item.id}>
               {item.inStock ? (
                 <Link to={`/shop/${item.id}`}>
-                  <CardComponent item={item} />
+                  <CardComponent
+                    item={item}
+                    addToCart={() => addToCart(item)}
+                  />
                 </Link>
               ) : (
                 <CardComponent item={item} />

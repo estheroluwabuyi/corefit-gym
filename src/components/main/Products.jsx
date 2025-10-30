@@ -4,9 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import FadeInSection from "../FadeInSection";
 import ProductsItem from "./ProductsItem";
 import { useGym } from "../../contexts/GymContext";
+import { useCart } from "../../contexts/CartContext";
 
 function Products() {
   const { equipments = [] } = useGym();
+  const { addToCart } = useCart();
 
   const navigate = useNavigate();
 
@@ -35,7 +37,10 @@ function Products() {
               <div key={item.id}>
                 {item.inStock ? (
                   <Link to={`/shop/${item.id}`}>
-                    <ProductsItem item={item} />
+                    <ProductsItem
+                      item={item}
+                      addToCart={() => addToCart(item)}
+                    />
                   </Link>
                 ) : (
                   <ProductsItem item={item} />
