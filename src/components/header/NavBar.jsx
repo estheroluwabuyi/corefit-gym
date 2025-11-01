@@ -7,20 +7,20 @@ import CartImg from "../cart/CartImg";
 import Logo from "../Logo";
 
 import {
-  FaDumbbell,
   FaShoppingCart,
   FaInfoCircle,
   FaEnvelope,
   FaHome,
+  FaDollarSign,
 } from "react-icons/fa";
 import { TbMenu2 } from "react-icons/tb";
-import { IoCloseOutline } from "react-icons/io5";
 import { CgClose } from "react-icons/cg";
 
 const navItems = [
   { name: "Home", icon: <FaHome />, path: "/" },
   { name: "Shop", icon: <FaShoppingCart />, path: "/shop" },
-  { name: "Exercise", icon: <FaDumbbell />, path: "/exercise" },
+  // { name: "Exercise", icon: <FaDumbbell />, path: "/exercise" },
+  { name: "Pricing", icon: <FaDollarSign />, path: "/pricing" },
   { name: "Contact", icon: <FaEnvelope />, path: "/contact" },
   { name: "About", icon: <FaInfoCircle />, path: "/about" },
 ];

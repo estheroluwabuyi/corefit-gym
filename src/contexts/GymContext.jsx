@@ -9,6 +9,15 @@ function GymProvider({ children }) {
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [containerActive, setContainerActive] = useState(null);
 
+  // Format USD
+  const formatUSD = (amount) =>
+    amount.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+
   return (
     <GymContext.Provider
       value={{
@@ -19,6 +28,7 @@ function GymProvider({ children }) {
         containerActive,
         setContainerActive,
         contactPage: contactInfo,
+        formatUSD,
       }}
     >
       {children}

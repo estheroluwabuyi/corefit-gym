@@ -8,17 +8,13 @@ export default function Cart() {
   const { cartItems } = useCart();
 
   return (
-    <div className=" bg-dark-alt ">
+    <div className="relative bg-dark-alt ">
       {cartItems.length > 0 ? (
-        // {cartItems.length === 0 ? (
         <div
           className="min-h-screen px-8 pb-25 lg:px-[5rem] 
         pt-[12rem] mx-auto md:max-w-5xl lg:max-w-full"
         >
           <CartHeader />
-          {/* 
-          <section className="lg:flex gap-20 items-center justify-center"> */}
-
           <section
             className={`lg:flex gap-20  justify-center ${
               cartItems.length > 3 ? "items-center" : "items-start"

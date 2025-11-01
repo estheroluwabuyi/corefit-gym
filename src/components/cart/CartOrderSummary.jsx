@@ -1,8 +1,10 @@
 import { useCart } from "../../contexts/CartContext";
+import { useGym } from "../../contexts/GymContext";
 import CtaBtn from "../CtaBtn";
 
 function CartOrderSummary() {
   const { cartItems, total } = useCart();
+  const { formatUSD } = useGym();
 
   return (
     <div className="tracking-wide text-[1.35rem] lg:text-[1.4rem] bg-primary backdrop-blur-md  shadow-lg px-10 py-12 lg:mt-10 mt-15 rounded-2xl font-opens lg:w-[35%]">
@@ -17,7 +19,7 @@ function CartOrderSummary() {
               : `${cartItems.length} items`}
             ):
           </h2>
-          <p>${total}</p>
+          <p>{formatUSD(total)}</p>
         </div>
         <div className="mt-20 mb-15 flex justify-between opacity-70">
           <h2>Shipping:</h2>
@@ -28,7 +30,7 @@ function CartOrderSummary() {
       <section className="">
         <div className=" flex justify-between">
           <h2 className="font-bold">Estimated Total:</h2>
-          <p>${total}</p>
+          <p>{formatUSD(total)}</p>
         </div>
       </section>
 

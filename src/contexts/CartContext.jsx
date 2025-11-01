@@ -1,9 +1,24 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
 
 function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const saved = localStorage.getItem("cartItems");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const [confirmItemId, setConfirmItemId] = useState(null);
+
+  // Prevent background scrolling when modal is open
+  useEffect(() => {
+    document.body.style.overflow = confirmItemId ? "hidden" : "auto";
+  }, [confirmItemId]);
+
+  // Save to localStorage
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   // Add to Cart
   const addToCart = (item) => {
@@ -23,6 +38,7 @@ function CartProvider({ children }) {
   // Remove from Cart
   const removeFromCart = (id) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
+    setConfirmItemId(null);
   };
 
   //   Increase Cart Quantity
@@ -66,6 +82,8 @@ function CartProvider({ children }) {
         decreaseQty,
         clearCart,
         total,
+        confirmItemId,
+        setConfirmItemId,
       }}
     >
       {children}

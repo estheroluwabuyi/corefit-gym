@@ -9,9 +9,8 @@ function CardComponent({ item, addToCart }) {
     setHoveredItemId,
     containerActive,
     setContainerActive,
+    formatUSD,
   } = useGym();
-
-  // const
 
   return (
     <div
@@ -45,7 +44,9 @@ function CardComponent({ item, addToCart }) {
       </div>
 
       <div className="self-start text-[1.5rem] lg:text-[1.7rem] flex justify-between w-full">
-        <div className="font-bold  font-montserrat">${item.price}</div>
+        <div className="font-bold  font-montserrat">
+          {formatUSD(item.price)}
+        </div>
 
         {item.inStock ? (
           <motion.button
