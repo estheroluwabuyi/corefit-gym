@@ -5,8 +5,7 @@ import CartOrderSummary from "../components/cart/CartOrderSummary";
 import CartAddedItems from "../components/cart/CartAddedItems";
 
 export default function Cart() {
-  const { cartItems, increaseQty, decreaseQty, removeFromCart, total } =
-    useCart();
+  const { cartItems } = useCart();
 
   return (
     <div className=" bg-dark-alt ">

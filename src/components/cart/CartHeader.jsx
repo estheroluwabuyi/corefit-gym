@@ -1,6 +1,9 @@
 import { IoIosStar } from "react-icons/io";
+import { useCart } from "../../contexts/CartContext";
 
 function CartHeader() {
+  const { cartItems, total } = useCart();
+
   return (
     <div className=" font-montserrat">
       <h2 className="text-[2rem] lg:text-[2.5rem] font-bold">Shopping Cart</h2>
@@ -9,11 +12,11 @@ function CartHeader() {
         <span className="font-semibold">Free Shipping!</span>
       </p>
 
-      {/* {cartItems.length > 0 && total >= 300 && ( */}
-      <p className=" text-green-500 mt-5  tracking-wider">
-        Cart eligible for discounts.
-      </p>
-      {/* )} */}
+      {cartItems.length > 0 && total >= 300 && (
+        <p className=" text-green-500 mt-5  tracking-wider">
+          Cart eligible for discounts.
+        </p>
+      )}
 
       <div className="mt-7 flex items-center lg:w-[63%]">
         <div className="w-full h-2 bg-secondary rounded-l-2xl"></div>
