@@ -15,7 +15,7 @@ function CartHeader() {
       </p>
       {/* )} */}
 
-      <div className="mt-7 flex items-center">
+      <div className="mt-7 flex items-center lg:w-[63%]">
         <div className="w-full h-2 bg-secondary rounded-l-2xl"></div>
         <div className="w-[2rem] h-[2rem] border border-secondary rounded-full flex items-center justify-center bg-dark-alt font-bold text-secondary shrink-0  ">
           <IoIosStar className="w-[1.2rem] mb-[.02rem] text-secondary" />

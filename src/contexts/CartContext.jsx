@@ -37,11 +37,13 @@ function CartProvider({ children }) {
   //   Decrease Cart Quantity
   const decreaseQty = (id) => {
     setCartItems((prev) =>
-      prev
-        .map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-        )
-        .filter((item) => item.quantity > 0)
+      prev.map((item) => {
+        if (item.id === id) {
+          if (item.quantity === 1) return item;
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+      })
     );
   };
 
