@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import CartImg from "../CartImg";
+import CartImg from "../cart/CartImg";
 import Logo from "../Logo";
 
 import {

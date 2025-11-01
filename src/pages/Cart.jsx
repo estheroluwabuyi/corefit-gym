@@ -1,30 +1,31 @@
 import { useCart } from "../contexts/CartContext";
-import CartHeader from "../components/CartHeader";
+import CartHeader from "../components/cart/CartHeader";
+import CartEmpty from "../components/cart/CartEmpty";
+import CartOrderSummary from "../components/cart/CartOrderSummary";
+import CartAddedItems from "../components/cart/CartAddedItems";
 
 export default function Cart() {
   const { cartItems, increaseQty, decreaseQty, removeFromCart, total } =
     useCart();
 
   return (
-    <div>
-      <CartHeader />
+    <div className=" bg-dark-alt">
+      {/* {cartItems.length > 0 ? ( */}
+      {cartItems.length === 0 ? (
+        <div
+          className="min-h-screen px-8 pb-25 lg:px-[5rem] 
+        pt-[12rem] mx-auto"
+        >
+          <CartHeader />
+
+          <section>
+            <CartAddedItems />
+            <CartOrderSummary />
+          </section>
+        </div>
+      ) : (
+        <CartEmpty />
+      )}
     </div>
   );
-}
-
-{
-  /* 
-      {/* Cart Items *
-      {cartItems.map((item) => (
-        <div key={item.id} className="flex justify-between items-center py-4 border-b border-b-dark-200">
-            {item.name} - ${item.price} × {item.quantity}
-          </p>
-          <button onClick={() => decreaseQty(item.id)}>-</button>
-          <button onClick={() => increaseQty(item.id)}>+</button>
-          <button onClick={() => removeFromCart(item.id)}>Remove</button> *
-        </div>
-      ))}
-
-      {/* <h3>Total: ${total}</h3> *
-    </div> */
 }
