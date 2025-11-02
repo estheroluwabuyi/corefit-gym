@@ -112,7 +112,6 @@ function ContactForm() {
 
           {/* Submit Button */}
           <CtaBtn
-            // text="Send Message"
             text={isLoading ? "Sending..." : "Send Message"}
             bg="bg-secondary "
             hoverBg="hover:bg-transparent"

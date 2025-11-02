@@ -6,12 +6,18 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import BackBtn from "../components/BackBtn";
 import { useGym } from "../contexts/GymContext";
 import { useCart } from "../contexts/CartContext";
+import CtaBtn from "../components/CtaBtn";
 
 function CartItemDetails() {
   const { id } = useParams();
   const { equipments, formatUSD } = useGym();
   const { addToCart } = useCart();
   const item = equipments.find((item) => item.id === id);
+
+  // Handle add to cart
+  const handleAddToCart = () => {
+    addToCart(item);
+  };
 
   //star rating
   const renderStars = (rating) => {
@@ -83,12 +89,27 @@ function CartItemDetails() {
           </p>
         </div>
 
-        <button className="mt-6 bg-secondary hover:bg-secondary/90  text-[1.35rem] sm:text-[1.4rem] lg:text-[1.7rem] text-text font-bold px-6 py-5 rounded-xl shadow-lg transition-all duration-300">
+        <button
+          className="mt-6 bg-secondary border-2 hover:border-2 hover:bg-transparent hover:border-secondary hover:text-primary  text-[1.35rem] sm:text-[1.4rem] lg:text-[1.7rem] text-text font-bold px-6 py-5 rounded-xl shadow-lg transition-all duration-500"
+          onClick={() => addToCart(item)}
+        >
           Add to Cart
         </button>
+        {/* <CtaBtn
+          hoverBg="hover:bg-transparent "
+          activeBg="active:bg-transparent "
+          mobileHoverBg="bg-transparent text-primary!"
+          text="Add to cart"
+          bg="bg-secondary"
+          radius="rounded-md"
+          width="w-full"
+          func={addToCart}
+          onClick={() => addToCart(item)}
+        /> */}
       </div>
     </motion.div>
   );
 }
+// onClick={() => addToCart(item)}
 
 export default CartItemDetails;

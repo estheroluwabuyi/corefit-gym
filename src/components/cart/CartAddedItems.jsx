@@ -46,14 +46,14 @@ function CartAddedItems() {
               <img src={item.image} alt={item.name} />
             </div>
 
-            <div className="text-[1.2rem] xs:text-[1.4rem] font-bold lg:text-[1.7rem] tracking-wider">
+            <div className="text-[1.2rem] ss:text-[1.3rem] font-bold lg:text-[1.7rem] tracking-wider">
               <div>{item.name}</div>
               <div className="mt-3">Price: {formatUSD(item.price)}</div>
             </div>
           </section>
 
           <div className="flex flex-col justify-center items-center">
-            <section className="flex justify-center items-center gap-5 xs:gap-7 sm:gap-10 p-2 xs:p-3 ss:px-5 rounded-xl border border-text/20 text-[1.2rem] xs:text-[1.4rem] font-bold lg:text-[1.7rem]">
+            <section className="flex justify-center items-center gap-5 xs:gap-7 sm:gap-10 p-2 xs:p-3 ss:px-5 rounded-xl border border-text/20 text-[1.2rem] ss:text-[1.3rem] font-bold lg:text-[1.7rem]">
               <button
                 className={` hover:scale-110 transition duration-600 ${
                   item.quantity === 1 && "opacity-50"
