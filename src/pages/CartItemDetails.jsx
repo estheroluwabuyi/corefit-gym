@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import BackBtn from "../components/BackBtn";
 import { useGym } from "../contexts/GymContext";
+import { useCart } from "../contexts/CartContext";
 
 function CartItemDetails() {
   const { id } = useParams();
   const { equipments, formatUSD } = useGym();
+  const { addToCart } = useCart();
   const item = equipments.find((item) => item.id === id);
 
   //star rating
@@ -65,7 +67,7 @@ function CartItemDetails() {
           <h1 className="text-3xl md:text-5xl font-bold mt-8 drop-shadow-md">
             {item.name}
           </h1>
-          <h2 className="bg-text/90  text-primary transition-all duration-700 ease-in-out text-[1.5rem] lg:t5xt-[1.7rem] font-bold font-montserrat mt-5">
+          <h2 className="bg-text/90  text-primary transition-all duration-700 ease-in-out text-[1.5rem] lg:text-[1.7rem] font-bold font-montserrat mt-5">
             {formatUSD(item.price)}
           </h2>
 
