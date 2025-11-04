@@ -12,7 +12,7 @@ export default function Cart() {
       {cartItems.length > 0 ? (
         <div
           className="min-h-screen px-8 pb-25 lg:px-[5rem] 
-        pt-[12rem] mx-auto md:max-w-5xl lg:max-w-full"
+        pt-[12rem] mx-auto md:max-w-5xl lg:max-w-full 2xl:px-[15rem]"
         >
           <CartHeader />
           <section
