@@ -16,9 +16,10 @@ export default function Cart() {
         >
           <CartHeader />
           <section
-            className={`lg:flex gap-20  justify-center ${
-              cartItems.length > 3 ? "items-center" : "items-start"
-            }`}
+            // className={`lg:flex gap-20  justify-center ${
+            //   cartItems.length > 3 ? "items-center" : "items-start"
+            // }`}
+            className="lg:flex gap-20 items-start justify-center"
           >
             <div className="lg:w-[65%]">
               <CartAddedItems />

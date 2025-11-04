@@ -3,7 +3,7 @@ export const equipmentItems = [
     id: "eq001",
     name: "Dumbbells",
     description:
-      "Compact dumbbells with adjustable weights—perfect for strength training at home.",
+      "Compact and versatile dumbbells with adjustable weights — perfect for home or gym workouts. Build muscle, tone your arms, and enhance overall strength with ease. Suitable for beginners and advanced lifters alike.",
     price: 120,
     rating: 4.8,
     tags: ["strength", "adjustable", "home"],
@@ -13,7 +13,8 @@ export const equipmentItems = [
   {
     id: "eq002",
     name: "Yoga Mat",
-    description: "Non-slip, thick yoga mat for all fitness levels.",
+    description:
+      "A thick, non-slip yoga mat that provides comfort and stability for every pose. Designed for all fitness levels, it supports yoga, pilates, and stretching sessions. Easy to roll and carry for home or studio use.",
     price: 25,
     rating: 4.6,
     tags: ["flexibility", "floor", "stretching"],
@@ -24,7 +25,7 @@ export const equipmentItems = [
     id: "eq003",
     name: "Resistance Bands",
     description:
-      "Set of 5 bands for home workouts, rehab, and mobility training—portable and versatile.",
+      "A complete set of 5 resistance bands for full-body workouts, mobility training, and rehabilitation. Lightweight and portable, they help improve strength, flexibility, and muscle tone anywhere you go.",
     price: 50,
     rating: 4.7,
     tags: ["strength", "rehab", "portable"],
@@ -35,7 +36,7 @@ export const equipmentItems = [
     id: "eq004",
     name: "Kettlebell",
     description:
-      "Durable 15 lbs kettlebell for full-body strength and cardio training.",
+      "Durable 15 lbs kettlebell for dynamic strength and cardio training. Ideal for swings, squats, and presses to build endurance, burn fat, and strengthen your entire body. A must-have for functional workouts.",
     price: 60,
     rating: 4.5,
     tags: ["strength", "endurance", "versatile"],
@@ -46,7 +47,7 @@ export const equipmentItems = [
     id: "eq005",
     name: "Balance Ball",
     description:
-      "Stability ball for core workouts, stretching, and posture training.",
+      "A stability ball designed for improving posture, core strength, and flexibility. Great for yoga, pilates, and physiotherapy. It adds fun and challenge to every workout routine.",
     price: 28,
     rating: 4.4,
     tags: ["core", "balance", "rehab"],
@@ -56,7 +57,8 @@ export const equipmentItems = [
   {
     id: "eq006",
     name: "Jump Rope",
-    description: "Adjustable speed rope for cardio and agility workouts.",
+    description:
+      "An adjustable speed rope built for agility, coordination, and endurance. Ideal for cardio workouts, warm-ups, and HIIT sessions. Lightweight, tangle-free, and easy to carry anywhere.",
     price: 15,
     rating: 4.0,
     tags: ["cardio", "conditioning", "portable"],
@@ -66,7 +68,8 @@ export const equipmentItems = [
   {
     id: "eq007",
     name: "Foam Roller",
-    description: "High-density roller for muscle recovery and massage.",
+    description:
+      "High-density foam roller for deep tissue massage and muscle recovery. Relieve soreness, improve blood circulation, and enhance flexibility after intense workouts or long days.",
     price: 22,
     rating: 4.5,
     tags: ["recovery", "mobility", "rehab"],
@@ -77,7 +80,7 @@ export const equipmentItems = [
     id: "eq008",
     name: "Barbell Set",
     description:
-      "Standard bar and plates—ideal for weightlifting and power training.",
+      "A complete barbell and weight plate set for serious strength training. Ideal for squats, deadlifts, presses, and Olympic lifts. Built to last and designed for both home and commercial use.",
     price: 150,
     rating: 4.6,
     tags: ["strength", "powerlifting", "home"],
@@ -88,7 +91,7 @@ export const equipmentItems = [
     id: "eq009",
     name: "Pull-Up Bar",
     description:
-      "Doorway pull-up bar with multiple grip positions for upper body strength training.",
+      "Heavy-duty doorway pull-up bar with multiple grip options. Strengthen your back, arms, and core with ease. Easy to install and fits most door frames — no screws required.",
     price: 35,
     rating: 4.2,
     tags: ["upper body", "strength", "bodyweight"],
@@ -99,7 +102,7 @@ export const equipmentItems = [
     id: "eq010",
     name: "Ankle Weights",
     description:
-      "Adjustable 5 lb pair—adds resistance to walks or workouts for better mobility and strength.",
+      "Adjustable 5 lb ankle weights that add resistance to walks, runs, and workouts. Helps tone your legs, improve endurance, and enhance mobility with every step.",
     price: 18,
     rating: 4.3,
     tags: ["legs", "resistance", "mobility"],
@@ -110,7 +113,7 @@ export const equipmentItems = [
     id: "eq011",
     name: "Stationary Bike",
     description:
-      "Low-impact indoor cycling machine for endurance and fat burn.",
+      "Low-impact indoor cycling machine designed for comfort and performance. Burn calories, improve stamina, and enjoy smooth pedalling with adjustable resistance levels.",
     price: 350,
     rating: 4.7,
     tags: ["cardio", "legs", "home gym"],
@@ -120,7 +123,8 @@ export const equipmentItems = [
   {
     id: "eq012",
     name: "Mini Stepper",
-    description: "Compact cardio machine to simulate stair climbing.",
+    description:
+      "Compact stair-stepping machine that provides an effective lower-body and cardio workout. Great for small spaces and daily fitness routines — strengthens legs and burns fat.",
     price: 80,
     rating: 3.6,
     tags: ["cardio", "lower body", "home"],
@@ -130,7 +134,8 @@ export const equipmentItems = [
   {
     id: "eq013",
     name: "Rowing Machine",
-    description: "Low-impact full-body cardio and strength workout machine.",
+    description:
+      "Full-body cardio and strength machine offering a smooth rowing motion. Targets arms, back, core, and legs simultaneously. Ideal for home gyms and total-body fitness.",
     price: 499,
     rating: 4.7,
     tags: ["cardio", "full body", "home gym"],
@@ -140,7 +145,8 @@ export const equipmentItems = [
   {
     id: "eq014",
     name: "Gliding Discs",
-    description: "Double-sided discs for strength and stability training.",
+    description:
+      "Dual-sided discs that glide on carpet or hard floors for core and stability workouts. Perfect for lunges, planks, and ab exercises — lightweight and easy to pack.",
     price: 20,
     rating: 3.8,
     tags: ["core", "glutes", "portable"],
@@ -151,7 +157,7 @@ export const equipmentItems = [
     id: "eq015",
     name: "Weight Bench",
     description:
-      "Sturdy adjustable bench for presses, rows, and full-body workouts.",
+      "A sturdy, adjustable bench designed for presses, rows, and strength training. Supports heavy loads and allows multiple angles for full-body workouts at home or in the gym.",
     price: 290,
     rating: 4.6,
     tags: ["strength", "upper body", "bench"],
@@ -161,7 +167,8 @@ export const equipmentItems = [
   {
     id: "eq016",
     name: "Battle Rope",
-    description: "Durable rope for HIIT, strength, and endurance training.",
+    description:
+      "Heavy-duty rope built for HIIT, strength, and endurance training. Engage your arms, shoulders, and core while boosting cardiovascular health. Suitable for indoor and outdoor workouts.",
     price: 75,
     rating: 4.4,
     tags: ["conditioning", "arms", "HIIT"],
@@ -171,7 +178,8 @@ export const equipmentItems = [
   {
     id: "eq017",
     name: "Treadmill",
-    description: "Space-saving treadmill with multiple speed settings.",
+    description:
+      "Compact, foldable treadmill with multiple speed and incline settings. Perfect for home cardio sessions, from brisk walks to intense runs, with digital performance tracking.",
     price: 820,
     rating: 4.8,
     tags: ["cardio", "indoor", "running"],
@@ -182,7 +190,7 @@ export const equipmentItems = [
     id: "eq018",
     name: "Suspension Trainer",
     description:
-      "TRX-style bodyweight system for building strength, balance, and mobility.",
+      "Professional-grade TRX-style suspension trainer for full-body workouts using your own weight. Improve balance, strength, and flexibility anywhere — from home to outdoors.",
     price: 110,
     rating: 4.6,
     tags: ["bodyweight", "core", "functional"],
@@ -193,19 +201,18 @@ export const equipmentItems = [
     id: "eq019",
     name: "Push-Up Bars",
     description:
-      "Ergonomic bars for deeper push-ups, better form, and wrist support.",
+      "Ergonomic push-up bars that reduce wrist strain and improve form. Increase range of motion and build upper body strength effectively at home or in the gym.",
     price: 30,
     rating: 4.4,
     tags: ["upper body", "home", "portable"],
     image: "/images/equipments/pushupbars.webp",
     inStock: true,
   },
-
   {
     id: "eq020",
     name: "Medicine Ball",
     description:
-      "10 lb ball for dynamic strength, coordination, and core training.",
+      "Weighted 10 lb medicine ball for explosive strength, coordination, and core training. Great for partner workouts, circuits, and full-body conditioning exercises.",
     price: 45,
     rating: 4.5,
     tags: ["strength", "explosive", "core"],

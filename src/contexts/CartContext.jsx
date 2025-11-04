@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const CartContext = createContext();
 
@@ -22,8 +23,8 @@ function CartProvider({ children }) {
 
   // Add to Cart
   const addToCart = (item) => {
+    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
     setCartItems((prev) => {
-      const existingItem = prev.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {
         return prev.map((cartItem) =>
           cartItem.id === item.id
@@ -33,6 +34,10 @@ function CartProvider({ children }) {
       }
       return [...prev, { ...item, quantity: 1 }];
     });
+
+    if (!existingItem) {
+      toast.success(`${item.name} added to cart!`, { id: "cart" });
+    }
   };
 
   // Remove from Cart

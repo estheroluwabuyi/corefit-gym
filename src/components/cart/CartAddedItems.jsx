@@ -104,7 +104,7 @@ function CartAddedItems() {
                     className="font-semibold bg-secondary hover:bg-text hover:text-primary text-text px-4 py-5 rounded-lg w-1/2 transition duration-600"
                     onClick={() => removeFromCart(item.id)}
                   >
-                    Yes
+                    Confirm
                   </button>
                 </div>
               </div>
