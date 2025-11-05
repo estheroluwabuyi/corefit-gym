@@ -1,5 +1,5 @@
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 function FooterNewsLetter() {
   const [input, setInput] = useState("");
@@ -40,8 +40,6 @@ function FooterNewsLetter() {
           Subscribe
         </button>
       </div>
-
-      <Toaster position="top-right" />
     </form>
   );
 }
