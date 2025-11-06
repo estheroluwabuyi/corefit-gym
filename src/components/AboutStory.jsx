@@ -17,7 +17,7 @@ function AboutStory() {
             className="w-full  rounded-lg "
           /> */}
           {!imgLoaded && (
-            <div className="w-full h-[300px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl md:self-center " />
+            <div className="w-full h-[250px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl md:self-center " />
           )}
           <img
             src="/images/about/community.jpg"
