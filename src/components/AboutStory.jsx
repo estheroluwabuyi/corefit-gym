@@ -1,16 +1,29 @@
+import { useState } from "react";
+
 function AboutStory() {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   return (
     <div>
       {/* Our Story */}
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 shadow-2xl p-7 py-10 bg-muted/50 rounded-3xl items-center">
         {/* Image */}
         <div className="lg:w-1/2">
-          <img
+          {/* <img
             src="/images/about/community.jpg"
             alt="Gym community story"
             width="300"
             height="250"
             className="w-full  rounded-lg "
+          /> */}
+          {!imgLoaded && (
+            <div className="w-full h-[300px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl md:self-center " />
+          )}
+          <img
+            src="/images/about/community.jpg"
+            className={`w-full  rounded-lg ${imgLoaded ? "block" : "hidden"}`}
+            onLoad={() => setImgLoaded(true)}
+            alt="Gym community story"
           />
         </div>
 
