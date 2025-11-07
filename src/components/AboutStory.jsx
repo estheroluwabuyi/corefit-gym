@@ -8,20 +8,16 @@ function AboutStory() {
       {/* Our Story */}
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 shadow-2xl p-7 py-10 bg-muted/50 rounded-3xl items-center">
         {/* Image */}
-
-        {!imgLoaded && (
-          <div className="lg:w-1/2">
-            <div className="w-full h-[200px] ss:h-[250px] sm:h-[300px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl  " />
-          </div>
-        )}
-
         <div className="lg:w-1/2">
+          {!imgLoaded && (
+            <div className="w-full h-[200px] ss:h-[250px] sm:h-[300px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl" />
+          )}
+
           <img
             src="/images/about/community.jpg"
             alt="Gym community story"
             width="300"
             height="250"
-            // className="w-full h-auto rounded-lg"
             className={`w-full h-auto rounded-lg ${
               imgLoaded ? "block" : "hidden"
             }`}
