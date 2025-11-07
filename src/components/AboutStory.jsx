@@ -8,22 +8,19 @@ function AboutStory() {
       {/* Our Story */}
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 shadow-2xl p-7 py-10 bg-muted/50 rounded-3xl items-center">
         {/* Image */}
+
+        {!imgLoaded && (
+          <div className="w-full h-[200px] ss:h-[250px] sm:h-[300px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl lg:w-1/2 " />
+        )}
+
         <div className="lg:w-1/2">
-          {/* <img
+          <img
             src="/images/about/community.jpg"
             alt="Gym community story"
             width="300"
             height="250"
-            className="w-full  rounded-lg "
-          /> */}
-          {!imgLoaded && (
-            <div className="w-full h-[250px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl md:self-center " />
-          )}
-          <img
-            src="/images/about/community.jpg"
-            className={`w-full  rounded-lg ${imgLoaded ? "block" : "hidden"}`}
+            className="w-full h-auto rounded-lg"
             onLoad={() => setImgLoaded(true)}
-            alt="Gym community story"
           />
         </div>
 
@@ -36,7 +33,7 @@ function AboutStory() {
             <div className="h-1.5 w-18 bg-secondary  rounded-full mb-7"></div>
           </div>
 
-          <p className="text-[1.4rem] lg:text-[1.7rem] tracking-wider leading-relaxed sm:max-w-4xl lg:max-w-5xl mb-8 ">
+          <div className="text-[1.4rem] lg:text-[1.7rem] tracking-wider leading-relaxed sm:max-w-5xl lg:max-w-5xl mb-8 ">
             Founded in 2018, CoreFit began with a simple idea — to create a
             space where everyone feels welcome, regardless of where they are in
             their fitness journey.
@@ -48,7 +45,7 @@ function AboutStory() {
             At CoreFit, we believe in energy, encouragement, and growth. We’re
             more than just a gym — we’re a family that pushes, supports, and
             celebrates every milestone with you.
-          </p>
+          </div>
 
           {/*  Story Quote*/}
           <div className="flex justify-center items-center mt-5">
