@@ -10,7 +10,9 @@ function AboutStory() {
         {/* Image */}
 
         {!imgLoaded && (
-          <div className="w-full h-[200px] ss:h-[250px] sm:h-[300px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl lg:w-1/2 " />
+          <div className="lg:w-1/2">
+            <div className="w-full h-[200px] ss:h-[250px] sm:h-[300px] md:h-[400px] bg-gray-700 animate-pulse rounded-3xl  " />
+          </div>
         )}
 
         <div className="lg:w-1/2">
