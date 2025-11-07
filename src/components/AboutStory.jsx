@@ -19,7 +19,10 @@ function AboutStory() {
             alt="Gym community story"
             width="300"
             height="250"
-            className="w-full h-auto rounded-lg"
+            // className="w-full h-auto rounded-lg"
+            className={`w-full h-auto rounded-lg ${
+              imgLoaded ? "block" : "hidden"
+            }`}
             onLoad={() => setImgLoaded(true)}
           />
         </div>
