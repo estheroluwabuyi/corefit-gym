@@ -18,11 +18,11 @@ import { CgClose } from "react-icons/cg";
 
 const navItems = [
   { name: "Home", icon: <FaHome />, path: "/" },
+  { name: "About", icon: <FaInfoCircle />, path: "/about" },
   { name: "Shop", icon: <FaShoppingCart />, path: "/shop" },
   // { name: "Exercise", icon: <FaDumbbell />, path: "/exercise" },
   { name: "Pricing", icon: <FaDollarSign />, path: "/pricing" },
   { name: "Contact", icon: <FaEnvelope />, path: "/contact" },
-  { name: "About", icon: <FaInfoCircle />, path: "/about" },
 ];
 
 function NavBar() {

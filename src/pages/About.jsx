@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 import PageHeader from "../components/PageHeader";
-import AboutMission from "../components/AboutMission";
-import AboutStory from "../components/AboutStory";
+import AboutMission from "../components/about/AboutMission";
+import AboutStory from "../components/about/AboutStory";
 
 function About() {
   return (

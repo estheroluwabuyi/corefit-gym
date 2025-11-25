@@ -6,7 +6,7 @@ import {
   FaBrain,
   FaHeart,
 } from "react-icons/fa";
-import FadeInSection from "./FadeInSection";
+import FadeInSection from "../FadeInSection";
 
 const missionPoints = [
   {
@@ -40,7 +40,7 @@ const missionPoints = [
 function AboutMission() {
   return (
     <FadeInSection animation="blur" delay={0.3}>
-      <section className="mt-16 bg-dark-alt py-12 rounded-xl shadow-lg max-w-7xl mx-auto font-permanent">
+      <section className="mt-[6rem]  rounded-xl max-w-7xl mx-auto font-permanent">
         <div className="bg-black/90 p-12 rounded-xl relative">
           <div className="flex flex-col items-center">
             <h2 className="text-[2.5rem] lg:text-[3rem] font-caveat  text-center mb-2">

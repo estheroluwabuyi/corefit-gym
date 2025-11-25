@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 import { useReducer } from "react";
-import CtaBtn from "./CtaBtn";
-import FadeInSection from "./FadeInSection";
+import CtaBtn from "../CtaBtn";
+import FadeInSection from "../FadeInSection";
 
 const initialState = {
   email: "",

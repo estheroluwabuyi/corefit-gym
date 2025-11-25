@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import { useGym } from "../contexts/GymContext";
 import clsx from "clsx";
-import ContactForm from "../components/ContactForm";
-import ContactMap from "../components/ContactMap";
+import ContactForm from "../components/contact/ContactForm";
+import ContactMap from "../components/contact/ContactMap";
 
 function Contact() {
   const { contactPage, containerActive, setContainerActive } = useGym();
