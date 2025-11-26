@@ -18,7 +18,6 @@ L.Marker.prototype.options.icon = defaultIcon;
 
 function ContactMap() {
   return (
-    //  <FadeInSection animation="blur" delay={0.4}></FadeInSection>
     <FadeInSection
       animation="blur"
       delay={0.3}
