@@ -34,18 +34,24 @@ function AboutStory() {
             <div className="h-1.5 w-18 bg-secondary  rounded-full mb-7"></div>
           </div>
 
-          <div className="text-[1.4rem] lg:text-[1.7rem] tracking-wider leading-relaxed sm:max-w-5xl lg:max-w-5xl mb-8 ">
-            Founded in 2018, CoreFit began with a simple idea — to create a
-            space where everyone feels welcome, regardless of where they are in
-            their fitness journey.
+          <div className="text-[1.4rem] lg:text-[1.7rem] tracking-wider leading-relaxed sm:max-w-5xl lg:max-w-5xl mb-8">
+            <p>
+              Founded in 2018, CoreFit began with a simple idea — to create a
+              space where everyone feels welcome, regardless of where they are
+              in their fitness journey
+            </p>
+
             <p className="my-3">
               What started as a small community gym quickly grew into a place of
               transformation — not just of bodies, but of confidence, mindset,
               and lifestyle.
             </p>
-            At CoreFit, we believe in energy, encouragement, and growth. We’re
-            more than just a gym — we’re a family that pushes, supports, and
-            celebrates every milestone with you.
+
+            <p>
+              At CoreFit, we believe in energy, encouragement, and growth. We’re
+              more than just a gym — we’re a family that pushes, supports, and
+              celebrates every milestone with you.
+            </p>
           </div>
 
           {/*  Story Quote*/}

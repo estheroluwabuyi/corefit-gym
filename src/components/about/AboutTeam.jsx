@@ -29,21 +29,19 @@ const teamMembers = [
 
 function AboutTeam() {
   return (
-    <FadeInSection animation="blur" delay={0.3}>
-      <section className="mt-[6rem]">
-        <div className="flex flex-col items-center">
-          <h2 className="text-[1.5rem] md:text-[1.7rem] text-center mx-auto font-semibold font-montserrat mb-2">
-            Meet Our Team
-          </h2>
-          <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
-        </div>
+    // <FadeInSection animation="blur" delay={0.3}>
+    <section className="mt-[6rem]">
+      <div className="flex flex-col items-center">
+        <h2 className="text-[1.5rem] md:text-[1.7rem] text-center mx-auto font-semibold font-montserrat mb-2">
+          Meet Our Team
+        </h2>
+        <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
+      </div>
 
-        <div className="grid grid-cols-1 max-w-2xl sm:grid-cols-2 xl:grid-cols-4 xl:max-w-[1300px] mx-auto gap-10 mt-10 sm:max-w-6xl">
-          {teamMembers.map((member, i) => (
-            <div
-              key={i}
-              className="bg-black/90 p-6 py-10 lg:py-15 rounded-xl shadow-lg border border-white/10 hover:scale-[1.02] transition-all duration-500"
-            >
+      <div className="grid grid-cols-1 max-w-2xl sm:grid-cols-2 xl:grid-cols-4 xl:max-w-[1300px] mx-auto gap-10 mt-10 sm:max-w-6xl">
+        {teamMembers.map((member, i) => (
+          <FadeInSection animation="blur" delay={0.3} key={i}>
+            <div className="bg-black/90 p-6 py-10 lg:py-15 rounded-xl shadow-lg border border-white/10 hover:scale-[1.02] transition-scale duration-500">
               <img
                 src={member.img}
                 alt={member.name}
@@ -61,10 +59,11 @@ function AboutTeam() {
                 {member.bio}
               </p>
             </div>
-          ))}
-        </div>
-      </section>
-    </FadeInSection>
+          </FadeInSection>
+        ))}
+      </div>
+    </section>
+    // </FadeInSection>
   );
 }
 
