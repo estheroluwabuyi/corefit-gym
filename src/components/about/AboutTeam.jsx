@@ -1,35 +1,37 @@
+import { useState } from "react";
 import FadeInSection from "../FadeInSection";
 
 const teamMembers = [
   {
     name: "Emma Brooks",
     role: "Head Coach",
-    img: "/images/team/coach.webp",
+    img: "/images/team/coach.jpg",
     bio: "Emma brings 7+ years of coaching experience, known for her warm approach and uplifting energy.",
   },
   {
     name: "Jordan Miles",
     role: "Fitness Instructor",
-    img: "/images/team/fitness.webp",
+    img: "/images/team/fitness.jpg",
     bio: "Jordan keeps every session fun and engaging, helping members stay motivated and consistent.",
   },
   {
     name: "Sofia Daniels",
     role: "Nutrition Coach",
-    img: "/images/team/nutrition.webp",
+    img: "/images/team/nutrition.jpg",
     bio: "Sofia creates simple, friendly nutrition plans designed to support real, sustainable progress.",
   },
   {
     name: "Liam Carter",
     role: "Mobility & Wellness Specialist",
-    img: "/images/team/wellness.webp",
+    img: "/images/team/wellness.jpg",
     bio: "Liam focuses on flexibility, posture, and recovery, making fitness feel safe and enjoyable.",
   },
 ];
 
 function AboutTeam() {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   return (
-    // <FadeInSection animation="blur" delay={0.3}>
     <section className="mt-[6rem]">
       <div className="flex flex-col items-center">
         <h2 className="text-[1.5rem] md:text-[1.7rem] text-center mx-auto font-semibold font-montserrat mb-2">
@@ -42,11 +44,22 @@ function AboutTeam() {
         {teamMembers.map((member, i) => (
           <FadeInSection animation="blur" delay={0.3} key={i}>
             <div className="bg-black/90 p-6 py-10 lg:py-15 rounded-xl shadow-lg border border-white/10 hover:scale-[1.02] transition-scale duration-500">
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-[10rem] h-[10rem] object-cover rounded-full mx-auto border-4  border-secondary shadow-md"
-              />
+              <div>
+                {!imgLoaded && (
+                  <div className="w-[10rem] h-[10rem] bg-gray-700 animate-pulse mx-auto rounded-full border-4  border-secondary shadow-md " />
+                )}
+
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  width="100"
+                  height="100"
+                  className={`w-[10rem] h-[10rem] object-cover rounded-full mx-auto border-4  border-secondary shadow-md  ${
+                    imgLoaded ? "block" : "hidden"
+                  }`}
+                  onLoad={() => setImgLoaded(true)}
+                />
+              </div>
 
               <h3 className="mt-6 text-[1.5rem] font-semibold text-center">
                 {member.name}
@@ -54,7 +67,6 @@ function AboutTeam() {
               <p className="text-secondary text-[1.2rem] font-medium uppercase text-center mt-2">
                 {member.role}
               </p>
-
               <p className="text-text/80 tracking-wider leading-relaxed  text-center mt-4 text-[1.4rem]">
                 {member.bio}
               </p>
@@ -63,7 +75,6 @@ function AboutTeam() {
         ))}
       </div>
     </section>
-    // </FadeInSection>
   );
 }
 

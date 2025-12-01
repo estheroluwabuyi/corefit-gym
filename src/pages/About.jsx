@@ -4,6 +4,7 @@ import PageHeader from "../components/PageHeader";
 import AboutMission from "../components/about/AboutMission";
 import AboutStory from "../components/about/AboutStory";
 import AboutTeam from "../components/about/AboutTeam";
+import WhyChooseUs from "../components/about/WhyChooseUs";
 
 function About() {
   return (
@@ -23,15 +24,18 @@ function About() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        className="lg:px-[5rem] 2xl:px-[15rem] px-8 mt-15"
+        className="mt-15"
       >
         <h2 className=" text-[1.5rem] md:text-[1.7rem] text-center pb-15 max-w-2xl mx-auto font-semibold font-montserrat capitalize">
           Building more than bodies — we build people.
         </h2>
 
-        <AboutStory />
-        <AboutMission />
-        <AboutTeam />
+        <div className="lg:px-[5rem] 2xl:px-[15rem] px-8 ">
+          <AboutStory />
+          <AboutMission />
+          <AboutTeam />
+        </div>
+        <WhyChooseUs />
       </motion.section>
     </motion.div>
   );
