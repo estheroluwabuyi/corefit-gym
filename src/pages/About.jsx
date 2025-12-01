@@ -9,7 +9,7 @@ import WhyChooseUs from "../components/about/WhyChooseUs";
 function About() {
   return (
     <motion.div
-      className=" bg-dark-alt min-h-screen pb-15 lg:pb-20"
+      className=" bg-dark-alt min-h-screen "
       initial={{ opacity: 0.1 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}

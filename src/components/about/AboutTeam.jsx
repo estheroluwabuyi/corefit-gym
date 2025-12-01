@@ -24,7 +24,7 @@ const teamMembers = [
     name: "Liam Carter",
     role: "Mobility & Wellness Specialist",
     img: "/images/team/wellness.jpg",
-    bio: "Liam focuses on flexibility, posture, and recovery, making fitness feel safe and enjoyable.",
+    bio: "Liam focuses on flexibility, posture, and recovery, making fitness feel enjoyable.",
   },
 ];
 
