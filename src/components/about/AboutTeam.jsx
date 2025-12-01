@@ -18,13 +18,13 @@ const teamMembers = [
     name: "Sofia Daniels",
     role: "Nutrition Coach",
     img: "/images/team/nutrition.jpg",
-    bio: "Sofia creates simple, friendly nutrition plans designed to support real, sustainable progress.",
+    bio: "Sofia creates simple, friendly nutrition plans designed to support steady, sustainable progress.",
   },
   {
     name: "Liam Carter",
     role: "Mobility & Wellness Specialist",
     img: "/images/team/wellness.jpg",
-    bio: "Liam focuses on flexibility, posture, and recovery, making fitness feel enjoyable.",
+    bio: "Liam focuses on mobility, posture, and recovery, helping members move confidently and feel their best.",
   },
 ];
 
