@@ -43,9 +43,9 @@ function WhyChooseUs() {
           </h2>
           <div className="h-1.5 w-20 bg-secondary rounded-full mb-7"></div>
 
-          <p className="text-center text-text/80 tracking-wider leading-relaxed text-[1.5rem] mb-20 lg:px-[5rem] 2xl:px-[15rem] px-8 max-w-2xl">
-            We give you the support, community, and personalised coaching you
-            need to grow confidently at your own pace.
+          <p className="text-center text-text/80 tracking-wider leading-relaxed text-[1.5rem] mb-20 lg:px-[5rem] 2xl:px-[15rem] px-8 max-w-3xl">
+            Get the support, coaching, and community you need to stay committed
+            and achieve real progress.
           </p>
         </div>
 
