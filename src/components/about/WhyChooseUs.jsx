@@ -8,27 +8,25 @@ import FadeInSection from "../FadeInSection";
 
 const features = [
   {
-    icon: <FaUsers className="text-secondary text-[3.5rem] xs:text-[5rem]" />,
+    icon: <FaUsers className="text-secondary text-[3rem] ss:text-[5rem]" />,
     value: "150+",
     label: "Happy Clients",
   },
   {
-    icon: (
-      <FaDumbbell className="text-secondary text-[3.5rem] xs:text-[5rem]" />
-    ),
+    icon: <FaDumbbell className="text-secondary text-[3rem] ss:text-[5rem]" />,
     value: "20+",
     label: "Expert Coaches",
   },
   {
     icon: (
-      <FaClipboardList className="mt-20 text-secondary text-[3.5rem] xs:text-[5rem]" />
+      <FaClipboardList className="mt-20 text-secondary text-[3rem] ss:text-[5rem]" />
     ),
     value: "15+",
     label: "Custom Plans",
   },
   {
     icon: (
-      <FaRegCheckCircle className="mt-20 text-secondary text-[3.5rem] xs:text-[5rem]" />
+      <FaRegCheckCircle className="mt-20 text-secondary text-[3rem] ss:text-[5rem]" />
     ),
     value: "50+",
     label: "Success Stories",
@@ -45,10 +43,9 @@ function WhyChooseUs() {
           </h2>
           <div className="h-1.5 w-20 bg-secondary rounded-full mb-7"></div>
 
-          <p className="text-center max-w-2xl text-text/80 tracking-wider leading-relaxed text-[1.5rem] mb-20">
-            Your fitness journey deserves the right support. We provide
-            personalised guidance, a friendly community, and a space designed to
-            help you grow at your own pace.
+          <p className="text-center text-text/80 tracking-wider leading-relaxed text-[1.5rem] mb-20 lg:px-[5rem] 2xl:px-[15rem] px-8 max-w-2xl">
+            We give you the support, community, and personalised coaching you
+            need to grow confidently at your own pace.
           </p>
         </div>
 
@@ -62,19 +59,19 @@ function WhyChooseUs() {
             />
           </div>
 
-          <div className=" w-full grid gap-x-40 grid-cols-2 lg:w-1/2 max-w-5xl">
+          <div className=" w-full grid gap-x-40 grid-cols-2 lg:w-1/2 max-w-5xl lg:px-[5rem] 2xl:px-[15rem] px-8 ">
             {features.map((item, i) => (
               <div key={i} className="text-center">
                 <div className="mx-auto mb-5 flex justify-center ">
                   {item.icon}
                 </div>
 
-                <h3 className="text-secondary text-[2.5rem] font-bold font-russo tracking-wider">
+                <h3 className="text-secondary  text-[2.5rem] font-bold font-russo tracking-wider">
                   {item.value}
                 </h3>
 
                 <p
-                  className="text-text/80 mt-2 font-montserrat text-[1.45rem] 
+                  className="text-text/80 mt-2 font-montserrat text-[1.13rem] ss:text-[1.35rem]  md:text-[1.45rem] 
                 tracking-wider"
                 >
                   {item.label}

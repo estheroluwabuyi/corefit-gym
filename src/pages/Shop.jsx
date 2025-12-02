@@ -29,7 +29,7 @@ function Shop() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center  pb-5 max-w-2xl mx-auto mt-15 font-semibold font-montserrat">
+        <h2 className=" text-[1.5rem] md:text-[1.7rem] mb-6 text-center px-8 pb-5 max-w-2xl mx-auto mt-15 font-semibold font-montserrat">
           Explore Our Collection
         </h2>
 

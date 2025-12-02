@@ -28,7 +28,7 @@ function Contact() {
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
         className="lg:px-[5rem] 2xl:px-[15rem] px-8 mt-15"
       >
-        <h2 className=" text-[1.5rem] md:text-[1.7rem] text-center pb-15 max-w-2xl mx-auto font-semibold font-montserrat ">
+        <h2 className=" text-[1.5rem] md:text-[1.7rem] text-center pb-15 max-w-2xl px-8 mx-auto font-semibold font-montserrat ">
           Reach Us Through Any of the Options Below — We’ll Get Back to You
           Quickly.
         </h2>

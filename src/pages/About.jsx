@@ -26,7 +26,7 @@ function About() {
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
         className="mt-15"
       >
-        <h2 className=" text-[1.5rem] md:text-[1.7rem] text-center pb-15 max-w-2xl mx-auto font-semibold font-montserrat capitalize">
+        <h2 className=" text-[1.5rem] md:text-[1.7rem] text-center pb-15 max-w-2xl mx-auto font-semibold font-montserrat capitalize px-8">
           Building more than bodies — we build people.
         </h2>
 
