@@ -17,6 +17,7 @@ import CartItemDetails from "./pages/CartItemDetails";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import { Toaster } from "react-hot-toast";
+import Pricing from "./pages/Pricing";
 
 // Lazy imports
 // const PageNotFound = lazy(() => import("./pages/PageNotFound"));
@@ -68,6 +69,7 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/shop" element={<Shop />} />
+                  <Route path="/pricing" element={<Pricing />} />
                   <Route path="/shop/:id" element={<CartItemDetails />} />
                 </Route>
                 <Route path="/blog/:id" element={<Blog />} />

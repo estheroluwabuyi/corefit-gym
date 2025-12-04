@@ -8,6 +8,7 @@ import FadeInSection from "../FadeInSection";
 import gymEquipments3 from "/images/value/gym-equipments3.webp";
 import gymClass from "/images/value/value-gym-class.webp";
 import { IoMdCheckboxOutline } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const sections = {
   sectionA: {
@@ -16,6 +17,7 @@ const sections = {
       "We don’t just help you break a sweat—we help you build a lifestyle. With top-tier gym equipment and certified trainers who care, your goals are always within reach",
     img: gymEquipments3,
     btn: "Start Your Journey",
+    link:'/pricing',
     alt: "Gym Equipment",
     arr: [
       "Personalised workout plans",
@@ -31,6 +33,7 @@ const sections = {
       "Whether you're looking to build strength, improve flexibility, or just stay active, our wide range of classes keeps things fresh and fun. There's always something for everyone.",
     img: gymClass,
     btn: "Join a Class →",
+    link:'/pricing',
     alt: "Gym Equipment",
     arr: [
       "HIIT & Strength",
@@ -96,7 +99,7 @@ function ValueSection() {
                   ))}
                 </ul>
 
-                <div className="self-start lg:self-start md:self-center ml-[3rem]">
+                <Link to={sec.link} className="self-start lg:self-start md:self-center ml-[3rem]">
                   <CtaBtn
                     text={sec.btn}
                     bg="bg-transparent"
@@ -105,7 +108,7 @@ function ValueSection() {
                     activeBg="active:bg-secondary"
                     radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
                   />
-                </div>
+                </Link>
               </div>
             </section>
           </FadeInSection>

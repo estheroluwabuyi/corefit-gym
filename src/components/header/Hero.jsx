@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import heroImg from "/images/bg.webp";
 import CtaBtn from "../CtaBtn";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -30,14 +31,16 @@ function Hero() {
             Your transformation starts now.
           </p>
 
-          <CtaBtn
-            text="Start Training"
-            bg="bg-secondary"
-            hoverBg="hover:bg-transparent"
-            activeBg="active:bg-transparent"
-            mobileHoverBg="bg-transparent"
-            radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
-          />
+          <Link to="/pricing">
+            <CtaBtn
+              text="Start Training"
+              bg="bg-secondary"
+              hoverBg="hover:bg-transparent"
+              activeBg="active:bg-transparent"
+              mobileHoverBg="bg-transparent"
+              radius="rounded-tl-[1.8rem] rounded-br-[1.8rem]"
+            />
+          </Link>
         </motion.div>
 
         {/* Hero Image */}
