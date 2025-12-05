@@ -83,13 +83,13 @@ function Pricing() {
           Select Your Membership
         </h2>
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10  mx-auto  ">
+         <div className="grid grid-cols-1 mt-12 sm:grid-cols-2 xl:grid-cols-4 gap-10  mx-auto max-w-2xl  sm:max-w-6xl  xl:max-w-full">
         {plans.map((plan, i) => (
           <motion.div
             key={i}
             whileHover={{ scale: 1.04 }}
             transition={{ type: "spring", stiffness: 55 }}
-            className={`bg-black/90 rounded-2xl p-8 lg:h-[350p] justify-center flex-col flex border  ${
+            className={`bg-black/90 rounded-2xl p-8 justify-center flex-col flex border  ${
               plan.highlight
                 ? "border-secondary shadow-[0_0_20px_rgba(247,92,3,0.3)]"
                 : "border-white/10"
@@ -109,7 +109,7 @@ function Pricing() {
             )}
 
 
-            <h2 className="text-[2rem] lg:text-[2.3rem] font-montserrat uppercase font-bold text-center tracking-wider">
+            <h2 className="text-[1.8rem] ss:text-[2rem] lg:text-[2.2rem] font-montserrat uppercase font-bold text-center tracking-wider">
               {plan.name}
             </h2>
             <p className="text-center text-[2.5rem] font-bold mt-3 font-montserrat">
