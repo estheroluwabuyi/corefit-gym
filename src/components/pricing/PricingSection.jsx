@@ -16,7 +16,7 @@ function PricingSection() {
       <div className=" bg-secondary/10 border
        border-secondary/20 rounded-full px-6 py-2 mb-6 text-center mx-auto max-w-3xl text-[0.9rem] xs:text-[1.1rem] sm:text-[1.2rem] text-secondary  tracking-wider font-russo">
         <span className="">
-          NO CONTRACTS • CANCEL ANYTIME • NO HIDDEN FEES
+          CANCEL ANYTIME • NO HIDDEN FEES
         </span>
       </div>
 
