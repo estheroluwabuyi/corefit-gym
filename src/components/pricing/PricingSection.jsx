@@ -29,7 +29,7 @@ function PricingSection() {
             <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
           </div>
 
-          <ul className="space-y-10 mt-3 grid md:grid-cols-2 place-items-center">
+          <ul className="space-y-10 mt-3 grid md:grid-cols-2 ">
             {perks.map((p, i) => (
               <li
                 className="flex bold text-[1.7rem] tracking-wider font-lato items-center gap-4 leading-relaxed group hover:bg-white/5 hover:scale-[1.02] transition-all duration-300 px-4 py-2 rounded-lg"
@@ -39,7 +39,7 @@ function PricingSection() {
                   {p.icon}
                 </div>
 
-                <span className="group-hover:text-white transition-colors duration-300">
+                <span className="group-hover:text-white transition-colors duration-300 ">
                   {p.text}
                 </span>
               </li>
