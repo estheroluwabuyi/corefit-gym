@@ -61,7 +61,6 @@ const plans = [
 
 function PricingCards() {
   return <div>
-
     <div className="flex flex-col items-center">
       <h2 className="text-[1.5rem] md:text-[1.7rem] text-center mx-auto font-semibold font-montserrat mb-2">
         Select Your Perfect Plan
@@ -69,7 +68,7 @@ function PricingCards() {
       <div className="h-1.5 w-20 bg-secondary  rounded-full mb-7"></div>
     </div>
 
-    <div className="grid grid-cols-1 mt-12 sm:grid-cols-2 xl:grid-cols-4 gap-10  mx-auto max-w-xl  sm:max-w-6xl  xl:max-w-full">
+    <div className="grid grid-cols-1 mt-5 sm:grid-cols-2 xl:grid-cols-4 gap-10  mx-auto max-w-xl  sm:max-w-6xl xl:max-w-[2000px]">
       {plans.map((plan, i) => (
         <motion.div
           key={i}
