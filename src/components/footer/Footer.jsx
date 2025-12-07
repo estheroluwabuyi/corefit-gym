@@ -11,7 +11,7 @@ function Footer() {
       aria-label="Footer"
       className="p-8 py-[5rem] lg:px-[5rem] bg-dark-alt footer-bg 2xl:px-[15rem]"
     >
-      <div className="flex flex-col gap-[3rem] md:flex-row ">
+      <div className="flex flex-col gap-[3rem] md:flex-row justify-center">
         <FooterBrandAndHours />
         <FooterContactInfo />
         <FooterNewsLetter />
