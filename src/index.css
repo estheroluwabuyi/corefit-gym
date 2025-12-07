@@ -112,13 +112,11 @@ a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("/images/bmi3.webp");
   background-attachment: fixed;
-  /* height: 100vh-60%; */
 }
 
 .grey-brand {
   filter: brightness(0) saturate(100%) invert(53%) sepia(7%) saturate(251%)
     hue-rotate(178deg) brightness(92%) contrast(90%);
-  /* opacity: 0.9; */
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
