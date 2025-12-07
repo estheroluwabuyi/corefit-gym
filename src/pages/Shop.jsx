@@ -4,6 +4,7 @@ import CardComponent from "../components/CardComponent";
 import { useGym } from "../contexts/GymContext";
 import PageHeader from "../components/PageHeader";
 import { useCart } from "../contexts/CartContext";
+import FadeInSection from "../components/FadeInSection";
 
 function Shop() {
   const { equipments } = useGym();
@@ -35,7 +36,7 @@ function Shop() {
 
         <div className="grid-cols-1 max-w-[200px] grid xs:grid-cols-2 lg:grid-cols-4 gap-10 mt-12 xs:max-w-4xl md:max-w-6xl lg:max-w-full mx-auto 2xl:px-[15rem] lg:px-[5rem] px-8">
           {equipments.map((item) => (
-            <div key={item.id}>
+            <FadeInSection animation="blur" delay={0.3} key={item.id} >
               {item.inStock ? (
                 <Link to={`/shop/${item.id}`}>
                   <CardComponent
@@ -46,7 +47,8 @@ function Shop() {
               ) : (
                 <CardComponent item={item} />
               )}
-            </div>
+
+            </FadeInSection>
           ))}
         </div>
       </motion.section>

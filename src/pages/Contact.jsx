@@ -44,7 +44,7 @@ function Contact() {
                 className={clsx(
                   "w-full h-[170px] md:h-[210px] flex items-center gap-8 border border-text/70 rounded-lg px-6 flex-col justify-center shadow-lg  transition-all duration-500 ease-in-out",
                   containerActive === item.id &&
-                    "border-secondary! shadow-[0_0_12px_#ff944d]! scale-[1.005] -translate-y-1"
+                  "border-secondary! shadow-[0_0_12px_#ff944d]! scale-[1.005] -translate-y-1"
                 )}
                 onMouseOver={() => setContainerActive(item.id)}
                 onMouseLeave={() => setContainerActive(null)}

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import { motion } from "framer-motion";
-import PricingCards from "../components/pricing/PricingCards";
-import PricingSection from "../components/pricing/PricingSection";
+import PricingPlanCards from "../components/pricing/PricingPlanCards";
+import PricingPerks from "../components/pricing/PricingPerks";
+import PricingFitnessEvolution from "../components/pricing/PricingFitnessEvolution";
 
 
 function Pricing() {
@@ -19,9 +20,6 @@ function Pricing() {
         titleColor="text-secondary"
         subtitle="Your goals, your pace, your plan. Choose from flexible membership options designed to support every stage of your fitness journey."
       />
-
-
-
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -34,17 +32,28 @@ function Pricing() {
           From Starter to Elite — Your Fitness Evolution Starts Here
         </h2>
 
-        <PricingSection />
-        <PricingCards />
+        <section>
+          <div className=" bg-secondary/10 border
+       border-secondary/20 rounded-full px-6 py-2 mb-6 text-center mx-auto max-w-3xl text-[1.2rem] text-secondary  tracking-wider font-russo">
+            CANCEL ANYTIME • NO HIDDEN FEES
+          </div>
+
+          <PricingPerks />
+        </section>
+
+        <PricingFitnessEvolution />
+        <PricingPlanCards />
 
         {/* PRICING CTA */}
-        <p className="text-center text-text/90 py-20 pt-30 text-[1.4rem] font-montserrat">
+        <div className="text-center text-text/90 py-20 pt-30 text-[1.4rem] font-montserrat">
           Not sure which plan fits you best?{" "}
           <Link to='/contact'> <span className="text-secondary underline cursor-pointer ">
             Book a free consultation.
           </span></Link>
 
-        </p>
+        </div>
+
+
       </motion.section>
     </motion.div>
   );
