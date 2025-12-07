@@ -58,10 +58,6 @@ function CardComponent({ item, addToCart }) {
             onTouchEnd={() => setHoveredItemId(null)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
-            // onClick={(e) => {
-            //   e.preventDefault();
-            //   addToCart();
-            // }}
           >
             <FaShoppingCart />
           </motion.button>
