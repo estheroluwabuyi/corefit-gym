@@ -30,6 +30,14 @@ const plansInfo = [
 
 ];
 
+const borderColors = {
+  "gray-400": "hover:border-gray-400/30",
+  "blue-400": "hover:border-blue-400/30",
+  "yellow-500": "hover:border-yellow-500/30",
+  "purple-500": "hover:border-purple-500/30",
+};
+
+
 function PricingFitnessEvolution() {
   return (<div
     className=" mx-auto text-center mb-16"
@@ -44,7 +52,7 @@ function PricingFitnessEvolution() {
     <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl lg:max-w-[1200px] mx-auto ">
 
       {plansInfo.map((plan, i) => (
-        <FadeInSection animation="blur" delay={0.3} key={i} className={`text-center p-6 bg-black/40 rounded-xl border border-white/15 hover:border-${plan.color}/30 transition-all duration-500`}>
+        <FadeInSection animation="blur" delay={0.3} key={i} className={`text-center p-6 bg-black/40 rounded-xl border border-white/15  ${borderColors[plan.color]} transition-all duration-500`}>
           <div className=" text-[5rem] mb-4 lg:text-[7rem]">
             {plan.icon}
           </div>
