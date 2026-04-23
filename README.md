@@ -35,7 +35,7 @@ A modern, responsive gym website that combines fitness services with an e-commer
 
 ---
 
-## 🎯 Project Purpose
+<!--## 🎯 Project Purpose
 
 This project was built to improve my frontend development skills, focusing on:
 
@@ -43,7 +43,7 @@ This project was built to improve my frontend development skills, focusing on:
 - State management in React  
 - Component-based architecture  
 - Creating interactive user interfaces  
-- Working with local storage for persistence  
+- Working with local storage for persistence  -->
 
 ---
 
