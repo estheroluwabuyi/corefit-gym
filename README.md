@@ -33,7 +33,6 @@ A modern, responsive gym website that combines fitness services with an e-commer
 - Local Storage API  
 - Vercel (Deployment)
 
----
 
 <!--## 🎯 Project Purpose
 
@@ -53,7 +52,6 @@ This project is deployed using **Vercel**.
 
 Live URL: https://corefit-gym.vercel.app/
 
----
 
 <!--## 📸 Screenshots
 
