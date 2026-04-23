@@ -55,9 +55,9 @@ Live URL: https://corefit-gym.vercel.app/
 
 ---
 
-## 📸 Screenshots
+<!--## 📸 Screenshots
 
-_Add screenshots here to make the project visually appealing._
+_Add screenshots here to make the project visually appealing._-->
 
 ---
 
